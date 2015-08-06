@@ -1,5 +1,9 @@
 package de.clzserver.homebox.config;
 
+import de.clzserver.homebox.config.properties.BooleanProperty;
+import de.clzserver.homebox.config.properties.Property;
+import de.clzserver.homebox.config.properties.StringProperty;
+
 import java.awt.Component;
 import java.awt.Insets;
 import java.util.Enumeration;

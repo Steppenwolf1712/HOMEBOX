@@ -7,6 +7,8 @@ import javax.swing.JList;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 
+import de.clzserver.homebox.config.HBPrinter;
+
 public class LinkAdd {
 
 	private JList links = new JList();
@@ -21,7 +23,7 @@ public class LinkAdd {
 				JOptionPane.OK_CANCEL_OPTION);
 		pane.createDialog(null, "Link hinzufügen").setVisible(true);
 
-		System.out.println("Eingabe: " + name.getText() + ", "
+		HBPrinter.getInstance().printMSG(this, "Eingabe= " + name.getText() + ", "
 				+ url.getText());
 		System.exit(0);
 		

@@ -1,4 +1,4 @@
-package de.clzserver.homebox.config;
+package de.clzserver.homebox.config.properties;
 
 public interface Property {
 

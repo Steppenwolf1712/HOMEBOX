@@ -1,5 +1,10 @@
 package de.clzserver.homebox.config;
 
-public class TableProperties {
+import javax.swing.table.DefaultTableModel;
 
+public class TableProperties extends DefaultTableModel{
+
+    TableProperties() {
+
+    }
 }

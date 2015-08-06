@@ -1,5 +1,7 @@
 package de.clzserver.homebox.budgetcalc.gui;
 
+import de.clzserver.homebox.config.HBPrinter;
+
 public enum UserEnum {
 	Marc("Marc","ce8"), Janine("Janine", "ce9");
 	
@@ -39,7 +41,7 @@ public enum UserEnum {
 			return userArray[i];
 		
 	}
-		System.out.println("UserEnum : Dieser User ist nicht verfügbar " + person);
+		HBPrinter.getInstance().printMSG(UserEnum.Marc, "Dieser User ist nicht verfügbar " + person);
 		return null;
 		
 	}

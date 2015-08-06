@@ -16,6 +16,7 @@ import org.w3c.dom.NodeList;
 
 import de.clzserver.homebox.budgetcalc.gui.UserEnum;
 import de.clzserver.homebox.budgetcalc.ods.interfaces.IBudget;
+import de.clzserver.homebox.config.HBPrinter;
 
 class CalcTable {
 
@@ -36,8 +37,7 @@ class CalcTable {
 					single = new CalcTable();
 					single.table = OdfDocument.loadDocument(file);
 				} catch (Exception e) {
-					System.out.println("CalcTable: Konnte die Datei "+file+" nicht laden!");
-					e.printStackTrace();
+					HBPrinter.getInstance().printError(single, "Konnte die Datei "+file+" nicht laden!", e);
 				}
 			}
 		return single;
@@ -61,7 +61,7 @@ class CalcTable {
 			
 			if (table_node == null) {
 				table_node = create_Table(table_name);
-				System.out.println("CalcTable: Erstelle Tabelle "+table_name);
+				HBPrinter.getInstance().printMSG(this, "Erstelle Tabelle "+table_name);
 			}
 				
 			if (table_node instanceof Element) {
@@ -69,19 +69,18 @@ class CalcTable {
 
 				Node new_line = createRow(verwendung, betrag, datum, user);
 				
-				System.out.println("CalcTable: Füge neue Zeile hinzu");
+				HBPrinter.getInstance().printMSG(this,"Füge neue Zeile hinzu");
 				table_ref.appendChild(new_line);
 				
 				odfContent.saveXML(table_ref);
 
 				table.save(table_file);
 			} else {
-				System.out.println("CalcTable: Die Tabelleninformationen lassen sich nicht weiterverarbeiten");
+				HBPrinter.getInstance().printMSG(this, "Die Tabelleninformationen lassen sich nicht weiterverarbeiten");
 			}
 			
 		} catch (Exception e) {
-			System.out.println("CalcTable: ODFToolkit konnte keine Dom-Instanz aus der ods erstellen");
-			e.printStackTrace();
+			HBPrinter.getInstance().printError(this, "ODFToolkit konnte keine Dom-Instanz aus der ods erstellen", e);
 		}
 		
 	}
@@ -210,8 +209,7 @@ class CalcTable {
 			}
 			
 		} catch (Exception e) {
-			System.out.println("CalcTable: Konnte den Inhalt der Datei nicht auslesen!");
-			e.printStackTrace();
+			HBPrinter.getInstance().printError(this, "Konnte den Inhalt der Datei nicht auslesen!", e);
 		}
 		
 		return erg;

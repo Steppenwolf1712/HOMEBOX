@@ -12,6 +12,7 @@ import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.awt.event.MouseMotionListener;
 
+import de.clzserver.homebox.config.HBPrinter;
 import de.clzserver.homebox.tray.parts.T_Icon_Menu;
 import de.clzserver.homebox.tray.parts.T_Icon_Item;
 import de.clzserver.homebox.tray.parts.T_Icon_SubMenu;
@@ -73,7 +74,7 @@ public class T_Icon implements MouseListener{
 		if (tray != null) {
 			SystemTray sysTray = SystemTray.getSystemTray();
 			sysTray.remove(tray);
-			System.out.println("T_Icon: TrayIcon wurde entfernt!");
+			HBPrinter.getInstance().printMSG(this, "TrayIcon wurde entfernt!");
 		}
 	}
 
@@ -83,8 +84,7 @@ public class T_Icon implements MouseListener{
 			sysTray.add(tray);
 
 		} catch (AWTException e) {
-			System.out.println("T_Icon -Fehler: Konnte Das Tray-Icon nicht zum laufenden SystemTray hinzufügen!");
-			System.err.println(e);
+			HBPrinter.getInstance().printError(this, "Konnte Das Tray-Icon nicht zum laufenden SystemTray hinzufügen!", e);
 		}
 	}
 

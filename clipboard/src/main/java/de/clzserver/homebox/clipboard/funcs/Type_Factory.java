@@ -11,7 +11,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 
-import de.clzserver.homebox.config.Config;
+import de.clzserver.homebox.shared.Config;
 
 public class Type_Factory {
 
@@ -19,6 +19,8 @@ public class Type_Factory {
 	public static final String TEXT_TYPE = "Text";
 	public static final String APP_TYPE = "Dateien";
 	public static final String IMG_TYPE = "Bild";
+	
+	public static final DataFlavor APP_FLAV = DataFlavor.javaFileListFlavor;
 	
 	private Type_Factory() {
 		
@@ -90,8 +92,11 @@ public class Type_Factory {
 		return null;
 	}
 	
-	public static String getTransferableType(Transferable trans) {
-		DataFlavor[] flavs = trans.getTransferDataFlavors();
+	public static String getDataFlavorTypes(DataFlavor... flavs) {
+		return getType(flavs);
+	}
+	
+	private static String getType(DataFlavor[] flavs) {
 		if (flavs.length == 0)
 			return null;
 		
@@ -103,6 +108,11 @@ public class Type_Factory {
 			return IMG_TYPE;
 		}
 		return null;
+	}
+	
+	public static String getTransferableType(Transferable trans) {
+		DataFlavor[] flavs = trans.getTransferDataFlavors();
+		return getType(flavs);
 	}
 }
 

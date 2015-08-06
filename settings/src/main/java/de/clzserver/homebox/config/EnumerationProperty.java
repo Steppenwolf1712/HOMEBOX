@@ -1,8 +1,10 @@
 package de.clzserver.homebox.config;
 
+import de.clzserver.homebox.config.properties.Property;
+
 import java.util.Vector;
 
-public class EnumerationProperty implements Property{
+public class EnumerationProperty implements Property {
 
 	@Override
 	public void setValue(String selectedValue) {

@@ -10,11 +10,14 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.imageio.ImageIO;
 
 import de.clzserver.homebox.clipboard.funcs.Type_Factory;
-import de.clzserver.homebox.config.Config;
+import de.clzserver.homebox.shared.Config;
+import de.clzserver.homebox.shared.HBPrinter;
 
 public class ClipLoad {
 
@@ -26,10 +29,24 @@ public class ClipLoad {
 		String type = Type_Factory.getSaveType();
 		
 		if (type.equals(Type_Factory.APP_TYPE)) {
-			System.out.println("ClipLoad: Es wird eine Menge von Dateien geladen!");
+			HBPrinter.getInstance().printMSG(this, "Es wird eine Menge von Dateien geladen!");
 			
+			File dir = new File(Config.getInstance().getValue(Config.SAVEAPP_PATH_KEY));
+			
+			if (!dir.isDirectory()) {
+				HBPrinter.getInstance().printError(this, "Das Ablageverzeichnis für die Files ist kein Pfad sondern ein File oder existiert nicht!", new IOException("Ungültiger Pfad"));
+				return;
+			}
+			
+			String[] temp_list = dir.list();
+			List<File> temp_files = new ArrayList<File>();
+			for (String s: temp_list)
+				temp_files.add(new File(s));
+			
+			TransferableFiles temp = new TransferableFiles(temp_files);
+			clip.setContents(temp, null);
 		} else if (type.equals(Type_Factory.IMG_TYPE)) {
-			System.out.println("Clipload: Es wird ein Bildausschnitt geladen!");
+			HBPrinter.getInstance().printMSG(this, "Es wird ein Bildausschnitt geladen!");
 			
 			BufferedImage buff = loadImage();
 			
@@ -37,7 +54,7 @@ public class ClipLoad {
 			clip.setContents(i, null);
 			
 		} else if (type.equals(Type_Factory.TEXT_TYPE)) {
-			System.out.println("ClipLoad: Es wird ein Text geladen!");
+			HBPrinter.getInstance().printMSG(this, "Es wird ein Text geladen!");
 			
 			String erg = loadString();
 			
@@ -45,7 +62,7 @@ public class ClipLoad {
 			
 			clip.setContents(erg_selection, null);
 		} else {
-			System.out.println("ClipLoad-Fehler: Der Typ der Ablage wurde nicht erkannt!");
+			HBPrinter.getInstance().printMSG(this, "Der Typ der Ablage wurde nicht erkannt!");
 		}
 	}
 
@@ -57,11 +74,10 @@ public class ClipLoad {
 		File input = new File(location);
 		BufferedImage buff = null;
 		try {
-			System.out.println("ClipLoad: Die Ablage wird von hier geladen: "+location);
+			HBPrinter.getInstance().printMSG(this, "Die Ablage wird von hier geladen: "+location);
 			buff = ImageIO.read(input);
 		} catch (IOException e) {
-			System.out.println("ClipLoad: Ein/Ausgabe Fehler beim File mit dem gespeicherten Bild Inhalt");
-			e.printStackTrace();
+			HBPrinter.getInstance().printError(this, "Ein/Ausgabe Fehler beim File mit dem gespeicherten Bild Inhalt", e);
 		}
 		
 		return buff;
@@ -74,7 +90,7 @@ public class ClipLoad {
 		
 		try {
 			String location = cfg.getValue(Config.SAVETEXT_PATH_KEY)+cfg.getValue(Config.SAVE_NAME_KEY);
-			System.out.println("ClipLoad: Die Ablage wird von hier geladen: "+location);
+			HBPrinter.getInstance().printMSG(this, "ClipLoad: Die Ablage wird von hier geladen: "+location);
 			
 			BufferedReader reader = new BufferedReader(
 					new InputStreamReader(
@@ -90,11 +106,9 @@ public class ClipLoad {
 			reader.close();
 		
 		} catch (FileNotFoundException e) {
-			System.out.println("ClipLoad-Fehler: Konnte beim String lesen aus dem Save das File nicht finden!");
-			e.printStackTrace();
+			HBPrinter.getInstance().printError(this, "Konnte beim String lesen aus dem Save das File nicht finden!", e);
 		} catch (IOException e) {
-			System.out.println("Clipload-Fehler: I/O Fehler beim lesen des Files!");
-			e.printStackTrace();
+			HBPrinter.getInstance().printError(this, "I/O Fehler beim lesen des Files!", e);
 		}
 
 		return erg;

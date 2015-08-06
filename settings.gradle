@@ -5,4 +5,5 @@ include 'homebox_base'
 include 'clipboard'
 include 'linkcollection'
 include 'budgetcalc'
+include 'filemanager'
 

@@ -1,5 +1,6 @@
 package de.clzserver.homebox.tray.func;
 
+import de.clzserver.homebox.config.HBPrinter;
 import de.clzserver.homebox.tray.T_Icon;
 import de.clzserver.homebox.tray.parts.IMenuItem;
 
@@ -7,8 +8,7 @@ public class Closer implements IMenuItem {
 
 	@Override
 	public void start() {
-		System.out
-				.println("Vielen Dank das sie sich für HomeBox entschieden haben ;-)");
+		HBPrinter.getInstance().printMSG(this, "Vielen Dank das sie sich für HomeBox entschieden haben ;-)");
 		T_Icon.getInstance().remove();
 		System.exit(0);
 	}

@@ -153,7 +153,6 @@ public class JPanelBudgetWriter extends JPanel implements ActionListener, KeyLis
 	@Override
 	public void keyPressed(KeyEvent arg0) {
 		if(arg0.getKeyCode() == KeyEvent.VK_TAB){
-			System.out.println("tab");
 			tuse.setFocusable(false);
 		tabs.setFocusable(true);
 		}		

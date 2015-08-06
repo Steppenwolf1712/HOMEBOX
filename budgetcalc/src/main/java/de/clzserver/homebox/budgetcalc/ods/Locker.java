@@ -8,6 +8,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 import de.clzserver.homebox.config.Config;
+import de.clzserver.homebox.config.HBPrinter;
 
 public class Locker {
 	
@@ -40,11 +41,9 @@ public class Locker {
 				
 				reader.close();
 			} catch (FileNotFoundException e) {
-				System.out.println("Locker: Konnte Lock-File ("+path+") nicht öffnen und lesen!");
-				e.printStackTrace();
+				HBPrinter.getInstance().printError(this, "Konnte Lock-File ("+path+") nicht öffnen und lesen!", e);
 			} catch (IOException e) {
-				System.out.println("Locker: Der Inhalt der Datie konnte nicht gelesen werden!");
-				e.printStackTrace();
+				HBPrinter.getInstance().printError(this, "Der Inhalt der Datie konnte nicht gelesen werden!", e);
 			}
 			
 			return erg;

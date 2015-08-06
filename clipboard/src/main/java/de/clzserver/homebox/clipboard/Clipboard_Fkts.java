@@ -11,6 +11,7 @@ import javax.swing.JOptionPane;
 
 import de.clzserver.homebox.clipboard.funcs.load.ClipLoad;
 import de.clzserver.homebox.clipboard.funcs.save.ClipSave;
+import de.clzserver.homebox.shared.HBPrinter;
 
 public class Clipboard_Fkts {
 	
@@ -38,14 +39,14 @@ public class Clipboard_Fkts {
 		Transferable data = system_clip.getContents(null);
 		
 			try {				
-				save.save(data);
+				save.save(data, system_clip);
 			}
 			catch (UnsupportedFlavorException e) {
 				JOptionPane.showMessageDialog(null, "Clipboard_Fkts: Der Inhalt der jetzigen Zwischenablage wird von Java nicht unterstützt");
-				e.printStackTrace();
+				HBPrinter.getInstance().printError(this, "Der Inhalt der jetzigen Zwischenablage wird von Java nicht unterstützt",e);
 			} catch (IOException e) {
 				JOptionPane.showMessageDialog(null, "Clipboard_Fkts: Ein/Ausgabefehler");
-				e.printStackTrace();
+				HBPrinter.getInstance().printError(this, "Ein/Ausgabefehler", e);
 			}
 	}
 	

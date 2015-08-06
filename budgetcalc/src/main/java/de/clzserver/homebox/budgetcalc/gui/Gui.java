@@ -24,6 +24,8 @@ import javax.swing.table.TableColumn;
 import de.clzserver.homebox.budgetcalc.ods.API_Factory;
 import de.clzserver.homebox.budgetcalc.ods.interfaces.IBudget;
 import de.clzserver.homebox.budgetcalc.ods.interfaces.IODS_API;
+import de.clzserver.homebox.budgetcalc.ods.interfaces.MonthEnum;
+import de.clzserver.homebox.config.Config;
 
 public class Gui extends JFrame {
 

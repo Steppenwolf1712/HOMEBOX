@@ -1,5 +1,6 @@
 package de.clzserver.homebox.tray.func;
 
+import de.clzserver.homebox.config.HBPrinter;
 import de.clzserver.homebox.tray.parts.IMenuItem;
 
 public class Clipboard implements IMenuItem{
@@ -9,7 +10,7 @@ public class Clipboard implements IMenuItem{
 	
 	@Override
 	public void start() {
-		System.out.println("Clipboard: Das Root-Element des Clipboad-Submenu bietet von sich aus keine Funktion an!");
+		HBPrinter.getInstance().printMSG(this, "Das Root-Element des Clipboad-Submenu bietet von sich aus keine Funktion an!");
 	}
 
 	@Override

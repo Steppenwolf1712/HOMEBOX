@@ -1,5 +1,6 @@
 package de.clzserver.homebox.tray.func;
 
+import de.clzserver.homebox.config.HBPrinter;
 import de.clzserver.homebox.tray.parts.IMenuItem;
 
 public class Placeholder implements IMenuItem{
@@ -14,7 +15,7 @@ public class Placeholder implements IMenuItem{
 
 	@Override
 	public void start() {
-		System.out.println("Placeholder machen nichts!");
+		HBPrinter.getInstance().printMSG(this, "Placeholder machen nichts!");
 	}
 
 	@Override
