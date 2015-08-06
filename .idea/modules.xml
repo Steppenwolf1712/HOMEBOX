@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/budgetcalc/budgetcalc.iml" filepath="$PROJECT_DIR$/budgetcalc/budgetcalc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/clipboard/clipboard.iml" filepath="$PROJECT_DIR$/clipboard/clipboard.iml" />
+      <module fileurl="file://$PROJECT_DIR$/homebox.iml" filepath="$PROJECT_DIR$/homebox.iml" />
+      <module fileurl="file://$PROJECT_DIR$/homebox_base/homebox_base.iml" filepath="$PROJECT_DIR$/homebox_base/homebox_base.iml" />
+      <module fileurl="file://$PROJECT_DIR$/linkcollection/linkcollection.iml" filepath="$PROJECT_DIR$/linkcollection/linkcollection.iml" />
+      <module fileurl="file://$PROJECT_DIR$/settings/settings.iml" filepath="$PROJECT_DIR$/settings/settings.iml" />
+    </modules>
+  </component>
+</project>

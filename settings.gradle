@@ -1,0 +1,8 @@
+rootProject.name = 'homebox'
+
+include 'settings'
+include 'homebox_base'
+include 'clipboard'
+include 'linkcollection'
+include 'budgetcalc'
+
