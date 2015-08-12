@@ -11,7 +11,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 
-import de.clzserver.homebox.shared.Config;
+import de.clzserver.homebox.config.Config;
 
 public class Type_Factory {
 

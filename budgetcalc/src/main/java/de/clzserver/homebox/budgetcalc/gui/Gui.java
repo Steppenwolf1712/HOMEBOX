@@ -1,31 +1,13 @@
 package de.clzserver.homebox.budgetcalc.gui;
 
 import java.awt.Component;
-import java.awt.ScrollPane;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
-import javax.swing.DefaultListModel;
-import javax.swing.JButton;
-import javax.swing.JComboBox;
 import javax.swing.JFrame;
-import javax.swing.JLabel;
 import javax.swing.JOptionPane;
-import javax.swing.JPanel;
-import javax.swing.JScrollPane;
 import javax.swing.JTabbedPane;
-import javax.swing.JTable;
-import javax.swing.JTextArea;
-import javax.swing.JTextField;
-import javax.swing.table.AbstractTableModel;
-import javax.swing.table.DefaultTableModel;
-import javax.swing.table.TableColumn;
 
 import de.clzserver.homebox.budgetcalc.ods.API_Factory;
-import de.clzserver.homebox.budgetcalc.ods.interfaces.IBudget;
-import de.clzserver.homebox.budgetcalc.ods.interfaces.IODS_API;
-import de.clzserver.homebox.budgetcalc.ods.interfaces.MonthEnum;
-import de.clzserver.homebox.config.Config;
+import de.clzserver.homebox.budgetcalc.ods.IODS_API;
 
 public class Gui extends JFrame {
 

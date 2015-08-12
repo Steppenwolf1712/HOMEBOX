@@ -10,7 +10,7 @@ public class Info implements IMenuItem{
 	@Override
 	public void start() {
 		JOptionPane.showMessageDialog(null, "Das ist das ÜBELST COOLE Programm von\nJanine und Marc ^^");
-		HBPrinter.getInstance().printMSG(this, "Das ist das ÜBELST COOLE Programm von\nJanine und Marc ^^");
+		HBPrinter.getInstance().printMSG(this.getClass(), "Das ist das ÜBELST COOLE Programm von\nJanine und Marc ^^");
 	}
 
 	@Override

@@ -1,4 +1,4 @@
-package de.clzserver.homebox.budgetcalc.ods.interfaces;
+package de.clzserver.homebox.budgetcalc.ods;
 
 public enum MonthEnum {
 	JANUAR("Januar",0), FEBRUAR("Februar",1), MAERZ("März",2), APRIL("April",3),

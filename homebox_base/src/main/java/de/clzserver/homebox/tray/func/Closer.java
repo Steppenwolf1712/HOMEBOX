@@ -8,7 +8,7 @@ public class Closer implements IMenuItem {
 
 	@Override
 	public void start() {
-		HBPrinter.getInstance().printMSG(this, "Vielen Dank das sie sich für HomeBox entschieden haben ;-)");
+		HBPrinter.getInstance().printMSG(this.getClass(), "Vielen Dank das sie sich für HomeBox entschieden haben ;-)");
 		T_Icon.getInstance().remove();
 		System.exit(0);
 	}

@@ -2,10 +2,9 @@ package de.clzserver.homebox.budgetcalc.gui;
 
 import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
-import java.util.Calendar;
 import java.util.Date;
 
-import de.clzserver.homebox.budgetcalc.ods.interfaces.IBudget;
+import de.clzserver.homebox.budgetcalc.ods.IBudget;
 
 class Budget implements IBudget{
 

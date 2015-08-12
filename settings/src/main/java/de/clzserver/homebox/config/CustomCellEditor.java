@@ -1,6 +1,7 @@
 package de.clzserver.homebox.config;
 
 import de.clzserver.homebox.config.properties.BooleanProperty;
+import de.clzserver.homebox.config.properties.EnumerationProperty;
 import de.clzserver.homebox.config.properties.Property;
 import de.clzserver.homebox.config.properties.StringProperty;
 
@@ -45,11 +46,11 @@ public class CustomCellEditor implements TableCellEditor {
 		listeners = new Vector<CellEditorListener>();
 	}
 
-	public CustomCellEditor(EnumerationProperty property) {
-		_values = property.getLiterals();
-		_property = property;
-		listeners = new Vector<CellEditorListener>();
-	}
+//	public CustomCellEditor(EnumerationProperty property) {
+//		_values = property.getLiterals();
+//		_property = property;
+//		listeners = new Vector<CellEditorListener>();
+//	}
 
 	@Override
 	public void addCellEditorListener(CellEditorListener cel) {

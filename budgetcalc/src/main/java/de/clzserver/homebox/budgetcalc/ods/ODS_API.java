@@ -2,9 +2,6 @@ package de.clzserver.homebox.budgetcalc.ods;
 
 import java.util.ArrayList;
 
-import de.clzserver.homebox.budgetcalc.ods.interfaces.IBudget;
-import de.clzserver.homebox.budgetcalc.ods.interfaces.IODS_API;
-import de.clzserver.homebox.budgetcalc.ods.interfaces.MonthEnum;
 import de.clzserver.homebox.config.Config;
 
 class ODS_API implements IODS_API{

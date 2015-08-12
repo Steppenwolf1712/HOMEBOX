@@ -19,8 +19,8 @@ import java.util.List;
 import javax.imageio.ImageIO;
 
 import de.clzserver.homebox.clipboard.funcs.Type_Factory;
-import de.clzserver.homebox.shared.Config;
-import de.clzserver.homebox.shared.HBPrinter;
+import de.clzserver.homebox.config.Config;
+import de.clzserver.homebox.config.HBPrinter;
 
 public class ClipSave {
 
@@ -32,14 +32,14 @@ public class ClipSave {
 		DataFlavor[] flavs = data.getTransferDataFlavors();
 		
 		if (flavs == null ||  flavs.length == 0) {
-			HBPrinter.getInstance().printMSG(this, "Nichts in der Zwischenablage");
+			HBPrinter.getInstance().printMSG(this.getClass(), "Nichts in der Zwischenablage");
 			return;
 		}
 		
 		String test = Type_Factory.getTransferableType(data);
 		
 		if (test.equals(Type_Factory.TEXT_TYPE)) {
-			HBPrinter.getInstance().printMSG(this, "Es ist ein Text zu transferieren");
+			HBPrinter.getInstance().printMSG(this.getClass(), "Es ist ein Text zu transferieren");
 			
 //			printInfo(data);
 			
@@ -58,20 +58,20 @@ public class ClipSave {
 			//Eine schönere Lösung wäre alle Flavors abzuholen und zu serialisieren, ich weiß blox nicht ob ich die wieder in das Clipboard reinbekomme
 			
 			if (erg == null)
-				HBPrinter.getInstance().printMSG(this, "Da ist beim String suchen aus der Zwischenablage was schief gegangen.");
+				HBPrinter.getInstance().printMSG(this.getClass(), "Da ist beim String suchen aus der Zwischenablage was schief gegangen.");
 			
 			saveString(erg);
 			
 		} else if (test.equals(Type_Factory.APP_TYPE)) {
-			HBPrinter.getInstance().printMSG(this, "Es ist eine Menge von Application(Dateien) zu transferieren");
+			HBPrinter.getInstance().printMSG(this.getClass(), "Es ist eine Menge von Application(Dateien) zu transferieren");
 			saveFiles((List<File>)data.getTransferData(flavs[0]));
 			
 		} else if (test.equals(Type_Factory.IMG_TYPE)) {
-			HBPrinter.getInstance().printMSG(this, "Es ist ein Bildausschnitt zu transferieren");
+			HBPrinter.getInstance().printMSG(this.getClass(), "Es ist ein Bildausschnitt zu transferieren");
 			saveImage((BufferedImage)data.getTransferData(flavs[0]));
 			
 		} else {
-			HBPrinter.getInstance().printMSG(this, "Fehler: Der zu Transferierende Typ konnte nicht erkannt werden.");
+			HBPrinter.getInstance().printMSG(this.getClass(), "Fehler: Der zu Transferierende Typ konnte nicht erkannt werden.");
 		}
 	}
 
@@ -85,9 +85,9 @@ public class ClipSave {
 		
 		try {
 			ImageIO.write(transferData, "jpg", target);
-			HBPrinter.getInstance().printMSG(this, "Die Ablage wird gespeichert=> "+location);
+			HBPrinter.getInstance().printMSG(this.getClass(), "Die Ablage wird gespeichert=> "+location);
 		} catch (IOException e) {
-			HBPrinter.getInstance().printError(this, "Ein/Ausgabe-Fehler beim speichern eines Bildes!", e);
+			HBPrinter.getInstance().printError(this.getClass(), "Ein/Ausgabe-Fehler beim speichern eines Bildes!", e);
 		}
 	}
 
@@ -119,7 +119,7 @@ public class ClipSave {
 					new OutputStreamWriter(
 							new FileOutputStream(location)));
 			
-			HBPrinter.getInstance().printMSG(this, "Die Ablage wird gespeichert=> "+location);
+			HBPrinter.getInstance().printMSG(this.getClass(), "Die Ablage wird gespeichert=> "+location);
 			writer.write(content);
 			
 			writer.flush();
@@ -146,15 +146,15 @@ public class ClipSave {
 	            os.write(buffer, 0, length);
 	        }
 	    } catch (FileNotFoundException e) {
-			HBPrinter.getInstance().printError(this, "Die Datei konnte nicht gefunden werden!", e);
+			HBPrinter.getInstance().printError(this.getClass(), "Die Datei konnte nicht gefunden werden!", e);
 		} catch (IOException e) {
-			HBPrinter.getInstance().printError(this, "Es gab einen Ein/Ausgabefehler!", e);
+			HBPrinter.getInstance().printError(this.getClass(), "Es gab einen Ein/Ausgabefehler!", e);
 		} finally {
 	        try {
 				is.close();
 		        os.close();
 			} catch (IOException e) {
-				HBPrinter.getInstance().printError(this, "Die Streams konnten nicht geschlossen werden!", e);
+				HBPrinter.getInstance().printError(this.getClass(), "Die Streams konnten nicht geschlossen werden!", e);
 			}
 	    }
 	}
@@ -164,7 +164,7 @@ public class ClipSave {
 		DataFlavor[] flavors = data.getTransferDataFlavors();
 		int i = 0;
 		for (DataFlavor flav: flavors) {
-			HBPrinter.getInstance().printMSG(this, "Inhalt Nummer "+ i++
+			HBPrinter.getInstance().printMSG(this.getClass(), "Inhalt Nummer "+ i++
 					+"\nHumandesc: "+flav.getHumanPresentableName()
 					+"\nMyMEtype: "+flav.getMimeType()+"\nJavatype: "
 					+flav.getDefaultRepresentationClassAsString()

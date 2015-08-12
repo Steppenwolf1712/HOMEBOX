@@ -15,7 +15,7 @@ public class Placeholder implements IMenuItem{
 
 	@Override
 	public void start() {
-		HBPrinter.getInstance().printMSG(this, "Placeholder machen nichts!");
+		HBPrinter.getInstance().printMSG(this.getClass(), "Placeholder machen nichts!");
 	}
 
 	@Override

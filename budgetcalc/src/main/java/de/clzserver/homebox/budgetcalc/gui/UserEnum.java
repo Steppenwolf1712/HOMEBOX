@@ -41,7 +41,7 @@ public enum UserEnum {
 			return userArray[i];
 		
 	}
-		HBPrinter.getInstance().printMSG(UserEnum.Marc, "Dieser User ist nicht verfügbar " + person);
+		HBPrinter.getInstance().printMSG(Marc.getClass(), "Dieser User ist nicht verfügbar " + person);
 		return null;
 		
 	}

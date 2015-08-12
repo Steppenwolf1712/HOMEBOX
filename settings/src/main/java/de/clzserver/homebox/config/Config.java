@@ -1,24 +1,36 @@
 package de.clzserver.homebox.config;
 
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
+import de.clzserver.homebox.config.properties.Property;
+import de.clzserver.homebox.config.properties.PropertyGroup;
+import de.clzserver.homebox.config.properties.StringProperty;
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
+import org.xml.sax.SAXException;
+
 import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.OutputStreamWriter;
-import java.util.Enumeration;
-import java.util.Properties;
+import java.util.ArrayList;
+import java.util.Collection;
 import java.util.regex.Pattern;
 
-import javax.swing.JOptionPane;
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.transform.Transformer;
+import javax.xml.transform.TransformerConfigurationException;
+import javax.xml.transform.TransformerException;
+import javax.xml.transform.TransformerFactory;
+import javax.xml.transform.dom.DOMSource;
+import javax.xml.transform.stream.StreamResult;
 
 
 public class Config {
 	
-	private static final String INIT_CONFIG = "init.txt";
+	private static final String INIT_CONFIG = "build\\resources\\main\\init.xml";
+
+	private static final String HOMEBOX_SETTINGS = "Homebox-Settings";
 
 	public static final String HOMEBOX_PATH_KEY = "HOMEBOX_PATH";
 	public static final String SAVE_PATH_KEY = "SAVE_PATH";
@@ -32,35 +44,45 @@ public class Config {
 	public static final String CALCODS_LOCK_NAME_KEY = "CALCODS_LOCK_NAME";
 	public static final String USER_STRING_KEY = "USER_STRING";
 		
-	private Properties props = null;
+	private ArrayList<PropertyGroup> props;
 	private static Config single = null;
 	
 	private Config() {
-		props = new Properties();
+		props = new ArrayList<PropertyGroup>();
 		init();
 	}
-	
-	Properties getProps() {
+
+	Collection<PropertyGroup> getProps() {
 		return props;
 	}
 	
 	private void init() {
 		try {
-			BufferedReader reader = new BufferedReader(new InputStreamReader(new FileInputStream(INIT_CONFIG)));
-			
-			String line = reader.readLine();
-			while (line != null) {
-				String[] kv = line.split("=");
-				props.put(kv[0], kv[1]);
-				line = reader.readLine();
+			DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
+			DocumentBuilder db = dbf.newDocumentBuilder();
+
+			Document dom = db.parse(INIT_CONFIG);
+
+			Element elem = dom.getDocumentElement();
+
+			NodeList nl = elem.getChildNodes();
+			for (int i = 0; i<= nl.getLength(); i++) {
+				Node temp = nl.item(i);
+				if (temp != null && temp.getNodeType() != Node.TEXT_NODE)
+					props.add(Property.parsePropertyGroup(nl.item(i)));
 			}
-			reader.close();
-		} catch (FileNotFoundException e) {
-			JOptionPane.showMessageDialog(null, "Fehler!!!\nKonnte init.txt Datei nicht finden.");
-			e.printStackTrace();
+		} catch (ParserConfigurationException e) {
+			HBPrinter.getInstance().printError(this.getClass(),
+					"Konnte keinen DocumentBuilder erstellen!",
+					e);
+		} catch (SAXException e) {
+			HBPrinter.getInstance().printError(this.getClass(),
+					"Es gab einen SAX-Parser Fehler beim einlesen der Config datei",
+					e);
 		} catch (IOException e) {
-			JOptionPane.showMessageDialog(null, "Fehler!!!\nKonnte InitFile nicht auslesen.");
-			e.printStackTrace();
+			HBPrinter.getInstance().printError(this.getClass(),
+					"Es gabe einen Ein-/Ausgabe-Fehler beim lesen der Config Datei",
+					e);
 		}
 	}
 
@@ -71,12 +93,23 @@ public class Config {
 	}
 	
 	public void setProperty(String key, String value) {
-		if (props.containsKey(key)) {
-			props.setProperty(key, value);
-		} else {
-			System.out.println("Neue Property in der Config-CLASS:\nKEY:="+key+"\nVALUE:="+value);
-			props.put(key, value);
+		for (PropertyGroup group: props) {
+			if (group.contains(key)) {
+				group.get(group.indexOf(key)).setValue(value);
+				return;
+			}
 		}
+		HBPrinter.getInstance().printMSG(this.getClass(),
+				"Neue Property in der Config-CLASS:\nKEY:=" + key + "\nVALUE:=" + value);
+		int maxOrder = 0;
+		PropertyGroup hs = null;
+		for (PropertyGroup group: props)
+			if (group.getGroupID().equals(HOMEBOX_SETTINGS))
+				hs = group;
+		for (Property p: hs)
+			if (maxOrder <= p.getOrder())
+				maxOrder = p.getOrder()+1;
+		hs.add(new StringProperty(key, value, maxOrder, HOMEBOX_SETTINGS));
 	}
 	
 	/**
@@ -88,11 +121,18 @@ public class Config {
 	 * @return
 	 */
 	public String getValue(String key) {
-		String temp = props.getProperty(key);
-		
+		String temp = getPlainValue(key);
+
 		String erg = get_rek_Value(temp);
 				
 		return erg;
+	}
+
+	public String getPlainValue(String key) {
+		for (PropertyGroup group: props)
+			if (group.contains(key))
+				return group.get(group.indexOf(key)).getValue();
+		return null;
 	}
 	
 	private String get_rek_Value(String temp) {
@@ -102,10 +142,13 @@ public class Config {
 			String[] tempi = temp.split(Pattern.quote("$"));
 			
 			for (int i = 0; i<tempi.length; i++) {
-				if (props.containsKey(tempi[i])) {
-					erg += get_rek_Value(props.getProperty(tempi[i]));
-				} else {
-					erg += tempi[i];
+				for (PropertyGroup group: props) {
+					if (group.contains(tempi[i])) {
+						erg += get_rek_Value(getPlainValue(tempi[i]));
+//					erg += get_rek_Value(props.get(props.indexOf(tempi[i])).getValue());
+					} else {
+						erg += tempi[i];
+					}
 				}
 			}
 		} else {
@@ -122,33 +165,38 @@ public class Config {
 
 		temp.delete();
 		try {
-			BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(INIT_CONFIG)));
-			
-			Enumeration<Object> keys = props.keys();
-			while (keys.hasMoreElements()) {
-				String temp_key = (String)keys.nextElement();
-				String erg = temp_key+"=";
-				erg+=props.getProperty(temp_key);
-				erg+="\n";
-				
-				writer.write(erg);
+			DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
+			DocumentBuilder db = dbf.newDocumentBuilder();
+
+			Document doc = db.newDocument();
+
+			Element rootElement = doc.createElement(Property.ID_PARENT);
+			doc.appendChild(rootElement);
+
+			for (PropertyGroup p: props) {
+				rootElement.appendChild(p.saveNode(doc));
 			}
-			
-			writer.flush();
-			writer.close();
-			
-			System.out.println("Init-File wurde erfoglreich gespeichert");
-			temp_save.delete();
-			
-		} catch (FileNotFoundException e) {
-			JOptionPane.showMessageDialog(null, "Fehler!!!\nBeim erstellen eines neuen init.txt Files.");
-			e.printStackTrace();
-			temp_save.renameTo(new File(INIT_CONFIG));
-		} catch (IOException e) {
-			JOptionPane.showMessageDialog(null, "Fehler beim schreiben einer Zeile ins init.txt Files");
-			e.printStackTrace();
-			temp_save.renameTo(new File(INIT_CONFIG));
+
+			TransformerFactory transformerFactory = TransformerFactory.newInstance();
+			Transformer transformer = transformerFactory.newTransformer();
+			DOMSource source = new DOMSource(doc);
+			StreamResult result = new StreamResult(new File(INIT_CONFIG));
+
+			transformer.transform(source, result);
+
+		} catch (TransformerConfigurationException e) {
+			HBPrinter.getInstance().printError(this.getClass(),
+					"Konnte keine Transformation konfigurieren!",
+					e);
+		} catch (TransformerException e) {
+			HBPrinter.getInstance().printError(this.getClass(),
+					"Konnte nicht erfolgreich transformieren!",
+					e);
+		} catch (ParserConfigurationException e) {
+			HBPrinter.getInstance().printError(this.getClass(),
+					"Konnte den Parser nciht erfolgreich konfigurieren!",
+					e);
 		}
-		
+
 	}
 }

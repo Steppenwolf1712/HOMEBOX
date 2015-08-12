@@ -15,7 +15,6 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
 import de.clzserver.homebox.budgetcalc.gui.UserEnum;
-import de.clzserver.homebox.budgetcalc.ods.interfaces.IBudget;
 import de.clzserver.homebox.config.HBPrinter;
 
 class CalcTable {
@@ -37,7 +36,7 @@ class CalcTable {
 					single = new CalcTable();
 					single.table = OdfDocument.loadDocument(file);
 				} catch (Exception e) {
-					HBPrinter.getInstance().printError(single, "Konnte die Datei "+file+" nicht laden!", e);
+					HBPrinter.getInstance().printError(CalcTable.class, "Konnte die Datei "+file+" nicht laden!", e);
 				}
 			}
 		return single;
@@ -61,7 +60,7 @@ class CalcTable {
 			
 			if (table_node == null) {
 				table_node = create_Table(table_name);
-				HBPrinter.getInstance().printMSG(this, "Erstelle Tabelle "+table_name);
+				HBPrinter.getInstance().printMSG(this.getClass(), "Erstelle Tabelle "+table_name);
 			}
 				
 			if (table_node instanceof Element) {
@@ -69,18 +68,18 @@ class CalcTable {
 
 				Node new_line = createRow(verwendung, betrag, datum, user);
 				
-				HBPrinter.getInstance().printMSG(this,"Füge neue Zeile hinzu");
+				HBPrinter.getInstance().printMSG(this.getClass(),"Füge neue Zeile hinzu");
 				table_ref.appendChild(new_line);
 				
 				odfContent.saveXML(table_ref);
 
 				table.save(table_file);
 			} else {
-				HBPrinter.getInstance().printMSG(this, "Die Tabelleninformationen lassen sich nicht weiterverarbeiten");
+				HBPrinter.getInstance().printMSG(this.getClass(), "Die Tabelleninformationen lassen sich nicht weiterverarbeiten");
 			}
 			
 		} catch (Exception e) {
-			HBPrinter.getInstance().printError(this, "ODFToolkit konnte keine Dom-Instanz aus der ods erstellen", e);
+			HBPrinter.getInstance().printError(this.getClass(), "ODFToolkit konnte keine Dom-Instanz aus der ods erstellen", e);
 		}
 		
 	}
@@ -209,7 +208,7 @@ class CalcTable {
 			}
 			
 		} catch (Exception e) {
-			HBPrinter.getInstance().printError(this, "Konnte den Inhalt der Datei nicht auslesen!", e);
+			HBPrinter.getInstance().printError(this.getClass(), "Konnte den Inhalt der Datei nicht auslesen!", e);
 		}
 		
 		return erg;

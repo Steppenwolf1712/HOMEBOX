@@ -10,7 +10,7 @@ public class Clipboard implements IMenuItem{
 	
 	@Override
 	public void start() {
-		HBPrinter.getInstance().printMSG(this, "Das Root-Element des Clipboad-Submenu bietet von sich aus keine Funktion an!");
+		HBPrinter.getInstance().printMSG(this.getClass(), "Das Root-Element des Clipboad-Submenu bietet von sich aus keine Funktion an!");
 	}
 
 	@Override

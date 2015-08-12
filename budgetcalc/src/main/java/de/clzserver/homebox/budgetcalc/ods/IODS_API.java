@@ -1,4 +1,4 @@
-package de.clzserver.homebox.budgetcalc.ods.interfaces;
+package de.clzserver.homebox.budgetcalc.ods;
 
 public interface IODS_API {
 
@@ -30,8 +30,6 @@ public interface IODS_API {
 	 * Die neue Zeile wird in die Tabelle für ein bestimmtes Jahr und ein bestimmten Monat geschrieben.
 	 * 
 	 * @param calc
-	 * @param month 
-	 * @param year 
 	 */
 	public void writeBudget(IBudget calc);
 }

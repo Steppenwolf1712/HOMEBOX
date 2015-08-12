@@ -2,15 +2,11 @@ package de.clzserver.homebox.tray;
 
 import java.awt.AWTException;
 import java.awt.Image;
-import java.awt.Menu;
-import java.awt.MenuItem;
-import java.awt.PopupMenu;
 import java.awt.SystemTray;
 import java.awt.Toolkit;
 import java.awt.TrayIcon;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
-import java.awt.event.MouseMotionListener;
 
 import de.clzserver.homebox.config.HBPrinter;
 import de.clzserver.homebox.tray.parts.T_Icon_Menu;
@@ -42,7 +38,7 @@ public class T_Icon implements MouseListener{
 		if (single == null) {
 			// Lade ein bild für den infobereich
 			Image img = Toolkit.getDefaultToolkit()
-					.getImage("ressources/Herzchen.gif");//"C:\\Users\\Marc Janßen\\Workspace\\Archiv\\favicon.gif");
+					.getImage("build\\resources\\main\\Herzchen.gif");//"C:\\Users\\Marc Janßen\\Workspace\\Archiv\\favicon.gif");
 			single = new T_Icon(img);
 		}
 		return single;
@@ -74,7 +70,7 @@ public class T_Icon implements MouseListener{
 		if (tray != null) {
 			SystemTray sysTray = SystemTray.getSystemTray();
 			sysTray.remove(tray);
-			HBPrinter.getInstance().printMSG(this, "TrayIcon wurde entfernt!");
+			HBPrinter.getInstance().printMSG(this.getClass(), "TrayIcon wurde entfernt!");
 		}
 	}
 
@@ -84,7 +80,7 @@ public class T_Icon implements MouseListener{
 			sysTray.add(tray);
 
 		} catch (AWTException e) {
-			HBPrinter.getInstance().printError(this, "Konnte Das Tray-Icon nicht zum laufenden SystemTray hinzufügen!", e);
+			HBPrinter.getInstance().printError(this.getClass(), "Konnte Das Tray-Icon nicht zum laufenden SystemTray hinzufügen!", e);
 		}
 	}
 

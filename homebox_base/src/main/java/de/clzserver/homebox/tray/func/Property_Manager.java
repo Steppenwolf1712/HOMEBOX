@@ -7,7 +7,10 @@ public class Property_Manager implements IMenuItem{
 
 	@Override
 	public void start() {
-		new PropMngr();
+		PropMngr mngr = new PropMngr();
+		mngr.pack();
+		mngr.setLocationRelativeTo(null);
+		mngr.setVisible(true);
 	}
 
 	@Override

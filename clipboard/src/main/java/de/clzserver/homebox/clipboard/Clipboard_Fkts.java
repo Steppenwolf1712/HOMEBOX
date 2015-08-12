@@ -2,7 +2,6 @@ package de.clzserver.homebox.clipboard;
 
 import java.awt.Toolkit;
 import java.awt.datatransfer.Clipboard;
-import java.awt.datatransfer.DataFlavor;
 import java.awt.datatransfer.Transferable;
 import java.awt.datatransfer.UnsupportedFlavorException;
 import java.io.IOException;
@@ -11,7 +10,7 @@ import javax.swing.JOptionPane;
 
 import de.clzserver.homebox.clipboard.funcs.load.ClipLoad;
 import de.clzserver.homebox.clipboard.funcs.save.ClipSave;
-import de.clzserver.homebox.shared.HBPrinter;
+import de.clzserver.homebox.config.HBPrinter;
 
 public class Clipboard_Fkts {
 	
@@ -42,11 +41,9 @@ public class Clipboard_Fkts {
 				save.save(data, system_clip);
 			}
 			catch (UnsupportedFlavorException e) {
-				JOptionPane.showMessageDialog(null, "Clipboard_Fkts: Der Inhalt der jetzigen Zwischenablage wird von Java nicht unterstützt");
-				HBPrinter.getInstance().printError(this, "Der Inhalt der jetzigen Zwischenablage wird von Java nicht unterstützt",e);
+				HBPrinter.getInstance().printError(this.getClass(), "Der Inhalt der jetzigen Zwischenablage wird von Java nicht unterstützt",e);
 			} catch (IOException e) {
-				JOptionPane.showMessageDialog(null, "Clipboard_Fkts: Ein/Ausgabefehler");
-				HBPrinter.getInstance().printError(this, "Ein/Ausgabefehler", e);
+				HBPrinter.getInstance().printError(this.getClass(), "Ein/Ausgabefehler", e);
 			}
 	}
 	

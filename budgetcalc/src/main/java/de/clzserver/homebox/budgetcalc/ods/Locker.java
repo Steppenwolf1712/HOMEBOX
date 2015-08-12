@@ -41,9 +41,9 @@ public class Locker {
 				
 				reader.close();
 			} catch (FileNotFoundException e) {
-				HBPrinter.getInstance().printError(this, "Konnte Lock-File ("+path+") nicht öffnen und lesen!", e);
+				HBPrinter.getInstance().printError(this.getClass(), "Konnte Lock-File ("+path+") nicht öffnen und lesen!", e);
 			} catch (IOException e) {
-				HBPrinter.getInstance().printError(this, "Der Inhalt der Datie konnte nicht gelesen werden!", e);
+				HBPrinter.getInstance().printError(this.getClass(), "Der Inhalt der Datie konnte nicht gelesen werden!", e);
 			}
 			
 			return erg;

@@ -15,9 +15,9 @@ import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableColumn;
 
 import de.clzserver.homebox.budgetcalc.ods.API_Factory;
-import de.clzserver.homebox.budgetcalc.ods.interfaces.IBudget;
-import de.clzserver.homebox.budgetcalc.ods.interfaces.IODS_API;
-import de.clzserver.homebox.budgetcalc.ods.interfaces.MonthEnum;
+import de.clzserver.homebox.budgetcalc.ods.IBudget;
+import de.clzserver.homebox.budgetcalc.ods.IODS_API;
+import de.clzserver.homebox.budgetcalc.ods.MonthEnum;
 import de.clzserver.homebox.config.HBPrinter;
 
 public class JPanelBudgetReader extends JPanel implements ActionListener {
@@ -81,7 +81,7 @@ public class JPanelBudgetReader extends JPanel implements ActionListener {
 
 			table.setAutoCreateRowSorter(true);
 		} else {
-			HBPrinter.getInstance().printMSG(this, "Das Budget-File ist gelockt ");
+			HBPrinter.getInstance().printMSG(this.getClass(), "Das Budget-File ist gelockt ");
 		}
 
 	}

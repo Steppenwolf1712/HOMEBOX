@@ -17,8 +17,8 @@ import javax.swing.JTextArea;
 import javax.swing.JTextField;
 
 import de.clzserver.homebox.budgetcalc.ods.API_Factory;
-import de.clzserver.homebox.budgetcalc.ods.interfaces.IODS_API;
-import de.clzserver.homebox.budgetcalc.ods.interfaces.MonthEnum;
+import de.clzserver.homebox.budgetcalc.ods.IODS_API;
+import de.clzserver.homebox.budgetcalc.ods.MonthEnum;
 import de.clzserver.homebox.config.Config;
 
 public class JPanelBudgetWriter extends JPanel implements ActionListener, KeyListener {

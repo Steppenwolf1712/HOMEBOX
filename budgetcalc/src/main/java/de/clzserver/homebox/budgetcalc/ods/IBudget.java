@@ -1,4 +1,4 @@
-package de.clzserver.homebox.budgetcalc.ods.interfaces;
+package de.clzserver.homebox.budgetcalc.ods;
 
 public interface IBudget {
 

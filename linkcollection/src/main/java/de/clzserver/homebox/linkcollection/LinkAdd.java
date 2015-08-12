@@ -1,8 +1,5 @@
 package de.clzserver.homebox.linkcollection;
 
-import java.io.File;
-import java.io.FileWriter;
-
 import javax.swing.JList;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
@@ -23,7 +20,7 @@ public class LinkAdd {
 				JOptionPane.OK_CANCEL_OPTION);
 		pane.createDialog(null, "Link hinzufügen").setVisible(true);
 
-		HBPrinter.getInstance().printMSG(this, "Eingabe= " + name.getText() + ", "
+		HBPrinter.getInstance().printMSG(this.getClass(), "Eingabe= " + name.getText() + ", "
 				+ url.getText());
 		System.exit(0);
 		

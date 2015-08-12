@@ -8,5 +8,8 @@ repositories {
 }
 
 dependencies {
+    compile project(":budgetcalc")
+    compile project(':clipboard')
+    compile project(':linkcollection')
     testCompile group: 'junit', name: 'junit', version: '4.11'
 }

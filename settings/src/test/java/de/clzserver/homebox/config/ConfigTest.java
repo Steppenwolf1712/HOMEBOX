@@ -7,6 +7,7 @@ public class ConfigTest {
 
     private ConfigTest() {
         PropMngr mgr = new PropMngr();
+        mgr.pack();
         mgr.setLocationRelativeTo(null);
         mgr.setVisible(true);
     }
