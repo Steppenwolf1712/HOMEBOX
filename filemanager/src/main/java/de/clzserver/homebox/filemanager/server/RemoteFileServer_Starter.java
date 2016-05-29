@@ -1,5 +1,7 @@
 package de.clzserver.homebox.filemanager.server;
 
+import java.rmi.NotBoundException;
+import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
 import java.rmi.server.UnicastRemoteObject;
@@ -10,10 +12,14 @@ import de.clzserver.homebox.config.HBPrinter;
 
 public class RemoteFileServer_Starter extends RMI_Starter {
 
-	public static int RMI_LAN_PORT = 54123;
-	
+	private RemoteFileServer fmngr;
+
 	public RemoteFileServer_Starter() {
-		super(IFileServer.class);
+		super(null, IFileServer.class);
+	}
+
+	public RemoteFileServer getServer() {
+		return fmngr;
 	}
 
 	@Override
@@ -22,13 +28,13 @@ public class RemoteFileServer_Starter extends RMI_Starter {
 			// System.setProperty("java.rmi.server.hostname", "127.0.0.1");
 
 			HBPrinter.getInstance().printMSG(this.getClass(), "Eröffne Bibliothek!");
-			IFileServer fmngr = new RemoteFileServer();
+			fmngr = new RemoteFileServer();
 
 			HBPrinter.getInstance().printMSG(this.getClass(), "Starte Dienst!");
 			IFileServer stub = (IFileServer) UnicastRemoteObject
-					.exportObject(fmngr, RMI_LAN_PORT);
+					.exportObject(fmngr, IFileServer.RMI_LAN_PORT);
 
-			Registry registry = LocateRegistry.createRegistry(1099);
+			Registry registry = LocateRegistry.createRegistry(IFileServer.REGISTRY_BINDING);
 
 			HBPrinter.getInstance().printMSG(
 					this.getClass(),
@@ -41,7 +47,23 @@ public class RemoteFileServer_Starter extends RMI_Starter {
 			HBPrinter.getInstance().printError(this.getClass(),
 					"Konnte Server nicht starten!", e);
 		}
-		HBPrinter.getInstance().printMSG(this.getClass(), "Server terminiert!");
 
+	}
+
+	public static boolean shutDown(RemoteFileServer currentServer) {
+		try {
+			Registry registry = LocateRegistry.createRegistry(IFileServer.REGISTRY_BINDING);
+
+			registry.unbind(IFileServer.SERVICE_NAME);
+
+			return UnicastRemoteObject.unexportObject(currentServer, false);
+		} catch (RemoteException e) {
+			HBPrinter.getInstance().printError(RemoteFileServer_Starter.class,
+					"Konnte den Service des Filemanagers nicht stopen!", e);
+		} catch (NotBoundException e) {
+			HBPrinter.getInstance().printError(RemoteFileServer_Starter.class,
+					"Der Service des Filemanagers ist zurzeit nicht gebunden und kann deshalb nicht von der Registryy entfernt werden!", e);
+		}
+		return false;
 	}
 }

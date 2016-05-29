@@ -16,6 +16,7 @@ import de.clzserver.homebox.tray.parts.T_Icon_PPMenu;
 
 public class T_Icon implements MouseListener{
 
+	private static String m_offset = "";
 	private TrayIcon tray = null;
 	private T_Icon_PPMenu ppmenu = null;
 	
@@ -34,11 +35,22 @@ public class T_Icon implements MouseListener{
 		tray.addMouseListener(this);
 	}
 
+	public static T_Icon getInstance(String offset) {
+		m_offset = offset;
+		if (single == null) {
+			// Lade ein bild für den infobereich
+			Image img = Toolkit.getDefaultToolkit()
+					.getImage(m_offset+"Herzchen.gif");//"C:\\Users\\Marc Janßen\\Workspace\\Archiv\\favicon.gif");
+			single = new T_Icon(img);
+		}
+		return single;
+	}
+
 	public static T_Icon getInstance() {
 		if (single == null) {
 			// Lade ein bild für den infobereich
 			Image img = Toolkit.getDefaultToolkit()
-					.getImage("build\\resources\\main\\Herzchen.gif");//"C:\\Users\\Marc Janßen\\Workspace\\Archiv\\favicon.gif");
+					.getImage("Herzchen.gif");//"C:\\Users\\Marc Janßen\\Workspace\\Archiv\\favicon.gif");
 			single = new T_Icon(img);
 		}
 		return single;

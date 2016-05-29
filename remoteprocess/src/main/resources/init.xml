@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Properties>
+    <PropertyGroup name="Homebox-Settings">
+        <String>
+            <Name>HOMEBOX_PATH</Name>
+            <Value>\\CLZ-Server\WG\HOMEBOX\</Value>
+            <Order>0</Order>
+        </String>
+        <String>
+            <Name>CALCODS_LOCK_NAME</Name>
+            <Value>.~lock.Rechnungen.ods#</Value>
+            <Order>1</Order>
+        </String>
+        <String>
+            <Name>CALCODS_PATH</Name>
+            <Value>$HOMEBOX_PATH$BudgetCalc\</Value>
+            <Order>2</Order>
+        </String>
+        <String>
+            <Name>SAVETEXT_PATH</Name>
+            <Value>$SAVE_PATH$text\</Value>
+            <Order>3</Order>
+        </String>
+        <String>
+            <Name>CALCODS_NAME</Name>
+            <Value>Rechnungen.ods</Value>
+            <Order>4</Order>
+        </String>
+        <String>
+            <Name>SAVEAPP_PATH</Name>
+            <Value>$SAVE_PATH$application\</Value>
+            <Order>5</Order>
+        </String>
+        <String>
+            <Name>SAVETYPE_NAME</Name>
+            <Value>type</Value>
+            <Order>6</Order>
+        </String>
+        <String>
+            <Name>SAVEIMG_PATH</Name>
+            <Value>$SAVE_PATH$image\</Value>
+            <Order>7</Order>
+        </String>
+        <String>
+            <Name>SAVE_PATH</Name>
+            <Value>Zwischenablage\</Value>
+            <Order>8</Order>
+        </String>
+        <String>
+            <Name>SAVE_NAME</Name>
+            <Value>clip_save</Value>
+            <Order>9</Order>
+        </String>
+        <String>
+            <Name>USER_STRING</Name>
+            <Value>Marc</Value>
+            <Order>10</Order>
+        </String>
+        <String>
+            <Name>USER_CONTENTS_PATH</Name>
+            <Value>User_Contents\</Value>
+            <Order>11</Order>
+        </String>
+        <String>
+            <Name>Itunes_PROCESS_NAME</Name>
+            <Value>iTunes.exe\</Value>
+            <Order>12</Order>
+        </String>
+        <String>
+            <Name>Itunes_LOCATION_PATH</Name>
+            <Value>C:\Program Files\iTunes\iTunes.exe</Value>
+            <Order>13</Order>
+        </String>
+        <String>
+            <Name>VisualSVN_PROCESS_NAME</Name>
+            <Value>VisualSVNServer.exe *32</Value>
+            <Order>14</Order>
+        </String>
+        <String>
+            <Name>VisualSVN_LOCATION_PATH</Name>
+            <Value>C:\Program Files (x86)\VisualSVN Server\bin\VisualSVNServer.exe\</Value>
+            <Order>15</Order>
+        </String>
+    </PropertyGroup>
+</Properties>

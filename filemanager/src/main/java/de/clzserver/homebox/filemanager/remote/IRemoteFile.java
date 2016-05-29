@@ -1,6 +1,7 @@
 package de.clzserver.homebox.filemanager.remote;
 
 import java.io.File;
+import java.io.IOException;
 import java.io.Serializable;
 
 public interface IRemoteFile extends Serializable {
@@ -30,27 +31,28 @@ public interface IRemoteFile extends Serializable {
 	 * @return
 	 */
 	public String getUser();
-
-	/**
-	 * Speichert das File in einer server ähnlichen Struktur ab.
-	 * 
-	 * @return
-	 */
-	public boolean saveFile();
 	
 	/**
-	 * GIbt das zugehörige File zurück, wenn es schon als lokale Kopie gespeichert wurde.
-	 * Wenn nicht wird, zuerst versucht zu speichern.
+	 * GIbt das zugehörige File zurück, wenn es schon als lokales temporäres File gespeichert wurde.
+	 * Ansonsten wird versucht den Inhalt in einem temporären File abzulegen.
 	 * 
 	 * Sollte das nicht funktionieren wird null zurückgegeben.
 	 * @return
 	 */
 	public File getFile();
-	
+
+	/**
+	 * Die Methode schreibt den übergebenen Content in das übergebene File. Exceptions werden direkt zurückgegeben.
+	 *
+	 * @param target
+	 * @throws IOException
+	 */
+	public void safeContentAt(File target) throws IOException;
+
 	/**
 	 * Erlaubt den Inhalt des RemoteFiles zu überschreiben, um danach wieder an den Server zurückgesand zu werden.
 	 * Wird null übergeben, wird einfach das inherente File erneut eingelesen. (zu bevorzugen)
-	 * 
+	 *
 	 * @param para_new_content
 	 */
 	public void takeOverChangesOfFile(File para_new_content);

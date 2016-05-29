@@ -1,11 +1,8 @@
 package de.clzserver.homebox.filemanager.remote.base;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
+import java.io.*;
 
+import de.clzserver.homebox.config.Config;
 import de.clzserver.homebox.filemanager.remote.IRemoteFile;
 import de.clzserver.homebox.config.HBPrinter;
 
@@ -26,20 +23,30 @@ public class RemoteFile implements IRemoteFile {
 	/**
 	 * Nimmt ein String einer File location und bereitet das File zum übertragen
 	 * über das Netzwerk vor.
-	 * 
+	 *
 	 * @param para_content
 	 */
-	public RemoteFile(String para_content) {
-		this(null, para_content);
+	public RemoteFile(File para_content, String para_remotePath) {
+		this(para_content, null, para_remotePath, false);
 	}
-	
+
+	/**
+	 * Nimmt ein String einer File location und bereitet das File zum übertragen
+	 * über das Netzwerk vor.
+	 *
+	 * @param para_content
+	 */
+	public RemoteFile(File para_content, String user, String para_remotePath) {
+		this(para_content, user, para_remotePath, false);
+	}
+
 	/**
 	 * Erzeugt in RemoteFile ohne Content. Es wird gebraucht um dem Client mitzuteilen,
 	 * dass die Ressource zur Zeit einen exklusiven Zugrif eines anderen Users hat.
 	 *
 	 */
-	public RemoteFile() {
-		m_b_rechte = false;
+	public RemoteFile(boolean rechte) {
+		m_b_rechte = rechte;
 	}
 
 	/**
@@ -52,19 +59,30 @@ public class RemoteFile implements IRemoteFile {
 	 * @param para_user
 	 * @param para_content
 	 */
-	public RemoteFile(String para_user, String para_content) {
+	public RemoteFile(File para_content, String para_user, String para_remotePath, boolean rechte) {
+//		String path = RemoteFile.class.getProtectionDomain().getCodeSource().getLocation().getPath();
+//		String decodedPath = "";
+//		try {
+//			 decodedPath = URLDecoder.decode(path, "UTF-8");
+//		} catch (UnsupportedEncodingException e) {
+//			HBPrinter.getInstance().printError(this.getClass(), "Konnte den Pfad zum Programm nicht decoden.\n" +
+//					"Somit ist es nicht möglich das lokale Dateisystem zu ereichen", e);
+//		}
 		m_s_user = para_user;
 
-		m_s_local_path = para_content;
+//		System.out.println("lokaler Pfad: "+decodedPath);
 
-		if (m_s_local_path != null && m_s_local_path.length() > 0) {
-			File content_safe = new File(m_s_local_path);
-			readout(content_safe);
+		m_s_local_path = para_remotePath;//decodedPath+para_content;
+
+		m_b_rechte = rechte;
+
+		if (m_s_local_path != null && m_s_local_path.length() > 0 && para_content!=null) {
+			readout(para_content);
 		} else
 			HBPrinter
 					.getInstance()
 					.printError(
-							this,
+							this.getClass(),
 							"Ungültiger Dateipfad!",
 							new IOException(
 									"Der übergebene String, der ein pfad zu einem File beschreiben sollte, ist leer!"));
@@ -80,14 +98,13 @@ public class RemoteFile implements IRemoteFile {
 			reader.close();
 		} catch (FileNotFoundException e) {
 			HBPrinter.getInstance().printError(
-					this,
-					"Konnte das gewünschte File nicht mit dem Pfad: "
-							+ m_s_local_path + "\nfinden!", e);
+					this.getClass(),
+					"Konnte das gewünschte File "+to_read +" nicht finden!", e);
 		} catch (IOException e) {
 			HBPrinter.getInstance().printError(
-					this,
+					this.getClass(),
 					"Es trat ein Ein/Ausgabe-Fehler beim auslesen der Datei "
-							+ m_s_local_path + " auf!", e);
+							+ to_read  + " auf!", e);
 		}
 	}
 
@@ -106,46 +123,77 @@ public class RemoteFile implements IRemoteFile {
 		return m_s_user;
 	}
 
+//	@Override
+//	public boolean saveFile() {
+//		File temp = new File((getUser()==null?m_s_local_path: getUserFilePath()));
+//
+//		try {
+//			if (temp.exists())
+//				HBPrinter.getInstance().printMSG(this.getClass(),
+//						"Das File " + m_s_local_path + " wird überschrieben!");
+//			else
+//				temp.createNewFile();
+//
+//			FileOutputStream writer = new FileOutputStream(temp);
+//			writer.write(m_byte_a_content);
+//			writer.close();
+//
+//			setSynchronised(true);
+//			return true;
+//		} catch (FileNotFoundException e) {
+//			HBPrinter
+//					.getInstance()
+//					.printError(
+//							this.getClass(),
+//							"Das File "
+//									+ m_s_local_path
+//									+ " konnte nicht gefunden werden (Schreibzugriff)!",
+//							e);
+//		} catch (IOException e) {
+//			HBPrinter.getInstance().printError(this.getClass(), "Fehler beim Schreiben oder Erstellen des Files "+m_s_local_path, e);
+//		}
+//		return false;
+//	}
+
+	private String getUserFilePath() {
+		return Config.getInstance().getValue(Config.USER_CONTENTS_PATH_KEY.toString())+getUser()+"\\"+m_s_local_path;
+	}
+
 	@Override
-	public boolean saveFile() {
-		File temp = new File(m_s_local_path);
+	public File getFile() {
 
+		int index = m_s_local_path.lastIndexOf(".");
+		String filePathName = m_s_local_path.substring(0, index);
+		String end = m_s_local_path.substring(index);
 		try {
-			if (temp.exists())
-				HBPrinter.getInstance().printMSG(this,
-						"Das File " + m_s_local_path + " wird überschrieben!");
-			else
-				temp.createNewFile();
+			String name = filePathName.substring(filePathName.lastIndexOf("\\"));
+			File erg = File.createTempFile(name, end);
 
-			FileOutputStream writer = new FileOutputStream(temp);
+			HBPrinter.getInstance().printMSG(this.getClass(), "Erzeuge temporäres File :=\n\t" + erg.getAbsolutePath());
+
+			FileOutputStream writer = new FileOutputStream(erg);
 			writer.write(m_byte_a_content);
+			writer.flush();
 			writer.close();
-			
+
 			setSynchronised(true);
-			return true;
+
+			erg.deleteOnExit();
+
+			return erg;
 		} catch (FileNotFoundException e) {
 			HBPrinter
 					.getInstance()
 					.printError(
-							this,
+							this.getClass(),
 							"Das File "
 									+ m_s_local_path
 									+ " konnte nicht gefunden werden (Schreibzugriff)!",
 							e);
 		} catch (IOException e) {
-			HBPrinter.getInstance().printError(this, "Fehler beim Schreiben oder Erstellen des Files "+m_s_local_path, e);
+			HBPrinter.getInstance().printError(this.getClass(), "Fehler beim Schreiben oder Erstellen des Files "+m_s_local_path, e);
 		}
-		return false;
-	}
-
-	@Override
-	public File getFile() {
-		File erg = null;
-		
-		if (this.saveFile())
-			erg = new File(m_s_local_path);
-		
-		return erg;
+		return null;
 	}
 
 	@Override
@@ -166,6 +214,13 @@ public class RemoteFile implements IRemoteFile {
 	@Override
 	public boolean hasRights() {
 		return m_b_rechte;
+	}
+
+	public void safeContentAt(File target) throws IOException {
+		FileOutputStream writer = new FileOutputStream(target);
+		writer.write(m_byte_a_content);
+		writer.flush();
+		writer.close();
 	}
 
 	public boolean isSynchronised() {

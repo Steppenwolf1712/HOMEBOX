@@ -3,7 +3,7 @@ version '1.0'
 
 apply plugin: 'java'
 
-sourceCompatibility = 1.5
+sourceCompatibility = 1.8
 
 repositories {
     mavenCentral()
@@ -12,4 +12,19 @@ repositories {
 dependencies {
     compile project(':settings')
     testCompile group: 'junit', name: 'junit', version: '4.11'
+}
+
+task runFileServerTest(type: JavaExec) {
+    classpath sourceSets.test.runtimeClasspath
+    main = "de.clzserver.homebox.filemanager.server.FileServerTest"
+}
+
+task runFileClientTest(type: JavaExec) {
+    classpath sourceSets.test.runtimeClasspath
+    main = "de.clzserver.homebox.filemanager.client.FileClientTest"
+}
+
+task runOnlineCheckerTest(type: JavaExec) {
+    classpath sourceSets.test.runtimeClasspath
+    main = "de.clzserver.homebox.filemanager.onlinecheck.OnlineCheckerTest"
 }

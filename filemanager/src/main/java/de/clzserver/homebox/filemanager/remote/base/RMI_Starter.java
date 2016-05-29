@@ -4,13 +4,16 @@ import de.clzserver.homebox.filemanager.remote.PolicyFileLocator;
 
 public abstract class RMI_Starter {
 
+    public String m_host;
+
     /**
      *
-     * @param clazzToAddToServerCodebase a class that should be in the java.rmi.server.codebase property.
+     * @param classToAddToServerCodebase a class that should be in the java.rmi.server.codebase property.
      */
-    public RMI_Starter(Class clazzToAddToServerCodebase) {
+    public RMI_Starter(String host, Class classToAddToServerCodebase) {
+        m_host = host;
 
-        System.setProperty("java.rmi.server.codebase", clazzToAddToServerCodebase
+        System.setProperty("java.rmi.server.codebase", classToAddToServerCodebase
             .getProtectionDomain().getCodeSource().getLocation().toString());
 
         System.setProperty("java.security.policy", PolicyFileLocator.getLocationOfPolicyFile());

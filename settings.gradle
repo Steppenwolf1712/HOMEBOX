@@ -6,4 +6,5 @@ include 'clipboard'
 include 'linkcollection'
 include 'budgetcalc'
 include 'filemanager'
+include 'remoteprocess'
 

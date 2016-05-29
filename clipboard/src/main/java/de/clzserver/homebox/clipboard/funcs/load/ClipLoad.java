@@ -10,11 +10,13 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.rmi.RemoteException;
 import java.util.ArrayList;
 import java.util.List;
 
 import javax.imageio.ImageIO;
 
+import de.clzserver.homebox.clipboard.funcs.RMI_Connect;
 import de.clzserver.homebox.clipboard.funcs.Type_Factory;
 import de.clzserver.homebox.config.Config;
 import de.clzserver.homebox.config.HBPrinter;
@@ -22,27 +24,39 @@ import de.clzserver.homebox.config.HBPrinter;
 public class ClipLoad {
 
 	public void load() {
-		System.out.println();
-		
 		Clipboard clip = Toolkit.getDefaultToolkit().getSystemClipboard();
 		
 		String type = Type_Factory.getSaveType();
+		RMI_Connect connect = RMI_Connect.getInstance();
 		
 		if (type.equals(Type_Factory.APP_TYPE)) {
 			HBPrinter.getInstance().printMSG(this.getClass(), "Es wird eine Menge von Dateien geladen!");
 			
-			File dir = new File(Config.getInstance().getValue(Config.SAVEAPP_PATH_KEY));
-			
-			if (!dir.isDirectory()) {
-				HBPrinter.getInstance().printError(this.getClass(), "Das Ablageverzeichnis für die Files ist kein Pfad sondern ein File oder existiert nicht!", new IOException("Ungültiger Pfad"));
+			String direc = Config.getInstance().getValue(Config.SAVEAPP_PATH_KEY);
+
+			String[] list = new String[0];
+			try {
+				list = connect.getContentList(direc);
+			} catch (RemoteException e) {
+				HBPrinter.getInstance().printError(this.getClass(), "Konnte den Inhalt des Ordners "+direc+" nicht vom Server erfragen!\n" +
+						"Das Ablageverzeichnis für die Files ist kein Pfad, sondern eine Datei oder existiert nicht!", e);
 				return;
 			}
-			
-			String[] temp_list = dir.list();
+
 			List<File> temp_files = new ArrayList<File>();
-			for (String s: temp_list)
-				temp_files.add(new File(s));
-			
+
+			for (String s: list) {
+				try {
+						temp_files.add(connect.getFile(s));
+				} catch (RemoteException e) {
+					HBPrinter.getInstance().printError(this.getClass(), "Konnte das File "+s+" nicht vom Server übertragen!", e);
+					return;
+				} catch (IOException e) {
+					HBPrinter.getInstance().printError(this.getClass(), "Konnte das File " + s + " nicht auf im lokalen Dateisystem abspeichern!", e);
+					return;
+				}
+			}
+
 			TransferableFiles temp = new TransferableFiles(temp_files);
 			clip.setContents(temp, null);
 		} else if (type.equals(Type_Factory.IMG_TYPE)) {
@@ -70,8 +84,19 @@ public class ClipLoad {
 		Config cfg = Config.getInstance();
 		
 		String location = cfg.getValue(Config.SAVEIMG_PATH_KEY)+cfg.getValue(Config.SAVE_NAME_KEY);
-		
-		File input = new File(location);
+
+		RMI_Connect connect = RMI_Connect.getInstance();
+
+		File input = null;
+		try {
+			input = connect.getFile(location);
+		} catch (RemoteException e) {
+			HBPrinter.getInstance().printError(this.getClass(), "Konnte das File "+location+" nicht vom Server übertragen!", e);
+			return null;
+		} catch (IOException e) {
+			HBPrinter.getInstance().printError(this.getClass(), "Konnte das File " + location + " nicht auf im lokalen Dateisystem abspeichern!", e);
+			return null;
+		}
 		BufferedImage buff = null;
 		try {
 			HBPrinter.getInstance().printMSG(this.getClass(), "Die Ablage wird von hier geladen: "+location);
@@ -87,14 +112,18 @@ public class ClipLoad {
 		String erg = "";
 
 		Config cfg = Config.getInstance();
-		
+
+		RMI_Connect connect = RMI_Connect.getInstance();
+		String location = cfg.getValue(Config.SAVETEXT_PATH_KEY)+cfg.getValue(Config.SAVE_NAME_KEY);
+
 		try {
-			String location = cfg.getValue(Config.SAVETEXT_PATH_KEY)+cfg.getValue(Config.SAVE_NAME_KEY);
 			HBPrinter.getInstance().printMSG(this.getClass(), "ClipLoad: Die Ablage wird von hier geladen: "+location);
-			
+
+			File temp = connect.getFile(location);
+
 			BufferedReader reader = new BufferedReader(
 					new InputStreamReader(
-							new FileInputStream(location)));
+							new FileInputStream(temp)));
 		
 			String teil = reader.readLine();
 			while (teil != null) {
@@ -106,8 +135,11 @@ public class ClipLoad {
 			reader.close();
 		
 		} catch (FileNotFoundException e) {
-			HBPrinter.getInstance().printError(this.getClass(), "Konnte beim String lesen aus dem Save das File nicht finden!", e);
-		} catch (IOException e) {
+			HBPrinter.getInstance().printError(this.getClass(), "Konnte beim lesen der verteilten Zwischenablage die Datei "+location+" lokal nicht finden!", e);
+		} catch (RemoteException e) {
+			HBPrinter.getInstance().printError(this.getClass(), "Konnte das File "+location+" nicht vom Server übertragen!", e);
+			return null;
+		}catch (IOException e) {
 			HBPrinter.getInstance().printError(this.getClass(), "I/O Fehler beim lesen des Files!", e);
 		}
 

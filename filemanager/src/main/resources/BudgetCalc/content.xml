@@ -1,0 +1,2367 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<office:document-content xmlns:office="urn:oasis:names:tc:opendocument:xmlns:office:1.0" xmlns:style="urn:oasis:names:tc:opendocument:xmlns:style:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:fo="urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:number="urn:oasis:names:tc:opendocument:xmlns:datastyle:1.0" xmlns:presentation="urn:oasis:names:tc:opendocument:xmlns:presentation:1.0" xmlns:svg="urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0" xmlns:chart="urn:oasis:names:tc:opendocument:xmlns:chart:1.0" xmlns:dr3d="urn:oasis:names:tc:opendocument:xmlns:dr3d:1.0" xmlns:math="http://www.w3.org/1998/Math/MathML" xmlns:form="urn:oasis:names:tc:opendocument:xmlns:form:1.0" xmlns:script="urn:oasis:names:tc:opendocument:xmlns:script:1.0" xmlns:ooo="http://openoffice.org/2004/office" xmlns:ooow="http://openoffice.org/2004/writer" xmlns:oooc="http://openoffice.org/2004/calc" xmlns:dom="http://www.w3.org/2001/xml-events" xmlns:xforms="http://www.w3.org/2002/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:rpt="http://openoffice.org/2005/report" xmlns:of="urn:oasis:names:tc:opendocument:xmlns:of:1.2" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:grddl="http://www.w3.org/2003/g/data-view#" xmlns:tableooo="http://openoffice.org/2009/table" xmlns:field="urn:openoffice:names:experimental:ooo-ms-interop:xmlns:field:1.0" office:version="1.2">
+<office:scripts/>
+<office:font-face-decls>
+<style:font-face style:name="Arial1" svg:font-family="Arial1"/>
+<style:font-face style:name="Arial" svg:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable"/>
+<style:font-face style:name="Arial Unicode MS" svg:font-family="&apos;Arial Unicode MS&apos;" style:font-family-generic="system" style:font-pitch="variable"/>
+<style:font-face style:name="Tahoma" svg:font-family="Tahoma" style:font-family-generic="system" style:font-pitch="variable"/>
+</office:font-face-decls>
+<office:automatic-styles>
+<style:style style:name="co1" style:family="table-column">
+<style:table-column-properties fo:break-before="auto" style:column-width="2.852cm"/>
+</style:style>
+<style:style style:name="co2" style:family="table-column">
+<style:table-column-properties fo:break-before="auto" style:column-width="2.267cm"/>
+</style:style>
+<style:style style:name="ro1" style:family="table-row">
+<style:table-row-properties style:row-height="0.496cm" fo:break-before="auto" style:use-optimal-row-height="true"/>
+</style:style>
+<style:style style:name="ro2" style:family="table-row">
+<style:table-row-properties style:row-height="0.499cm" fo:break-before="auto" style:use-optimal-row-height="true"/>
+</style:style>
+<style:style style:name="ta1" style:family="table" style:master-page-name="Default">
+<style:table-properties table:display="true" style:writing-mode="lr-tb"/>
+</style:style>
+<number:date-style style:name="N30" number:automatic-order="true" number:format-source="language">
+<number:day/>
+<number:text>.</number:text>
+<number:month/>
+<number:text>.</number:text>
+<number:year/>
+</number:date-style>
+<number:date-style style:name="N36" number:automatic-order="true">
+<number:day number:style="long"/>
+<number:text>.</number:text>
+<number:month number:style="long"/>
+<number:text>.</number:text>
+<number:year number:style="long"/>
+</number:date-style>
+<number:date-style style:name="N37" number:automatic-order="true">
+<number:day number:style="long"/>
+<number:text>.</number:text>
+<number:month number:style="long"/>
+<number:text>.</number:text>
+<number:year/>
+</number:date-style>
+<style:style style:name="ce1" style:family="table-cell" style:parent-style-name="Default" style:data-style-name="N0">
+<style:table-cell-properties fo:border-bottom="0.039cm double #000000" style:border-line-width-bottom="0.002cm 0.035cm 0.002cm" fo:border-left="none" fo:border-right="none" fo:border-top="none"/>
+</style:style>
+<style:style style:name="ce2" style:family="table-cell" style:parent-style-name="Default" style:data-style-name="N0"/>
+<style:style style:name="ce3" style:family="table-cell" style:parent-style-name="Default" style:data-style-name="N37"/>
+<style:style style:name="ce4" style:family="table-cell" style:parent-style-name="Default" style:data-style-name="N107">
+<style:table-cell-properties fo:border-bottom="0.039cm double #000000" style:border-line-width-bottom="0.002cm 0.035cm 0.002cm" fo:border-left="none" fo:border-right="none" fo:border-top="none"/>
+</style:style>
+<style:style style:name="ce5" style:family="table-cell" style:parent-style-name="Default" style:data-style-name="N107"/>
+<style:style style:name="ce6" style:family="table-cell" style:parent-style-name="Default" style:data-style-name="N36">
+<style:table-cell-properties fo:border-bottom="0.039cm double #000000" style:border-line-width-bottom="0.002cm 0.035cm 0.002cm" fo:border-left="none" fo:border-right="none" fo:border-top="none"/>
+</style:style>
+<style:style style:name="ce7" style:family="table-cell" style:parent-style-name="Default" style:data-style-name="N30"/>
+<style:style style:name="ce8" style:family="table-cell" style:parent-style-name="Default" style:data-style-name="N0">
+<style:table-cell-properties fo:background-color="#fcd5b4"/>
+</style:style>
+<style:style style:name="ce9" style:family="table-cell" style:parent-style-name="Default" style:data-style-name="N0">
+<style:table-cell-properties fo:background-color="#b6dde8"/>
+</style:style>
+<style:style style:name="ce10" style:family="table-cell" style:parent-style-name="Default">
+<style:table-cell-properties style:text-align-source="value-type" style:repeat-content="false"/>
+<style:paragraph-properties fo:margin-left="0cm"/>
+</style:style>
+</office:automatic-styles>
+<office:body>
+<office:spreadsheet>
+<table:calculation-settings table:case-sensitive="false" table:search-criteria-must-apply-to-whole-cell="false"/>
+<table:content-validations>
+<table:content-validation table:name="val1" table:base-cell-address="2014_März.B1">
+<table:error-message table:message-type="stop" table:display="true"/>
+</table:content-validation>
+<table:content-validation table:name="val2" table:condition="of:cell-content-is-in-list(&quot;Marc&quot;;&quot;Chen&quot;)" table:allow-empty-cell="true" table:display-list="unsorted" table:base-cell-address="2014_März.D1">
+<table:help-message table:title="Mitbewohner" table:display="true">
+<text:p>Marc</text:p>
+<text:p>Janine</text:p>
+</table:help-message>
+</table:content-validation>
+<table:content-validation table:name="val3" table:condition="of:cell-content-is-in-list(&quot;Marc&quot;;&quot;Janine&quot;)" table:allow-empty-cell="true" table:display-list="unsorted" table:base-cell-address="2014_März.D1">
+<table:help-message table:title="Mitbewohner" table:display="true">
+<text:p>Marc</text:p>
+<text:p>Janine</text:p>
+</table:help-message>
+</table:content-validation>
+<table:content-validation table:name="val4" table:condition="of:cell-content-is-in-list(&quot;Marc&quot;;&quot;Janine&quot;)" table:allow-empty-cell="true" table:display-list="unsorted" table:base-cell-address="2014_April.D1">
+<table:help-message table:title="Mitbewohner" table:display="true">
+<text:p>Marc</text:p>
+<text:p>Janine</text:p>
+</table:help-message>
+</table:content-validation>
+<table:content-validation table:name="val5" table:condition="of:cell-content-is-in-list(&quot;Marc&quot;;&quot;Janine&quot;)" table:allow-empty-cell="true" table:display-list="unsorted" table:base-cell-address="2014_Mai.D1">
+<table:help-message table:title="Mitbewohner" table:display="true">
+<text:p>Marc</text:p>
+<text:p>Janine</text:p>
+</table:help-message>
+</table:content-validation>
+</table:content-validations>
+<table:table table:name="2014_März" table:style-name="ta1" table:print="false">
+<table:table-column table:style-name="co1" table:default-cell-style-name="Default"/>
+<table:table-column table:style-name="co2" table:number-columns-repeated="3" table:default-cell-style-name="Default"/>
+<table:table-row table:style-name="ro1">
+<table:table-cell table:style-name="ce1" office:value-type="string">
+<text:p>Verwendung</text:p>
+</table:table-cell>
+<table:table-cell table:style-name="ce4" office:value-type="string">
+<text:p>Betrag</text:p>
+</table:table-cell>
+<table:table-cell table:style-name="ce6" office:value-type="string">
+<text:p>Datum</text:p>
+</table:table-cell>
+<table:table-cell table:style-name="ce1" table:content-validation-name="val2" office:value-type="string">
+<text:p>Wer</text:p>
+</table:table-cell>
+</table:table-row>
+<table:table-row table:style-name="ro1">
+<table:table-cell table:style-name="ce2" office:value-type="string">
+<text:p>Beispiel</text:p>
+</table:table-cell>
+<table:table-cell table:style-name="ce5" table:content-validation-name="val1" office:value-type="currency" office:currency="EUR" office:value="0">
+<text:p>0,00 €</text:p>
+</table:table-cell>
+<table:table-cell table:style-name="ce7" office:value-type="date" office:date-value="2014-03-01">
+<text:p>01.03.14</text:p>
+</table:table-cell>
+<table:table-cell table:style-name="ce8" table:content-validation-name="val2" office:value-type="string">
+<text:p>Marc</text:p>
+</table:table-cell>
+</table:table-row>
+<table:table-row table:style-name="ro1">
+<table:table-cell table:style-name="ce2" office:value-type="string">
+<text:p>Beispiel</text:p>
+</table:table-cell>
+<table:table-cell table:style-name="ce5" table:content-validation-name="val1" office:value-type="currency" office:currency="EUR" office:value="0">
+<text:p>0,00 €</text:p>
+</table:table-cell>
+<table:table-cell table:style-name="ce7" office:value-type="date" office:date-value="2014-03-01">
+<text:p>01.03.14</text:p>
+</table:table-cell>
+<table:table-cell table:style-name="ce9" table:content-validation-name="val2" office:value-type="string">
+<text:p>Janine</text:p>
+</table:table-cell>
+</table:table-row>
+<table:table-row table:style-name="ro1">
+<table:table-cell office:value-type="string">
+<text:p>Marktkauf</text:p>
+</table:table-cell>
+<table:table-cell table:style-name="ce5" table:content-validation-name="val1" office:value-type="currency" office:currency="EUR" office:value="13.83">
+<text:p>13,83 €</text:p>
+</table:table-cell>
+<table:table-cell table:style-name="ce7" office:value-type="date" office:date-value="2014-03-03">
+<text:p>03.03.14</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val2" office:value-type="string">
+<text:p>Marc</text:p>
+</table:table-cell>
+</table:table-row>
+<table:table-row table:style-name="ro2">
+<table:table-cell office:value-type="string">
+<text:p>Penny</text:p>
+</table:table-cell>
+<table:table-cell table:style-name="ce5" table:content-validation-name="val1" office:value-type="currency" office:currency="EUR" office:value="14.85">
+<text:p>14,85 €</text:p>
+</table:table-cell>
+<table:table-cell table:style-name="ce7" office:value-type="date" office:date-value="2014-03-04">
+<text:p>04.03.14</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val3" office:value-type="string">
+<text:p>Janine</text:p>
+</table:table-cell>
+</table:table-row>
+<table:table-row table:style-name="ro1">
+<table:table-cell office:value-type="string">
+<text:p>Marktkauf</text:p>
+</table:table-cell>
+<table:table-cell table:style-name="ce5" table:content-validation-name="val1" office:value-type="currency" office:currency="EUR" office:value="8.19">
+<text:p>8,19 €</text:p>
+</table:table-cell>
+<table:table-cell table:style-name="ce7" office:value-type="date" office:date-value="2014-03-05">
+<text:p>05.03.14</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val3" office:value-type="string">
+<text:p>Janine</text:p>
+</table:table-cell>
+</table:table-row>
+<table:table-row table:style-name="ro2">
+<table:table-cell office:value-type="string">
+<text:p>Penny</text:p>
+</table:table-cell>
+<table:table-cell table:style-name="ce5" table:content-validation-name="val1" office:value-type="currency" office:currency="EUR" office:value="8.49">
+<text:p>8,49 €</text:p>
+</table:table-cell>
+<table:table-cell table:style-name="ce7" office:value-type="date" office:date-value="2014-03-05">
+<text:p>05.03.14</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val2" office:value-type="string">
+<text:p>Marc</text:p>
+</table:table-cell>
+</table:table-row>
+<table:table-row table:style-name="ro2">
+<table:table-cell office:value-type="string">
+<text:p>Penny</text:p>
+</table:table-cell>
+<table:table-cell table:style-name="ce5" table:content-validation-name="val1" office:value-type="currency" office:currency="EUR" office:value="15.84">
+<text:p>15,84 €</text:p>
+</table:table-cell>
+<table:table-cell table:style-name="ce7" office:value-type="date" office:date-value="2014-03-05">
+<text:p>05.03.14</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val2" office:value-type="string">
+<text:p>Marc</text:p>
+</table:table-cell>
+</table:table-row>
+<table:table-row table:style-name="ro2">
+<table:table-cell office:value-type="string">
+<text:p>Penny</text:p>
+</table:table-cell>
+<table:table-cell table:style-name="ce5" table:content-validation-name="val1" office:value-type="currency" office:currency="EUR" office:value="4.42">
+<text:p>4,42 €</text:p>
+</table:table-cell>
+<table:table-cell table:style-name="ce7" office:value-type="date" office:date-value="2014-03-07">
+<text:p>07.03.14</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val2" office:value-type="string">
+<text:p>Marc</text:p>
+</table:table-cell>
+</table:table-row>
+<table:table-row table:style-name="ro1">
+<table:table-cell office:value-type="string">
+<text:p>Telekom</text:p>
+</table:table-cell>
+<table:table-cell table:style-name="ce5" table:content-validation-name="val1" office:value-type="currency" office:currency="EUR" office:value="58.14">
+<text:p>58,14 €</text:p>
+</table:table-cell>
+<table:table-cell table:style-name="ce7" office:value-type="date" office:date-value="2014-03-10">
+<text:p>10.03.14</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val2" office:value-type="string">
+<text:p>Marc</text:p>
+</table:table-cell>
+</table:table-row>
+<table:table-row table:style-name="ro2">
+<table:table-cell office:value-type="string">
+<text:p>Penny</text:p>
+</table:table-cell>
+<table:table-cell table:style-name="ce5" table:content-validation-name="val1" office:value-type="currency" office:currency="EUR" office:value="2.07">
+<text:p>2,07 €</text:p>
+</table:table-cell>
+<table:table-cell table:style-name="ce7" office:value-type="date" office:date-value="2014-03-11">
+<text:p>11.03.14</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val2" office:value-type="string">
+<text:p>Janine</text:p>
+</table:table-cell>
+</table:table-row>
+<table:table-row table:style-name="ro2">
+<table:table-cell office:value-type="string">
+<text:p>Penny</text:p>
+</table:table-cell>
+<table:table-cell table:style-name="ce5" table:content-validation-name="val1" office:value-type="currency" office:currency="EUR" office:value="11.69">
+<text:p>11,69 €</text:p>
+</table:table-cell>
+<table:table-cell table:style-name="ce7" office:value-type="date" office:date-value="2014-03-12">
+<text:p>12.03.14</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val3" office:value-type="string">
+<text:p>Janine</text:p>
+</table:table-cell>
+</table:table-row>
+<table:table-row table:style-name="ro1">
+<table:table-cell office:value-type="string">
+<text:p>Marktkauf</text:p>
+</table:table-cell>
+<table:table-cell table:style-name="ce5" table:content-validation-name="val1" office:value-type="currency" office:currency="EUR" office:value="12.69">
+<text:p>12,69 €</text:p>
+</table:table-cell>
+<table:table-cell table:style-name="ce7" office:value-type="date" office:date-value="2014-03-12">
+<text:p>12.03.14</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val2" office:value-type="string">
+<text:p>Janine</text:p>
+</table:table-cell>
+</table:table-row>
+<table:table-row table:style-name="ro1">
+<table:table-cell office:value-type="string">
+<text:p>Marktkauf</text:p>
+</table:table-cell>
+<table:table-cell table:style-name="ce5" table:content-validation-name="val1" office:value-type="currency" office:currency="EUR" office:value="14.93">
+<text:p>14,93 €</text:p>
+</table:table-cell>
+<table:table-cell table:style-name="ce7" office:value-type="date" office:date-value="2014-03-13">
+<text:p>13.03.14</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val3" office:value-type="string">
+<text:p>Janine</text:p>
+</table:table-cell>
+</table:table-row>
+<table:table-row table:style-name="ro2">
+<table:table-cell office:value-type="string">
+<text:p>Penny</text:p>
+</table:table-cell>
+<table:table-cell table:style-name="ce5" table:content-validation-name="val1" office:value-type="currency" office:currency="EUR" office:value="3.96">
+<text:p>3,96 €</text:p>
+</table:table-cell>
+<table:table-cell table:style-name="ce7" office:value-type="date" office:date-value="2014-03-13">
+<text:p>13.03.14</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val3" office:value-type="string">
+<text:p>Janine</text:p>
+</table:table-cell>
+</table:table-row>
+<table:table-row table:style-name="ro1">
+<table:table-cell office:value-type="string">
+<text:p>REWE</text:p>
+</table:table-cell>
+<table:table-cell table:style-name="ce5" table:content-validation-name="val1" office:value-type="currency" office:currency="EUR" office:value="1.69">
+<text:p>1,69 €</text:p>
+</table:table-cell>
+<table:table-cell table:style-name="ce7" office:value-type="date" office:date-value="2014-03-14">
+<text:p>14.03.14</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val2" office:value-type="string">
+<text:p>Marc</text:p>
+</table:table-cell>
+</table:table-row>
+<table:table-row table:style-name="ro2">
+<table:table-cell office:value-type="string">
+<text:p>Penny</text:p>
+</table:table-cell>
+<table:table-cell table:style-name="ce5" table:content-validation-name="val1" office:value-type="currency" office:currency="EUR" office:value="4.31">
+<text:p>4,31 €</text:p>
+</table:table-cell>
+<table:table-cell table:style-name="ce7" office:value-type="date" office:date-value="2014-03-14">
+<text:p>14.03.14</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val2" office:value-type="string">
+<text:p>Marc</text:p>
+</table:table-cell>
+</table:table-row>
+<table:table-row table:style-name="ro2">
+<table:table-cell office:value-type="string">
+<text:p>Penny</text:p>
+</table:table-cell>
+<table:table-cell table:style-name="ce5" table:content-validation-name="val1" office:value-type="currency" office:currency="EUR" office:value="6.27">
+<text:p>6,27 €</text:p>
+</table:table-cell>
+<table:table-cell table:style-name="ce7" office:value-type="date" office:date-value="2014-03-15">
+<text:p>15.03.14</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val2" office:value-type="string">
+<text:p>Marc</text:p>
+</table:table-cell>
+</table:table-row>
+<table:table-row table:style-name="ro2">
+<table:table-cell office:value-type="string">
+<text:p>Penny</text:p>
+</table:table-cell>
+<table:table-cell table:style-name="ce5" table:content-validation-name="val1" office:value-type="currency" office:currency="EUR" office:value="8.48">
+<text:p>8,48 €</text:p>
+</table:table-cell>
+<table:table-cell table:style-name="ce7" office:value-type="date" office:date-value="2014-03-17">
+<text:p>17.03.14</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val2" office:value-type="string">
+<text:p>Janine</text:p>
+</table:table-cell>
+</table:table-row>
+<table:table-row table:style-name="ro1">
+<table:table-cell office:value-type="string">
+<text:p>Real</text:p>
+</table:table-cell>
+<table:table-cell table:style-name="ce5" table:content-validation-name="val1" office:value-type="currency" office:currency="EUR" office:value="10.9">
+<text:p>10,90 €</text:p>
+</table:table-cell>
+<table:table-cell table:style-name="ce7" office:value-type="date" office:date-value="2014-03-18">
+<text:p>18.03.14</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val2" office:value-type="string">
+<text:p>Janine</text:p>
+</table:table-cell>
+</table:table-row>
+<table:table-row table:style-name="ro1">
+<table:table-cell office:value-type="string">
+<text:p>Marktkauf</text:p>
+</table:table-cell>
+<table:table-cell table:style-name="ce5" table:content-validation-name="val1" office:value-type="currency" office:currency="EUR" office:value="2.17">
+<text:p>2,17 €</text:p>
+</table:table-cell>
+<table:table-cell table:style-name="ce7" office:value-type="date" office:date-value="2014-03-19">
+<text:p>19.03.14</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val2" office:value-type="string">
+<text:p>Janine</text:p>
+</table:table-cell>
+</table:table-row>
+<table:table-row table:style-name="ro1">
+<table:table-cell office:value-type="string">
+<text:p>Marktkauf</text:p>
+</table:table-cell>
+<table:table-cell table:style-name="ce5" table:content-validation-name="val1" office:value-type="currency" office:currency="EUR" office:value="11.99">
+<text:p>11,99 €</text:p>
+</table:table-cell>
+<table:table-cell table:style-name="ce7" office:value-type="date" office:date-value="2014-03-19">
+<text:p>19.03.14</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val2" office:value-type="string">
+<text:p>Marc</text:p>
+</table:table-cell>
+</table:table-row>
+<table:table-row table:style-name="ro1">
+<table:table-cell office:value-type="string">
+<text:p>Technik-Partner</text:p>
+</table:table-cell>
+<table:table-cell table:style-name="ce5" table:content-validation-name="val1" table:formula="of:=2*11.99" office:value-type="currency" office:currency="EUR" office:value="23.98">
+<text:p>23,98 €</text:p>
+</table:table-cell>
+<table:table-cell table:style-name="ce7" office:value-type="date" office:date-value="2014-03-19">
+<text:p>19.03.14</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val2" office:value-type="string">
+<text:p>Marc</text:p>
+</table:table-cell>
+</table:table-row>
+<table:table-row table:style-name="ro1">
+<table:table-cell office:value-type="string">
+<text:p>Kaufhaus</text:p>
+</table:table-cell>
+<table:table-cell table:style-name="ce5" table:content-validation-name="val1" office:value-type="currency" office:currency="EUR" office:value="2.5">
+<text:p>2,50 €</text:p>
+</table:table-cell>
+<table:table-cell table:style-name="ce7" office:value-type="date" office:date-value="2014-03-20">
+<text:p>20.03.14</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val2" office:value-type="string">
+<text:p>Janine</text:p>
+</table:table-cell>
+</table:table-row>
+<table:table-row table:style-name="ro2">
+<table:table-cell office:value-type="string">
+<text:p>Penny</text:p>
+</table:table-cell>
+<table:table-cell table:style-name="ce5" table:content-validation-name="val1" office:value-type="currency" office:currency="EUR" office:value="4.81">
+<text:p>4,81 €</text:p>
+</table:table-cell>
+<table:table-cell table:style-name="ce7" office:value-type="date" office:date-value="2014-03-20">
+<text:p>20.03.14</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val2" office:value-type="string">
+<text:p>Janine</text:p>
+</table:table-cell>
+</table:table-row>
+<table:table-row table:style-name="ro1">
+<table:table-cell office:value-type="string">
+<text:p>Lidl</text:p>
+</table:table-cell>
+<table:table-cell table:style-name="ce5" table:content-validation-name="val1" office:value-type="currency" office:currency="EUR" office:value="1.33">
+<text:p>1,33 €</text:p>
+</table:table-cell>
+<table:table-cell table:style-name="ce7" office:value-type="date" office:date-value="2014-03-20">
+<text:p>20.03.14</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val2" office:value-type="string">
+<text:p>Janine</text:p>
+</table:table-cell>
+</table:table-row>
+<table:table-row table:style-name="ro2">
+<table:table-cell office:value-type="string">
+<text:p>Blockhaus-Verechnung</text:p>
+</table:table-cell>
+<table:table-cell table:style-name="ce5" table:content-validation-name="val1" office:value-type="currency" office:currency="EUR" office:value="22">
+<text:p>22,00 €</text:p>
+</table:table-cell>
+<table:table-cell table:style-name="ce7" office:value-type="date" office:date-value="2014-03-20">
+<text:p>20.03.14</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val2" office:value-type="string">
+<text:p>Marc</text:p>
+</table:table-cell>
+</table:table-row>
+<table:table-row table:style-name="ro2">
+<table:table-cell office:value-type="string">
+<text:p>Penny</text:p>
+</table:table-cell>
+<table:table-cell table:style-name="ce5" table:content-validation-name="val1" office:value-type="currency" office:currency="EUR" office:value="1.87">
+<text:p>1,87 €</text:p>
+</table:table-cell>
+<table:table-cell table:style-name="ce7" office:value-type="date" office:date-value="2014-03-24">
+<text:p>24.03.14</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val2" office:value-type="string">
+<text:p>Janine</text:p>
+</table:table-cell>
+</table:table-row>
+<table:table-row table:style-name="ro2">
+<table:table-cell table:style-name="ce3" office:value-type="string">
+<text:p>Penny</text:p>
+</table:table-cell>
+<table:table-cell table:style-name="ce5" table:content-validation-name="val1" office:value-type="currency" office:currency="EUR" office:value="12.53">
+<text:p>12,53 €</text:p>
+</table:table-cell>
+<table:table-cell table:style-name="ce7" office:value-type="date" office:date-value="2014-03-26">
+<text:p>26.03.14</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val2" office:value-type="string">
+<text:p>Janine</text:p>
+</table:table-cell>
+</table:table-row>
+<table:table-row table:style-name="ro2">
+<table:table-cell office:value-type="string">
+<text:p>Penny</text:p>
+</table:table-cell>
+<table:table-cell table:style-name="ce5" table:content-validation-name="val1" office:value-type="currency" office:currency="EUR" office:value="5.07">
+<text:p>5,07 €</text:p>
+</table:table-cell>
+<table:table-cell table:style-name="ce7" office:value-type="date" office:date-value="2014-03-26">
+<text:p>26.03.14</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val2" office:value-type="string">
+<text:p>Marc</text:p>
+</table:table-cell>
+</table:table-row>
+<table:table-row table:style-name="ro1">
+<table:table-cell office:value-type="string">
+<text:p>Marktkauf</text:p>
+</table:table-cell>
+<table:table-cell table:style-name="ce5" table:content-validation-name="val1" office:value-type="currency" office:currency="EUR" office:value="23.31">
+<text:p>23,31 €</text:p>
+</table:table-cell>
+<table:table-cell table:style-name="ce7" office:value-type="date" office:date-value="2014-03-26">
+<text:p>26.03.14</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val2" office:value-type="string">
+<text:p>Marc</text:p>
+</table:table-cell>
+</table:table-row>
+<table:table-row table:style-name="ro2">
+<table:table-cell table:style-name="ce3" office:value-type="string">
+<text:p>Penny</text:p>
+</table:table-cell>
+<table:table-cell table:style-name="ce5" table:content-validation-name="val1" office:value-type="currency" office:currency="EUR" office:value="1.98">
+<text:p>1,98 €</text:p>
+</table:table-cell>
+<table:table-cell table:style-name="ce7" office:value-type="date" office:date-value="2014-03-28">
+<text:p>28.03.14</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val2" office:value-type="string">
+<text:p>Janine </text:p>
+</table:table-cell>
+</table:table-row>
+<table:table-row table:style-name="ro1">
+<table:table-cell office:value-type="string">
+<text:p>Marktkauf</text:p>
+</table:table-cell>
+<table:table-cell table:style-name="ce5" table:content-validation-name="val1" office:value-type="currency" office:currency="EUR" office:value="9.7">
+<text:p>9,70 €</text:p>
+</table:table-cell>
+<table:table-cell table:style-name="ce7" office:value-type="date" office:date-value="2014-03-29">
+<text:p>29.03.14</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val2" office:value-type="string">
+<text:p>Janine</text:p>
+</table:table-cell>
+</table:table-row>
+<table:table-row table:style-name="ro2">
+<table:table-cell office:value-type="string">
+<text:p>Olli</text:p>
+</table:table-cell>
+<table:table-cell table:style-name="ce5" table:content-validation-name="val1" office:value-type="currency" office:currency="EUR" office:value="3">
+<text:p>3,00 €</text:p>
+</table:table-cell>
+<table:table-cell table:style-name="ce7" office:value-type="date" office:date-value="2014-03-01">
+<text:p>01.03.14</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val2" office:value-type="string">
+<text:p>Marc</text:p>
+</table:table-cell>
+</table:table-row>
+<table:table-row table:style-name="ro2">
+<table:table-cell office:value-type="string">
+<text:p>Olli</text:p>
+</table:table-cell>
+<table:table-cell table:style-name="ce5" table:content-validation-name="val1" office:value-type="currency" office:currency="EUR" office:value="4.85">
+<text:p>4,85 €</text:p>
+</table:table-cell>
+<table:table-cell table:style-name="ce7" office:value-type="date" office:date-value="2014-03-01">
+<text:p>01.03.14</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val2" office:value-type="string">
+<text:p>Janine</text:p>
+</table:table-cell>
+</table:table-row>
+<table:table-row table:style-name="ro2">
+<table:table-cell office:value-type="string">
+<text:p>Penny</text:p>
+</table:table-cell>
+<table:table-cell office:value-type="float" office:value="10.45">
+<text:p>10,45</text:p>
+</table:table-cell>
+<table:table-cell table:style-name="ce3" office:value-type="date" office:date-value="2014-03-31">
+<text:p>31.03.14</text:p>
+</table:table-cell>
+<table:table-cell office:value-type="string">
+<text:p>Janine</text:p>
+</table:table-cell>
+</table:table-row>
+</table:table>
+<table:table table:name="2014_April" table:style-name="ta1" table:print="false">
+<table:table-column table:style-name="co1" table:default-cell-style-name="Default"/>
+<table:table-column table:style-name="co2" table:default-cell-style-name="ce5"/>
+<table:table-column table:style-name="co2" table:default-cell-style-name="ce7"/>
+<table:table-column table:style-name="co2" table:default-cell-style-name="Default"/>
+<table:table-row table:style-name="ro1">
+<table:table-cell table:style-name="ce1" office:value-type="string">
+<text:p>Verwendung</text:p>
+</table:table-cell>
+<table:table-cell table:style-name="ce4" office:value-type="string">
+<text:p>Betrag</text:p>
+</table:table-cell>
+<table:table-cell table:style-name="ce6" office:value-type="string">
+<text:p>Datum</text:p>
+</table:table-cell>
+<table:table-cell table:style-name="ce1" table:content-validation-name="val4" office:value-type="string">
+<text:p>Wer</text:p>
+</table:table-cell>
+</table:table-row>
+<table:table-row table:style-name="ro1">
+<table:table-cell table:style-name="ce2" office:value-type="string">
+<text:p>Beispiel</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val1" office:value-type="currency" office:currency="EUR" office:value="0">
+<text:p>0,00 €</text:p>
+</table:table-cell>
+<table:table-cell office:value-type="date" office:date-value="2014-04-01">
+<text:p>01.04.14</text:p>
+</table:table-cell>
+<table:table-cell table:style-name="ce8" table:content-validation-name="val4" office:value-type="string">
+<text:p>Marc</text:p>
+</table:table-cell>
+</table:table-row>
+<table:table-row table:style-name="ro1">
+<table:table-cell table:style-name="ce2" office:value-type="string">
+<text:p>Beispiel</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val1" office:value-type="currency" office:currency="EUR" office:value="0">
+<text:p>0,00 €</text:p>
+</table:table-cell>
+<table:table-cell office:value-type="date" office:date-value="2014-04-01">
+<text:p>01.04.14</text:p>
+</table:table-cell>
+<table:table-cell table:style-name="ce9" table:content-validation-name="val4" office:value-type="string">
+<text:p>Janine</text:p>
+</table:table-cell>
+</table:table-row>
+<table:table-row table:style-name="ro2">
+<table:table-cell office:value-type="string">
+<text:p>Penny</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val1" office:value-type="currency" office:currency="EUR" office:value="20.51">
+<text:p>20,51 €</text:p>
+</table:table-cell>
+<table:table-cell office:value-type="date" office:date-value="2014-04-01">
+<text:p>01.04.14</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val4" office:value-type="string">
+<text:p>Marc</text:p>
+</table:table-cell>
+</table:table-row>
+<table:table-row table:style-name="ro2">
+<table:table-cell office:value-type="string">
+<text:p>Penny</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val1" office:value-type="currency" office:currency="EUR" office:value="2.41">
+<text:p>2,41 €</text:p>
+</table:table-cell>
+<table:table-cell office:value-type="date" office:date-value="2014-04-02">
+<text:p>02.04.14</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val2" office:value-type="string">
+<text:p>Janine</text:p>
+</table:table-cell>
+</table:table-row>
+<table:table-row table:style-name="ro2">
+<table:table-cell office:value-type="string">
+<text:p>Penny</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val1" office:value-type="currency" office:currency="EUR" office:value="4.94">
+<text:p>4,94 €</text:p>
+</table:table-cell>
+<table:table-cell office:value-type="date" office:date-value="2014-04-03">
+<text:p>03.04.14</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val2" office:value-type="string">
+<text:p>Janine</text:p>
+</table:table-cell>
+</table:table-row>
+<table:table-row table:style-name="ro2">
+<table:table-cell office:value-type="string">
+<text:p>Penny</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val1" office:value-type="currency" office:currency="EUR" office:value="1.38">
+<text:p>1,38 €</text:p>
+</table:table-cell>
+<table:table-cell office:value-type="date" office:date-value="2014-04-03">
+<text:p>03.04.14</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val2" office:value-type="string">
+<text:p>Janine</text:p>
+</table:table-cell>
+</table:table-row>
+<table:table-row table:style-name="ro1">
+<table:table-cell office:value-type="string">
+<text:p>Marktkauf</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val1" office:value-type="currency" office:currency="EUR" office:value="14.5">
+<text:p>14,50 €</text:p>
+</table:table-cell>
+<table:table-cell office:value-type="date" office:date-value="2014-04-05">
+<text:p>05.04.14</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val2" office:value-type="string">
+<text:p>Janine</text:p>
+</table:table-cell>
+</table:table-row>
+<table:table-row table:style-name="ro2">
+<table:table-cell office:value-type="string">
+<text:p>Penny</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val1" office:value-type="currency" office:currency="EUR" office:value="5.42">
+<text:p>5,42 €</text:p>
+</table:table-cell>
+<table:table-cell office:value-type="date" office:date-value="2014-04-05">
+<text:p>05.04.14</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val2" office:value-type="string">
+<text:p>Janine</text:p>
+</table:table-cell>
+</table:table-row>
+<table:table-row table:style-name="ro2">
+<table:table-cell office:value-type="string">
+<text:p>Penny</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val1" office:value-type="currency" office:currency="EUR" office:value="2.16">
+<text:p>2,16 €</text:p>
+</table:table-cell>
+<table:table-cell office:value-type="date" office:date-value="2014-04-07">
+<text:p>07.04.14</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val2" office:value-type="string">
+<text:p>Janine</text:p>
+</table:table-cell>
+</table:table-row>
+<table:table-row table:style-name="ro1">
+<table:table-cell office:value-type="string">
+<text:p>Telekom</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val1" office:value-type="currency" office:currency="EUR" office:value="57.76">
+<text:p>57,76 €</text:p>
+</table:table-cell>
+<table:table-cell office:value-type="date" office:date-value="2014-04-07">
+<text:p>07.04.14</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val4" office:value-type="string">
+<text:p>Marc</text:p>
+</table:table-cell>
+</table:table-row>
+<table:table-row table:style-name="ro2">
+<table:table-cell office:value-type="string">
+<text:p>Penny</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val1" office:value-type="currency" office:currency="EUR" office:value="2.57">
+<text:p>2,57 €</text:p>
+</table:table-cell>
+<table:table-cell office:value-type="date" office:date-value="2014-04-08">
+<text:p>08.04.14</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val2" office:value-type="string">
+<text:p>Janine</text:p>
+</table:table-cell>
+</table:table-row>
+<table:table-row table:style-name="ro1">
+<table:table-cell office:value-type="string">
+<text:p>Marktkauf</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val1" office:value-type="currency" office:currency="EUR" office:value="10.5">
+<text:p>10,50 €</text:p>
+</table:table-cell>
+<table:table-cell office:value-type="date" office:date-value="2014-04-08">
+<text:p>08.04.14</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val4" office:value-type="string">
+<text:p>Marc</text:p>
+</table:table-cell>
+</table:table-row>
+<table:table-row table:style-name="ro1">
+<table:table-cell office:value-type="string">
+<text:p>REWE</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val1" office:value-type="currency" office:currency="EUR" office:value="3.62">
+<text:p>3,62 €</text:p>
+</table:table-cell>
+<table:table-cell office:value-type="date" office:date-value="2014-04-09">
+<text:p>09.04.14</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val2" office:value-type="string">
+<text:p>Janine</text:p>
+</table:table-cell>
+</table:table-row>
+<table:table-row table:style-name="ro2">
+<table:table-cell office:value-type="string">
+<text:p>PizzaIn</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val1" office:value-type="currency" office:currency="EUR" office:value="8.2">
+<text:p>8,20 €</text:p>
+</table:table-cell>
+<table:table-cell office:value-type="date" office:date-value="2014-04-09">
+<text:p>09.04.14</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val2" office:value-type="string">
+<text:p>Janine</text:p>
+</table:table-cell>
+</table:table-row>
+<table:table-row table:style-name="ro2">
+<table:table-cell office:value-type="string">
+<text:p>Penny</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val1" office:value-type="currency" office:currency="EUR" office:value="5.97">
+<text:p>5,97 €</text:p>
+</table:table-cell>
+<table:table-cell office:value-type="date" office:date-value="2014-04-10">
+<text:p>10.04.14</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val4" office:value-type="string">
+<text:p>Marc</text:p>
+</table:table-cell>
+</table:table-row>
+<table:table-row table:style-name="ro2">
+<table:table-cell office:value-type="string">
+<text:p>Penny </text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val1" office:value-type="currency" office:currency="EUR" office:value="6.01">
+<text:p>6,01 €</text:p>
+</table:table-cell>
+<table:table-cell office:value-type="date" office:date-value="2014-04-11">
+<text:p>11.04.14</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val4" office:value-type="string">
+<text:p>Janine</text:p>
+</table:table-cell>
+</table:table-row>
+<table:table-row table:style-name="ro2">
+<table:table-cell table:style-name="ce3" office:value-type="string">
+<text:p>Penny</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val1" office:value-type="currency" office:currency="EUR" office:value="10.46">
+<text:p>10,46 €</text:p>
+</table:table-cell>
+<table:table-cell office:value-type="date" office:date-value="2014-04-11">
+<text:p>11.04.14</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val4" office:value-type="string">
+<text:p>Janine</text:p>
+</table:table-cell>
+</table:table-row>
+<table:table-row table:style-name="ro2">
+<table:table-cell office:value-type="string">
+<text:p>Penny</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val1" office:value-type="currency" office:currency="EUR" office:value="1.99">
+<text:p>1,99 €</text:p>
+</table:table-cell>
+<table:table-cell office:value-type="date" office:date-value="2014-04-11">
+<text:p>11.04.14</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val4" office:value-type="string">
+<text:p>Janine</text:p>
+</table:table-cell>
+</table:table-row>
+<table:table-row table:style-name="ro1">
+<table:table-cell office:value-type="string">
+<text:p>Marktkauf</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val1" office:value-type="currency" office:currency="EUR" office:value="11.5">
+<text:p>11,50 €</text:p>
+</table:table-cell>
+<table:table-cell office:value-type="date" office:date-value="2014-04-12">
+<text:p>12.04.14</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val4" office:value-type="string">
+<text:p>Janine</text:p>
+</table:table-cell>
+</table:table-row>
+<table:table-row table:style-name="ro2">
+<table:table-cell office:value-type="string">
+<text:p>Penny</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val1" office:value-type="currency" office:currency="EUR" office:value="1.43">
+<text:p>1,43 €</text:p>
+</table:table-cell>
+<table:table-cell office:value-type="date" office:date-value="2014-04-14">
+<text:p>14.04.14</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val4" office:value-type="string">
+<text:p>Janine</text:p>
+</table:table-cell>
+</table:table-row>
+<table:table-row table:style-name="ro1">
+<table:table-cell office:value-type="string">
+<text:p>Marktkauf</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val1" office:value-type="currency" office:currency="EUR" office:value="6.65">
+<text:p>6,65 €</text:p>
+</table:table-cell>
+<table:table-cell office:value-type="date" office:date-value="2014-04-14">
+<text:p>14.04.14</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val4" office:value-type="string">
+<text:p>Janine</text:p>
+</table:table-cell>
+</table:table-row>
+<table:table-row table:style-name="ro1">
+<table:table-cell table:style-name="ce3" office:value-type="string">
+<text:p>Marktkauf</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val1" office:value-type="currency" office:currency="EUR" office:value="12.42">
+<text:p>12,42 €</text:p>
+</table:table-cell>
+<table:table-cell office:value-type="date" office:date-value="2014-04-15">
+<text:p>15.04.14</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val4" office:value-type="string">
+<text:p>Janine</text:p>
+</table:table-cell>
+</table:table-row>
+<table:table-row table:style-name="ro2">
+<table:table-cell office:value-type="string">
+<text:p>Penny</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val1" office:value-type="currency" office:currency="EUR" office:value="0.78">
+<text:p>0,78 €</text:p>
+</table:table-cell>
+<table:table-cell office:value-type="date" office:date-value="2014-04-16">
+<text:p>16.04.14</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val4" office:value-type="string">
+<text:p>Janine</text:p>
+</table:table-cell>
+</table:table-row>
+<table:table-row table:style-name="ro2">
+<table:table-cell office:value-type="string">
+<text:p>Penny</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val1" office:value-type="currency" office:currency="EUR" office:value="1.79">
+<text:p>1,79 €</text:p>
+</table:table-cell>
+<table:table-cell office:value-type="date" office:date-value="2014-04-16">
+<text:p>16.04.14</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val4" office:value-type="string">
+<text:p>Janine</text:p>
+</table:table-cell>
+</table:table-row>
+<table:table-row table:style-name="ro1">
+<table:table-cell office:value-type="string">
+<text:p>McDonalds</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val1" office:value-type="currency" office:currency="EUR" office:value="4.29">
+<text:p>4,29 €</text:p>
+</table:table-cell>
+<table:table-cell office:value-type="date" office:date-value="2014-04-17">
+<text:p>17.04.14</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val4" office:value-type="string">
+<text:p>Janine</text:p>
+</table:table-cell>
+</table:table-row>
+<table:table-row table:style-name="ro1">
+<table:table-cell office:value-type="string">
+<text:p>Tierpark</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val1" office:value-type="currency" office:currency="EUR" office:value="18">
+<text:p>18,00 €</text:p>
+</table:table-cell>
+<table:table-cell office:value-type="date" office:date-value="2014-04-18">
+<text:p>18.04.14</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val4" office:value-type="string">
+<text:p>Janine</text:p>
+</table:table-cell>
+</table:table-row>
+<table:table-row table:style-name="ro2">
+<table:table-cell office:value-type="string">
+<text:p>Rossmann</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val1" office:value-type="currency" office:currency="EUR" office:value="14.05">
+<text:p>14,05 €</text:p>
+</table:table-cell>
+<table:table-cell office:value-type="date" office:date-value="2014-04-19">
+<text:p>19.04.14</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val4" office:value-type="string">
+<text:p>Janine</text:p>
+</table:table-cell>
+</table:table-row>
+<table:table-row table:style-name="ro2">
+<table:table-cell office:value-type="string">
+<text:p>Famila</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val1" office:value-type="currency" office:currency="EUR" office:value="18.33">
+<text:p>18,33 €</text:p>
+</table:table-cell>
+<table:table-cell office:value-type="date" office:date-value="2014-04-19">
+<text:p>19.04.14</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val4" office:value-type="string">
+<text:p>Janine</text:p>
+</table:table-cell>
+</table:table-row>
+<table:table-row table:style-name="ro2">
+<table:table-cell office:value-type="string">
+<text:p>Penny</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val1" office:value-type="currency" office:currency="EUR" office:value="37.98">
+<text:p>37,98 €</text:p>
+</table:table-cell>
+<table:table-cell office:value-type="date" office:date-value="2014-04-19">
+<text:p>19.04.14</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val4" office:value-type="string">
+<text:p>Marc</text:p>
+</table:table-cell>
+</table:table-row>
+<table:table-row table:style-name="ro2">
+<table:table-cell office:value-type="string">
+<text:p>Penny</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val1" office:value-type="currency" office:currency="EUR" office:value="1.46">
+<text:p>1,46 €</text:p>
+</table:table-cell>
+<table:table-cell office:value-type="date" office:date-value="2014-04-22">
+<text:p>22.04.14</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val4" office:value-type="string">
+<text:p>Janine</text:p>
+</table:table-cell>
+</table:table-row>
+<table:table-row table:style-name="ro2">
+<table:table-cell office:value-type="string">
+<text:p>Penny</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val1" office:value-type="currency" office:currency="EUR" office:value="1.77">
+<text:p>1,77 €</text:p>
+</table:table-cell>
+<table:table-cell office:value-type="date" office:date-value="2014-04-22">
+<text:p>22.04.14</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val4" office:value-type="string">
+<text:p>Janine</text:p>
+</table:table-cell>
+</table:table-row>
+<table:table-row table:style-name="ro2">
+<table:table-cell office:value-type="string">
+<text:p>Penny</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val1" office:value-type="currency" office:currency="EUR" office:value="5.24">
+<text:p>5,24 €</text:p>
+</table:table-cell>
+<table:table-cell office:value-type="date" office:date-value="2014-04-22">
+<text:p>22.04.14</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val4" office:value-type="string">
+<text:p>Janine</text:p>
+</table:table-cell>
+</table:table-row>
+<table:table-row table:style-name="ro2">
+<table:table-cell table:style-name="ce3" office:value-type="string">
+<text:p>Penny</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val1" office:value-type="currency" office:currency="EUR" office:value="8.23">
+<text:p>8,23 €</text:p>
+</table:table-cell>
+<table:table-cell office:value-type="date" office:date-value="2014-04-23">
+<text:p>23.04.14</text:p>
+</table:table-cell>
+<table:table-cell table:style-name="ce10" table:content-validation-name="val4" office:value-type="string">
+<text:p>Janine</text:p>
+</table:table-cell>
+</table:table-row>
+<table:table-row table:style-name="ro2">
+<table:table-cell office:value-type="string">
+<text:p>Penny</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val1" office:value-type="currency" office:currency="EUR" office:value="19.1">
+<text:p>19,10 €</text:p>
+</table:table-cell>
+<table:table-cell office:value-type="date" office:date-value="2014-04-24">
+<text:p>24.04.14</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val4" office:value-type="string">
+<text:p>Marc</text:p>
+</table:table-cell>
+</table:table-row>
+<table:table-row table:style-name="ro2">
+<table:table-cell office:value-type="string">
+<text:p>Penny</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val1" office:value-type="currency" office:currency="EUR" office:value="1.42">
+<text:p>1,42 €</text:p>
+</table:table-cell>
+<table:table-cell office:value-type="date" office:date-value="2014-04-26">
+<text:p>26.04.14</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val4" office:value-type="string">
+<text:p>Janine</text:p>
+</table:table-cell>
+</table:table-row>
+<table:table-row table:style-name="ro2">
+<table:table-cell office:value-type="string">
+<text:p>Penny</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val1" office:value-type="currency" office:currency="EUR" office:value="9.04">
+<text:p>9,04 €</text:p>
+</table:table-cell>
+<table:table-cell office:value-type="date" office:date-value="2014-04-26">
+<text:p>26.04.14</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val4" office:value-type="string">
+<text:p>Janine</text:p>
+</table:table-cell>
+</table:table-row>
+<table:table-row table:style-name="ro2">
+<table:table-cell office:value-type="string">
+<text:p>Penny</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val1" office:value-type="currency" office:currency="EUR" office:value="1.25">
+<text:p>1,25 €</text:p>
+</table:table-cell>
+<table:table-cell office:value-type="date" office:date-value="2014-04-28">
+<text:p>28.04.14</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val4" office:value-type="string">
+<text:p>Janine</text:p>
+</table:table-cell>
+</table:table-row>
+<table:table-row table:style-name="ro1">
+<table:table-cell office:value-type="string">
+<text:p>Marktkauf</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val1" office:value-type="currency" office:currency="EUR" office:value="21.63">
+<text:p>21,63 €</text:p>
+</table:table-cell>
+<table:table-cell office:value-type="date" office:date-value="2014-04-28">
+<text:p>28.04.14</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val4" office:value-type="string">
+<text:p>Janine</text:p>
+</table:table-cell>
+</table:table-row>
+<table:table-row table:style-name="ro2">
+<table:table-cell office:value-type="string">
+<text:p>Penny</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val1" office:value-type="currency" office:currency="EUR" office:value="-3.01">
+<text:p>-3,01 €</text:p>
+</table:table-cell>
+<table:table-cell office:value-type="date" office:date-value="2014-04-30">
+<text:p>30.04.14</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val4" office:value-type="string">
+<text:p>Janine</text:p>
+</table:table-cell>
+</table:table-row>
+<table:table-row table:style-name="ro1">
+<table:table-cell office:value-type="string">
+<text:p>real</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val1" office:value-type="currency" office:currency="EUR" office:value="3.18">
+<text:p>3,18 €</text:p>
+</table:table-cell>
+<table:table-cell office:value-type="date" office:date-value="2014-04-30">
+<text:p>30.04.14</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val4" office:value-type="string">
+<text:p>Janine</text:p>
+</table:table-cell>
+</table:table-row>
+</table:table>
+<table:table table:name="2014_Mai" table:style-name="ta1" table:print="false">
+<table:table-column table:style-name="co1" table:default-cell-style-name="Default"/>
+<table:table-column table:style-name="co2" table:default-cell-style-name="ce5"/>
+<table:table-column table:style-name="co2" table:default-cell-style-name="ce7"/>
+<table:table-column table:style-name="co2" table:default-cell-style-name="Default"/>
+<table:table-row table:style-name="ro1">
+<table:table-cell table:style-name="ce1" office:value-type="string">
+<text:p>Verwendung</text:p>
+</table:table-cell>
+<table:table-cell table:style-name="ce4" office:value-type="string">
+<text:p>Betrag</text:p>
+</table:table-cell>
+<table:table-cell table:style-name="ce6" office:value-type="string">
+<text:p>Datum</text:p>
+</table:table-cell>
+<table:table-cell table:style-name="ce1" table:content-validation-name="val5" office:value-type="string">
+<text:p>Wer</text:p>
+</table:table-cell>
+</table:table-row>
+<table:table-row table:style-name="ro1">
+<table:table-cell table:style-name="ce2" office:value-type="string">
+<text:p>Beispiel</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val1" office:value-type="currency" office:currency="EUR" office:value="0">
+<text:p>0,00 €</text:p>
+</table:table-cell>
+<table:table-cell office:value-type="date" office:date-value="2014-05-01">
+<text:p>01.05.14</text:p>
+</table:table-cell>
+<table:table-cell table:style-name="ce8" table:content-validation-name="val5" office:value-type="string">
+<text:p>Marc</text:p>
+</table:table-cell>
+</table:table-row>
+<table:table-row table:style-name="ro1">
+<table:table-cell table:style-name="ce2" office:value-type="string">
+<text:p>Beispiel</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val1" office:value-type="currency" office:currency="EUR" office:value="0">
+<text:p>0,00 €</text:p>
+</table:table-cell>
+<table:table-cell office:value-type="date" office:date-value="2014-05-01">
+<text:p>01.05.14</text:p>
+</table:table-cell>
+<table:table-cell table:style-name="ce9" table:content-validation-name="val5" office:value-type="string">
+<text:p>Janine</text:p>
+</table:table-cell>
+</table:table-row>
+<table:table-row table:style-name="ro2">
+<table:table-cell office:value-type="string">
+<text:p>Penny</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val1" office:value-type="currency" office:currency="EUR" office:value="4.42">
+<text:p>4,42 €</text:p>
+</table:table-cell>
+<table:table-cell office:value-type="date" office:date-value="2014-05-05">
+<text:p>05.05.14</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val5" office:value-type="string">
+<text:p>Janine</text:p>
+</table:table-cell>
+</table:table-row>
+<table:table-row table:style-name="ro1">
+<table:table-cell office:value-type="string">
+<text:p>Marktkauf</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val1" office:value-type="currency" office:currency="EUR" office:value="8.38">
+<text:p>8,38 €</text:p>
+</table:table-cell>
+<table:table-cell office:value-type="date" office:date-value="2014-05-05">
+<text:p>05.05.14</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val5" office:value-type="string">
+<text:p>Janine</text:p>
+</table:table-cell>
+</table:table-row>
+<table:table-row table:style-name="ro2">
+<table:table-cell table:style-name="ce3" office:value-type="string">
+<text:p>Penny</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val1" office:value-type="currency" office:currency="EUR" office:value="1.17">
+<text:p>1,17 €</text:p>
+</table:table-cell>
+<table:table-cell office:value-type="date" office:date-value="2014-05-05">
+<text:p>05.05.14</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val5" office:value-type="string">
+<text:p>Marc</text:p>
+</table:table-cell>
+</table:table-row>
+<table:table-row table:style-name="ro2">
+<table:table-cell office:value-type="string">
+<text:p>Penny</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val1" office:value-type="currency" office:currency="EUR" office:value="4.15">
+<text:p>4,15 €</text:p>
+</table:table-cell>
+<table:table-cell office:value-type="date" office:date-value="2014-05-06">
+<text:p>06.05.14</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val5" office:value-type="string">
+<text:p>Janine</text:p>
+</table:table-cell>
+</table:table-row>
+<table:table-row table:style-name="ro1">
+<table:table-cell office:value-type="string">
+<text:p>Marktkauf</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val1" office:value-type="currency" office:currency="EUR" office:value="10.36">
+<text:p>10,36 €</text:p>
+</table:table-cell>
+<table:table-cell office:value-type="date" office:date-value="2014-05-06">
+<text:p>06.05.14</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val5" office:value-type="string">
+<text:p>Janine</text:p>
+</table:table-cell>
+</table:table-row>
+<table:table-row table:style-name="ro2">
+<table:table-cell office:value-type="string">
+<text:p>Penny</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val1" office:value-type="currency" office:currency="EUR" office:value="1.9">
+<text:p>1,90 €</text:p>
+</table:table-cell>
+<table:table-cell office:value-type="date" office:date-value="2014-05-07">
+<text:p>07.05.14</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val5" office:value-type="string">
+<text:p>Janine</text:p>
+</table:table-cell>
+</table:table-row>
+<table:table-row table:style-name="ro2">
+<table:table-cell table:style-name="ce3" office:value-type="string">
+<text:p>Penny</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val1" table:formula="of:=28.99-25" office:value-type="currency" office:currency="EUR" office:value="3.99">
+<text:p>3,99 €</text:p>
+</table:table-cell>
+<table:table-cell office:value-type="date" office:date-value="2014-05-07">
+<text:p>07.05.14</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val5" office:value-type="string">
+<text:p>Marc</text:p>
+</table:table-cell>
+</table:table-row>
+<table:table-row table:style-name="ro1">
+<table:table-cell office:value-type="string">
+<text:p>Telekom</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val1" office:value-type="currency" office:currency="EUR" office:value="57.95">
+<text:p>57,95 €</text:p>
+</table:table-cell>
+<table:table-cell office:value-type="date" office:date-value="2014-05-08">
+<text:p>08.05.14</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val5" office:value-type="string">
+<text:p>Marc</text:p>
+</table:table-cell>
+</table:table-row>
+<table:table-row table:style-name="ro2">
+<table:table-cell office:value-type="string">
+<text:p>Penny</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val1" office:value-type="currency" office:currency="EUR" office:value="2.49">
+<text:p>2,49 €</text:p>
+</table:table-cell>
+<table:table-cell table:style-name="ce3" office:value-type="date" office:date-value="2014-05-09">
+<text:p>09.05.14</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val5" office:value-type="string">
+<text:p>Janine</text:p>
+</table:table-cell>
+</table:table-row>
+<table:table-row table:style-name="ro2">
+<table:table-cell office:value-type="string">
+<text:p>Penny</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val1" office:value-type="currency" office:currency="EUR" office:value="4.29">
+<text:p>4,29 €</text:p>
+</table:table-cell>
+<table:table-cell office:value-type="date" office:date-value="2014-05-12">
+<text:p>12.05.14</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val5" office:value-type="string">
+<text:p>Janine</text:p>
+</table:table-cell>
+</table:table-row>
+<table:table-row table:style-name="ro1">
+<table:table-cell office:value-type="string">
+<text:p>Marktkauf</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val1" office:value-type="currency" office:currency="EUR" office:value="11.61">
+<text:p>11,61 €</text:p>
+</table:table-cell>
+<table:table-cell office:value-type="date" office:date-value="2014-05-12">
+<text:p>12.05.14</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val5" office:value-type="string">
+<text:p>Marc</text:p>
+</table:table-cell>
+</table:table-row>
+<table:table-row table:style-name="ro2">
+<table:table-cell office:value-type="string">
+<text:p>Penny</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val1" office:value-type="currency" office:currency="EUR" office:value="3.57">
+<text:p>3,57 €</text:p>
+</table:table-cell>
+<table:table-cell office:value-type="date" office:date-value="2014-05-13">
+<text:p>13.05.14</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val5" office:value-type="string">
+<text:p>Janine</text:p>
+</table:table-cell>
+</table:table-row>
+<table:table-row table:style-name="ro2">
+<table:table-cell office:value-type="string">
+<text:p>Penny</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val1" office:value-type="currency" office:currency="EUR" office:value="4.62">
+<text:p>4,62 €</text:p>
+</table:table-cell>
+<table:table-cell office:value-type="date" office:date-value="2014-05-14">
+<text:p>14.05.14</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val5" office:value-type="string">
+<text:p>Janine</text:p>
+</table:table-cell>
+</table:table-row>
+<table:table-row table:style-name="ro2">
+<table:table-cell office:value-type="string">
+<text:p>Penny</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val1" office:value-type="currency" office:currency="EUR" office:value="1.69">
+<text:p>1,69 €</text:p>
+</table:table-cell>
+<table:table-cell office:value-type="date" office:date-value="2014-05-14">
+<text:p>14.05.14</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val5" office:value-type="string">
+<text:p>Janine</text:p>
+</table:table-cell>
+</table:table-row>
+<table:table-row table:style-name="ro1">
+<table:table-cell office:value-type="string">
+<text:p>Marktkauf</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val1" office:value-type="currency" office:currency="EUR" office:value="15.79">
+<text:p>15,79 €</text:p>
+</table:table-cell>
+<table:table-cell office:value-type="date" office:date-value="2014-05-15">
+<text:p>15.05.14</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val5" office:value-type="string">
+<text:p>Janine</text:p>
+</table:table-cell>
+</table:table-row>
+<table:table-row table:style-name="ro2">
+<table:table-cell office:value-type="string">
+<text:p>Penny</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val1" office:value-type="currency" office:currency="EUR" office:value="5.76">
+<text:p>5,76 €</text:p>
+</table:table-cell>
+<table:table-cell office:value-type="date" office:date-value="2014-05-15">
+<text:p>15.05.14</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val5" office:value-type="string">
+<text:p>Janine</text:p>
+</table:table-cell>
+</table:table-row>
+<table:table-row table:style-name="ro2">
+<table:table-cell office:value-type="string">
+<text:p>Penny</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val1" office:value-type="currency" office:currency="EUR" office:value="2.13">
+<text:p>2,13 €</text:p>
+</table:table-cell>
+<table:table-cell office:value-type="date" office:date-value="2014-05-16">
+<text:p>16.05.14</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val5" office:value-type="string">
+<text:p>Janine</text:p>
+</table:table-cell>
+</table:table-row>
+<table:table-row table:style-name="ro1">
+<table:table-cell office:value-type="string">
+<text:p>Marktkauf</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val1" office:value-type="currency" office:currency="EUR" office:value="7.02">
+<text:p>7,02 €</text:p>
+</table:table-cell>
+<table:table-cell office:value-type="date" office:date-value="2014-05-16">
+<text:p>16.05.14</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val5" office:value-type="string">
+<text:p>Janine</text:p>
+</table:table-cell>
+</table:table-row>
+<table:table-row table:style-name="ro2">
+<table:table-cell office:value-type="string">
+<text:p>Penny</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val1" office:value-type="currency" office:currency="EUR" office:value="10.14">
+<text:p>10,14 €</text:p>
+</table:table-cell>
+<table:table-cell office:value-type="date" office:date-value="2014-05-17">
+<text:p>17.05.14</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val5" office:value-type="string">
+<text:p>Janine</text:p>
+</table:table-cell>
+</table:table-row>
+<table:table-row table:style-name="ro2">
+<table:table-cell office:value-type="string">
+<text:p>Penny</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val1" office:value-type="currency" office:currency="EUR" office:value="2.57">
+<text:p>2,57 €</text:p>
+</table:table-cell>
+<table:table-cell office:value-type="date" office:date-value="2014-05-19">
+<text:p>19.05.14</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val5" office:value-type="string">
+<text:p>Janine</text:p>
+</table:table-cell>
+</table:table-row>
+<table:table-row table:style-name="ro2">
+<table:table-cell office:value-type="string">
+<text:p>Penny</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val1" office:value-type="currency" office:currency="EUR" office:value="1.17">
+<text:p>1,17 €</text:p>
+</table:table-cell>
+<table:table-cell office:value-type="date" office:date-value="2014-05-20">
+<text:p>20.05.14</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val5" office:value-type="string">
+<text:p>Janine</text:p>
+</table:table-cell>
+</table:table-row>
+<table:table-row table:style-name="ro2">
+<table:table-cell office:value-type="string">
+<text:p>Penny</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val1" office:value-type="currency" office:currency="EUR" office:value="6.22">
+<text:p>6,22 €</text:p>
+</table:table-cell>
+<table:table-cell office:value-type="date" office:date-value="2014-05-20">
+<text:p>20.05.14</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val5" office:value-type="string">
+<text:p>Janine</text:p>
+</table:table-cell>
+</table:table-row>
+<table:table-row table:style-name="ro1">
+<table:table-cell office:value-type="string">
+<text:p>Marktkauf</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val1" office:value-type="currency" office:currency="EUR" office:value="33.08">
+<text:p>33,08 €</text:p>
+</table:table-cell>
+<table:table-cell office:value-type="date" office:date-value="2014-05-21">
+<text:p>21.05.14</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val5" office:value-type="string">
+<text:p>Marc</text:p>
+</table:table-cell>
+</table:table-row>
+<table:table-row table:style-name="ro2">
+<table:table-cell office:value-type="string">
+<text:p>Penny</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val1" office:value-type="currency" office:currency="EUR" office:value="4.66">
+<text:p>4,66 €</text:p>
+</table:table-cell>
+<table:table-cell office:value-type="date" office:date-value="2014-05-21">
+<text:p>21.05.14</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val5" office:value-type="string">
+<text:p>Marc</text:p>
+</table:table-cell>
+</table:table-row>
+<table:table-row table:style-name="ro1">
+<table:table-cell office:value-type="string">
+<text:p>Aldi</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val1" office:value-type="currency" office:currency="EUR" office:value="14.27">
+<text:p>14,27 €</text:p>
+</table:table-cell>
+<table:table-cell office:value-type="date" office:date-value="2014-05-22">
+<text:p>22.05.14</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val5" office:value-type="string">
+<text:p>Janine</text:p>
+</table:table-cell>
+</table:table-row>
+<table:table-row table:style-name="ro2">
+<table:table-cell office:value-type="string">
+<text:p>Penny</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val1" office:value-type="currency" office:currency="EUR" office:value="2.61">
+<text:p>2,61 €</text:p>
+</table:table-cell>
+<table:table-cell office:value-type="date" office:date-value="2014-05-22">
+<text:p>22.05.14</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val5" office:value-type="string">
+<text:p>Janine</text:p>
+</table:table-cell>
+</table:table-row>
+<table:table-row table:style-name="ro2">
+<table:table-cell office:value-type="string">
+<text:p>Penny</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val1" office:value-type="currency" office:currency="EUR" office:value="1.14">
+<text:p>1,14 €</text:p>
+</table:table-cell>
+<table:table-cell office:value-type="date" office:date-value="2014-05-24">
+<text:p>24.05.14</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val5" office:value-type="string">
+<text:p>Janine</text:p>
+</table:table-cell>
+</table:table-row>
+<table:table-row table:style-name="ro2">
+<table:table-cell office:value-type="string">
+<text:p>Penny</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val1" office:value-type="currency" office:currency="EUR" office:value="2.49">
+<text:p>2,49 €</text:p>
+</table:table-cell>
+<table:table-cell office:value-type="date" office:date-value="2014-05-24">
+<text:p>24.05.14</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val5" office:value-type="string">
+<text:p>Janine</text:p>
+</table:table-cell>
+</table:table-row>
+<table:table-row table:style-name="ro2">
+<table:table-cell office:value-type="string">
+<text:p>Penny</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val1" office:value-type="currency" office:currency="EUR" office:value="5.48">
+<text:p>5,48 €</text:p>
+</table:table-cell>
+<table:table-cell office:value-type="date" office:date-value="2014-05-26">
+<text:p>26.05.14</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val5" office:value-type="string">
+<text:p>Janine</text:p>
+</table:table-cell>
+</table:table-row>
+<table:table-row table:style-name="ro1">
+<table:table-cell office:value-type="string">
+<text:p>Marktkauf</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val1" office:value-type="currency" office:currency="EUR" office:value="8.14">
+<text:p>8,14 €</text:p>
+</table:table-cell>
+<table:table-cell office:value-type="date" office:date-value="2014-05-26">
+<text:p>26.05.14</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val5" office:value-type="string">
+<text:p>Janine</text:p>
+</table:table-cell>
+</table:table-row>
+<table:table-row table:style-name="ro1">
+<table:table-cell office:value-type="string">
+<text:p>Tanzkarten</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val1" office:value-type="currency" office:currency="EUR" office:value="40">
+<text:p>40,00 €</text:p>
+</table:table-cell>
+<table:table-cell office:value-type="date" office:date-value="2014-05-01">
+<text:p>01.05.14</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val5" office:value-type="string">
+<text:p>Janine</text:p>
+</table:table-cell>
+</table:table-row>
+<table:table-row table:style-name="ro1">
+<table:table-cell office:value-type="string">
+<text:p>Workshop</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val1" office:value-type="currency" office:currency="EUR" office:value="23">
+<text:p>23,00 €</text:p>
+</table:table-cell>
+<table:table-cell office:value-type="date" office:date-value="2014-05-01">
+<text:p>01.05.14</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val5" office:value-type="string">
+<text:p>Janine</text:p>
+</table:table-cell>
+</table:table-row>
+<table:table-row table:style-name="ro2">
+<table:table-cell office:value-type="string">
+<text:p>Sekai</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val1" office:value-type="currency" office:currency="EUR" office:value="9">
+<text:p>9,00 €</text:p>
+</table:table-cell>
+<table:table-cell office:value-type="date" office:date-value="2014-05-01">
+<text:p>01.05.14</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val5" office:value-type="string">
+<text:p>Janine </text:p>
+</table:table-cell>
+</table:table-row>
+<table:table-row table:style-name="ro2">
+<table:table-cell office:value-type="string">
+<text:p>Steam</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val1" office:value-type="currency" office:currency="EUR" office:value="30">
+<text:p>30,00 €</text:p>
+</table:table-cell>
+<table:table-cell office:value-type="date" office:date-value="2014-05-01">
+<text:p>01.05.14</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val5" office:value-type="string">
+<text:p>Marc</text:p>
+</table:table-cell>
+</table:table-row>
+<table:table-row table:style-name="ro2">
+<table:table-cell office:value-type="string">
+<text:p>Sekai</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val1" office:value-type="currency" office:currency="EUR" office:value="13.3">
+<text:p>13,30 €</text:p>
+</table:table-cell>
+<table:table-cell office:value-type="date" office:date-value="2014-05-01">
+<text:p>01.05.14</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val5" office:value-type="string">
+<text:p>Janine</text:p>
+</table:table-cell>
+</table:table-row>
+<table:table-row table:style-name="ro2">
+<table:table-cell office:value-type="string">
+<text:p>Penny</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val1" office:value-type="currency" office:currency="EUR" office:value="-6.19">
+<text:p>-6,19 €</text:p>
+</table:table-cell>
+<table:table-cell office:value-type="date" office:date-value="2014-05-30">
+<text:p>30.05.14</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val5" office:value-type="string">
+<text:p>Janine</text:p>
+</table:table-cell>
+</table:table-row>
+<table:table-row table:style-name="ro2">
+<table:table-cell office:value-type="string">
+<text:p>Penny</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val1" office:value-type="currency" office:currency="EUR" office:value="12.22">
+<text:p>12,22 €</text:p>
+</table:table-cell>
+<table:table-cell office:value-type="date" office:date-value="2014-05-31">
+<text:p>31.05.14</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val5" office:value-type="string">
+<text:p>Janine</text:p>
+</table:table-cell>
+</table:table-row>
+<table:table-row table:style-name="ro1">
+<table:table-cell table:style-name="ce2" office:value-type="string">
+<text:p>Penny</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val1" office:value-type="currency" office:currency="EUR" office:value="7.35">
+<text:p>7,35 €</text:p>
+</table:table-cell>
+<table:table-cell office:value-type="date" office:date-value="2014-05-23">
+<text:p>23.05.14</text:p>
+</table:table-cell>
+<table:table-cell table:style-name="ce8" table:content-validation-name="val5" office:value-type="string">
+<text:p>Marc</text:p>
+</table:table-cell>
+</table:table-row>
+</table:table>
+<table:table table:name="2014_Juni" table:style-name="ta1" table:print="false">
+<table:table-column table:style-name="co1" table:default-cell-style-name="Default"/>
+<table:table-column table:style-name="co2" table:default-cell-style-name="ce5"/>
+<table:table-column table:style-name="co2" table:default-cell-style-name="ce7"/>
+<table:table-column table:style-name="co2" table:default-cell-style-name="Default"/>
+<table:table-row table:style-name="ro1">
+<table:table-cell table:style-name="ce1" office:value-type="string">
+<text:p>Verwendung</text:p>
+</table:table-cell>
+<table:table-cell table:style-name="ce4" office:value-type="string">
+<text:p>Betrag</text:p>
+</table:table-cell>
+<table:table-cell table:style-name="ce6" office:value-type="string">
+<text:p>Datum</text:p>
+</table:table-cell>
+<table:table-cell table:style-name="ce1" table:content-validation-name="val5" office:value-type="string">
+<text:p>Wer</text:p>
+</table:table-cell>
+</table:table-row>
+<table:table-row table:style-name="ro1">
+<table:table-cell table:style-name="ce2" office:value-type="string">
+<text:p>Beispiel</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val1" office:value-type="currency" office:currency="EUR" office:value="0">
+<text:p>0,00 €</text:p>
+</table:table-cell>
+<table:table-cell office:value-type="date" office:date-value="2014-05-01">
+<text:p>01.05.14</text:p>
+</table:table-cell>
+<table:table-cell table:style-name="ce8" table:content-validation-name="val5" office:value-type="string">
+<text:p>Marc</text:p>
+</table:table-cell>
+</table:table-row>
+<table:table-row table:style-name="ro1">
+<table:table-cell table:style-name="ce2" office:value-type="string">
+<text:p>Beispiel</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val1" office:value-type="currency" office:currency="EUR" office:value="0">
+<text:p>0,00 €</text:p>
+</table:table-cell>
+<table:table-cell office:value-type="date" office:date-value="2014-05-01">
+<text:p>01.05.14</text:p>
+</table:table-cell>
+<table:table-cell table:style-name="ce9" table:content-validation-name="val5" office:value-type="string">
+<text:p>Janine</text:p>
+</table:table-cell>
+</table:table-row>
+<table:table-row table:style-name="ro1">
+<table:table-cell office:value-type="string">
+<text:p>Marktkauf</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val1" office:value-type="currency" office:currency="EUR" office:value="20.71">
+<text:p>20,71 €</text:p>
+</table:table-cell>
+<table:table-cell office:value-type="date" office:date-value="2014-06-03">
+<text:p>03.06.14</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val5" office:value-type="string">
+<text:p>Janine</text:p>
+</table:table-cell>
+</table:table-row>
+<table:table-row table:style-name="ro1">
+<table:table-cell office:value-type="string">
+<text:p>Marktkauf</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val1" office:value-type="currency" office:currency="EUR" office:value="12.79">
+<text:p>12,79 €</text:p>
+</table:table-cell>
+<table:table-cell office:value-type="date" office:date-value="2014-06-05">
+<text:p>05.06.14</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val5" office:value-type="string">
+<text:p>Janine</text:p>
+</table:table-cell>
+</table:table-row>
+<table:table-row table:style-name="ro2">
+<table:table-cell table:style-name="ce3" office:value-type="string">
+<text:p>Penny</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val1" office:value-type="currency" office:currency="EUR" office:value="-6.43">
+<text:p>-6,43 €</text:p>
+</table:table-cell>
+<table:table-cell office:value-type="date" office:date-value="2014-06-06">
+<text:p>06.06.14</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val5" office:value-type="string">
+<text:p>Janine</text:p>
+</table:table-cell>
+</table:table-row>
+<table:table-row table:style-name="ro2">
+<table:table-cell office:value-type="string">
+<text:p>marktkauf</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val1" office:value-type="currency" office:currency="EUR" office:value="0.69">
+<text:p>0,69 €</text:p>
+</table:table-cell>
+<table:table-cell office:value-type="date" office:date-value="2014-06-02">
+<text:p>02.06.14</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val5" office:value-type="string">
+<text:p>Janine</text:p>
+</table:table-cell>
+</table:table-row>
+<table:table-row table:style-name="ro2">
+<table:table-cell office:value-type="string">
+<text:p>Penny</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val1" office:value-type="currency" office:currency="EUR" office:value="1.49">
+<text:p>1,49 €</text:p>
+</table:table-cell>
+<table:table-cell office:value-type="date" office:date-value="2014-06-04">
+<text:p>04.06.14</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val5" office:value-type="string">
+<text:p>Janine</text:p>
+</table:table-cell>
+</table:table-row>
+<table:table-row table:style-name="ro2">
+<table:table-cell office:value-type="string">
+<text:p>Penny</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val1" office:value-type="currency" office:currency="EUR" office:value="1.48">
+<text:p>1,48 €</text:p>
+</table:table-cell>
+<table:table-cell office:value-type="date" office:date-value="2014-06-02">
+<text:p>02.06.14</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val5" office:value-type="string">
+<text:p>Janine </text:p>
+</table:table-cell>
+</table:table-row>
+<table:table-row table:style-name="ro1">
+<table:table-cell table:style-name="ce3" office:value-type="string">
+<text:p>Marktkauf</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val1" office:value-type="currency" office:currency="EUR" office:value="25.89">
+<text:p>25,89 €</text:p>
+</table:table-cell>
+<table:table-cell office:value-type="date" office:date-value="2014-06-27">
+<text:p>27.06.14</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val5" office:value-type="string">
+<text:p>Janine</text:p>
+</table:table-cell>
+</table:table-row>
+<table:table-row table:style-name="ro2">
+<table:table-cell office:value-type="string">
+<text:p>Penny</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val1" office:value-type="currency" office:currency="EUR" office:value="1.39">
+<text:p>1,39 €</text:p>
+</table:table-cell>
+<table:table-cell office:value-type="date" office:date-value="2014-06-30">
+<text:p>30.06.14</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val5" office:value-type="string">
+<text:p>Janine</text:p>
+</table:table-cell>
+</table:table-row>
+<table:table-row table:style-name="ro1">
+<table:table-cell office:value-type="string">
+<text:p>Schwimmen</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val1" office:value-type="currency" office:currency="EUR" office:value="7.5">
+<text:p>7,50 €</text:p>
+</table:table-cell>
+<table:table-cell table:style-name="ce3" office:value-type="date" office:date-value="2014-06-10">
+<text:p>10.06.14</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val5" office:value-type="string">
+<text:p>Janine</text:p>
+</table:table-cell>
+</table:table-row>
+<table:table-row table:style-name="ro2">
+<table:table-cell office:value-type="string">
+<text:p>Penny</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val1" office:value-type="currency" office:currency="EUR" office:value="14.18">
+<text:p>14,18 €</text:p>
+</table:table-cell>
+<table:table-cell office:value-type="date" office:date-value="2014-06-27">
+<text:p>27.06.14</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val5" office:value-type="string">
+<text:p>Janine</text:p>
+</table:table-cell>
+</table:table-row>
+<table:table-row table:style-name="ro1">
+<table:table-cell office:value-type="string">
+<text:p>Müller</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val1" office:value-type="currency" office:currency="EUR" office:value="7.99">
+<text:p>7,99 €</text:p>
+</table:table-cell>
+<table:table-cell office:value-type="date" office:date-value="2014-06-07">
+<text:p>07.06.14</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val5" office:value-type="string">
+<text:p>Janine</text:p>
+</table:table-cell>
+</table:table-row>
+<table:table-row table:style-name="ro1">
+<table:table-cell office:value-type="string">
+<text:p>Technik Partner</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val1" office:value-type="currency" office:currency="EUR" office:value="18.97">
+<text:p>18,97 €</text:p>
+</table:table-cell>
+<table:table-cell office:value-type="date" office:date-value="2014-06-20">
+<text:p>20.06.14</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val5" office:value-type="string">
+<text:p>Janine</text:p>
+</table:table-cell>
+</table:table-row>
+<table:table-row table:style-name="ro2">
+<table:table-cell office:value-type="string">
+<text:p>Penny</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val1" office:value-type="currency" office:currency="EUR" office:value="8.84">
+<text:p>8,84 €</text:p>
+</table:table-cell>
+<table:table-cell office:value-type="date" office:date-value="2014-06-25">
+<text:p>25.06.14</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val5" office:value-type="string">
+<text:p>Janine</text:p>
+</table:table-cell>
+</table:table-row>
+<table:table-row table:style-name="ro2">
+<table:table-cell office:value-type="string">
+<text:p>Penny</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val1" office:value-type="currency" office:currency="EUR" office:value="6.38">
+<text:p>6,38 €</text:p>
+</table:table-cell>
+<table:table-cell office:value-type="date" office:date-value="2014-06-23">
+<text:p>23.06.14</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val5" office:value-type="string">
+<text:p>Janine</text:p>
+</table:table-cell>
+</table:table-row>
+<table:table-row table:style-name="ro1">
+<table:table-cell office:value-type="string">
+<text:p>Jakob essen</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val1" office:value-type="currency" office:currency="EUR" office:value="29.8">
+<text:p>29,80 €</text:p>
+</table:table-cell>
+<table:table-cell office:value-type="date" office:date-value="2014-06-10">
+<text:p>10.06.14</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val5" office:value-type="string">
+<text:p>Janine</text:p>
+</table:table-cell>
+</table:table-row>
+<table:table-row table:style-name="ro2">
+<table:table-cell office:value-type="string">
+<text:p>Penny</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val1" office:value-type="currency" office:currency="EUR" office:value="9.88">
+<text:p>9,88 €</text:p>
+</table:table-cell>
+<table:table-cell office:value-type="date" office:date-value="2014-06-23">
+<text:p>23.06.14</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val5" office:value-type="string">
+<text:p>Janine</text:p>
+</table:table-cell>
+</table:table-row>
+<table:table-row table:style-name="ro2">
+<table:table-cell office:value-type="string">
+<text:p>Penny</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val1" office:value-type="currency" office:currency="EUR" office:value="3.02">
+<text:p>3,02 €</text:p>
+</table:table-cell>
+<table:table-cell office:value-type="date" office:date-value="2014-06-19">
+<text:p>19.06.14</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val5" office:value-type="string">
+<text:p>Janine</text:p>
+</table:table-cell>
+</table:table-row>
+<table:table-row table:style-name="ro1">
+<table:table-cell office:value-type="string">
+<text:p>Netto</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val1" office:value-type="currency" office:currency="EUR" office:value="5.68">
+<text:p>5,68 €</text:p>
+</table:table-cell>
+<table:table-cell office:value-type="date" office:date-value="2014-06-10">
+<text:p>10.06.14</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val5" office:value-type="string">
+<text:p>Janine</text:p>
+</table:table-cell>
+</table:table-row>
+<table:table-row table:style-name="ro2">
+<table:table-cell office:value-type="string">
+<text:p>Rossmann (putz kram)</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val1" office:value-type="currency" office:currency="EUR" office:value="2.65">
+<text:p>2,65 €</text:p>
+</table:table-cell>
+<table:table-cell office:value-type="date" office:date-value="2014-06-06">
+<text:p>06.06.14</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val5" office:value-type="string">
+<text:p>Janine</text:p>
+</table:table-cell>
+</table:table-row>
+<table:table-row table:style-name="ro1">
+<table:table-cell office:value-type="string">
+<text:p>McDonalds</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val1" office:value-type="currency" office:currency="EUR" office:value="12.6">
+<text:p>12,60 €</text:p>
+</table:table-cell>
+<table:table-cell office:value-type="date" office:date-value="2014-06-01">
+<text:p>01.06.14</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val5" office:value-type="string">
+<text:p>Janine</text:p>
+</table:table-cell>
+</table:table-row>
+<table:table-row table:style-name="ro1">
+<table:table-cell table:style-name="ce2" office:value-type="string">
+<text:p>Penny</text:p>
+</table:table-cell>
+<table:table-cell table:content-validation-name="val1" office:value-type="currency" office:currency="EUR" office:value="10.17">
+<text:p>10,17 €</text:p>
+</table:table-cell>
+<table:table-cell office:value-type="date" office:date-value="2014-06-24">
+<text:p>24.06.14</text:p>
+</table:table-cell>
+<table:table-cell table:style-name="ce8" table:content-validation-name="val5" office:value-type="string">
+<text:p>Marc</text:p>
+</table:table-cell>
+</table:table-row>
+</table:table>
+<table:table table:name="2014_Juli" table:style-name="ta1" table:print="false">
+<table:table-column table:style-name="co2" table:number-columns-repeated="4" table:default-cell-style-name="Default"/>
+<table:table-row table:style-name="ro1">
+<table:table-cell table:style-name="ce1" office:value-type="string">
+<text:p>Verwendung</text:p>
+</table:table-cell>
+<table:table-cell table:style-name="ce4" office:value-type="string">
+<text:p>Betrag</text:p>
+</table:table-cell>
+<table:table-cell table:style-name="ce6" office:value-type="string">
+<text:p>Datum</text:p>
+</table:table-cell>
+<table:table-cell table:style-name="ce1" table:content-validation-name="val5" office:value-type="string">
+<text:p>Wer</text:p>
+</table:table-cell>
+</table:table-row>
+<table:table-row table:style-name="ro1">
+<table:table-cell table:style-name="ce2" office:value-type="string">
+<text:p>Beispiel</text:p>
+</table:table-cell>
+<table:table-cell table:style-name="ce5" table:content-validation-name="val1" office:value-type="currency" office:currency="EUR" office:value="0">
+<text:p>0,00 €</text:p>
+</table:table-cell>
+<table:table-cell table:style-name="ce7" office:value-type="date" office:date-value="2014-05-01">
+<text:p>01.05.14</text:p>
+</table:table-cell>
+<table:table-cell table:style-name="ce8" table:content-validation-name="val5" office:value-type="string">
+<text:p>Marc</text:p>
+</table:table-cell>
+</table:table-row>
+<table:table-row table:style-name="ro1">
+<table:table-cell table:style-name="ce2" office:value-type="string">
+<text:p>Beispiel</text:p>
+</table:table-cell>
+<table:table-cell table:style-name="ce5" table:content-validation-name="val1" office:value-type="currency" office:currency="EUR" office:value="0">
+<text:p>0,00 €</text:p>
+</table:table-cell>
+<table:table-cell table:style-name="ce7" office:value-type="date" office:date-value="2014-05-01">
+<text:p>01.05.14</text:p>
+</table:table-cell>
+<table:table-cell table:style-name="ce9" table:content-validation-name="val5" office:value-type="string">
+<text:p>Janine</text:p>
+</table:table-cell>
+</table:table-row>
+<table:table-row table:style-name="ro1">
+<table:table-cell office:value-type="string">
+<text:p>Marktkauf</text:p>
+</table:table-cell>
+<table:table-cell table:style-name="ce5" table:content-validation-name="val1" office:value-type="currency" office:currency="EUR" office:value="17.28">
+<text:p>17,28 €</text:p>
+</table:table-cell>
+<table:table-cell table:style-name="ce7" office:value-type="date" office:date-value="2014-07-11">
+<text:p>11.07.14</text:p>
+</table:table-cell>
+<table:table-cell table:style-name="ce9" table:content-validation-name="val5" office:value-type="string">
+<text:p>Janine</text:p>
+</table:table-cell>
+</table:table-row>
+<table:table-row table:style-name="ro1">
+<table:table-cell office:value-type="string">
+<text:p>Penny</text:p>
+</table:table-cell>
+<table:table-cell table:style-name="ce5" table:content-validation-name="val1" office:value-type="currency" office:currency="EUR" office:value="6.44">
+<text:p>6,44 €</text:p>
+</table:table-cell>
+<table:table-cell table:style-name="ce7" office:value-type="date" office:date-value="2014-07-09">
+<text:p>09.07.14</text:p>
+</table:table-cell>
+<table:table-cell table:style-name="ce9" table:content-validation-name="val5" office:value-type="string">
+<text:p>Janine</text:p>
+</table:table-cell>
+</table:table-row>
+<table:table-row table:style-name="ro1">
+<table:table-cell office:value-type="string">
+<text:p>Marktkauf</text:p>
+</table:table-cell>
+<table:table-cell table:style-name="ce5" table:content-validation-name="val1" office:value-type="currency" office:currency="EUR" office:value="4.14">
+<text:p>4,14 €</text:p>
+</table:table-cell>
+<table:table-cell table:style-name="ce7" office:value-type="date" office:date-value="2014-07-05">
+<text:p>05.07.14</text:p>
+</table:table-cell>
+<table:table-cell table:style-name="ce9" table:content-validation-name="val5" office:value-type="string">
+<text:p>Janine</text:p>
+</table:table-cell>
+</table:table-row>
+<table:table-row table:style-name="ro1">
+<table:table-cell office:value-type="string">
+<text:p>Penny</text:p>
+</table:table-cell>
+<table:table-cell table:style-name="ce5" table:content-validation-name="val1" office:value-type="currency" office:currency="EUR" office:value="4.95">
+<text:p>4,95 €</text:p>
+</table:table-cell>
+<table:table-cell table:style-name="ce7" office:value-type="date" office:date-value="2014-07-04">
+<text:p>04.07.14</text:p>
+</table:table-cell>
+<table:table-cell table:style-name="ce9" table:content-validation-name="val5" office:value-type="string">
+<text:p>Janine</text:p>
+</table:table-cell>
+</table:table-row>
+<table:table-row table:style-name="ro1">
+<table:table-cell office:value-type="string">
+<text:p>Penny</text:p>
+</table:table-cell>
+<table:table-cell table:style-name="ce5" table:content-validation-name="val1" office:value-type="currency" office:currency="EUR" office:value="3.49">
+<text:p>3,49 €</text:p>
+</table:table-cell>
+<table:table-cell table:style-name="ce7" office:value-type="date" office:date-value="2014-07-08">
+<text:p>08.07.14</text:p>
+</table:table-cell>
+<table:table-cell table:style-name="ce9" table:content-validation-name="val5" office:value-type="string">
+<text:p>Janine</text:p>
+</table:table-cell>
+</table:table-row>
+<table:table-row table:style-name="ro1">
+<table:table-cell office:value-type="string">
+<text:p>Penny</text:p>
+</table:table-cell>
+<table:table-cell table:style-name="ce5" table:content-validation-name="val1" office:value-type="currency" office:currency="EUR" office:value="3.37">
+<text:p>3,37 €</text:p>
+</table:table-cell>
+<table:table-cell table:style-name="ce7" office:value-type="date" office:date-value="2014-07-10">
+<text:p>10.07.14</text:p>
+</table:table-cell>
+<table:table-cell table:style-name="ce9" table:content-validation-name="val5" office:value-type="string">
+<text:p>Janine</text:p>
+</table:table-cell>
+</table:table-row>
+<table:table-row table:style-name="ro1">
+<table:table-cell office:value-type="string">
+<text:p>Aldi</text:p>
+</table:table-cell>
+<table:table-cell table:style-name="ce5" table:content-validation-name="val1" office:value-type="currency" office:currency="EUR" office:value="1.39">
+<text:p>1,39 €</text:p>
+</table:table-cell>
+<table:table-cell table:style-name="ce7" office:value-type="date" office:date-value="2014-07-02">
+<text:p>02.07.14</text:p>
+</table:table-cell>
+<table:table-cell table:style-name="ce9" table:content-validation-name="val5" office:value-type="string">
+<text:p>Janine</text:p>
+</table:table-cell>
+</table:table-row>
+<table:table-row table:style-name="ro1">
+<table:table-cell office:value-type="string">
+<text:p>Penny</text:p>
+</table:table-cell>
+<table:table-cell table:style-name="ce5" table:content-validation-name="val1" office:value-type="currency" office:currency="EUR" office:value="10.1">
+<text:p>10,10 €</text:p>
+</table:table-cell>
+<table:table-cell table:style-name="ce7" office:value-type="date" office:date-value="2014-07-10">
+<text:p>10.07.14</text:p>
+</table:table-cell>
+<table:table-cell table:style-name="ce9" table:content-validation-name="val5" office:value-type="string">
+<text:p>Janine</text:p>
+</table:table-cell>
+</table:table-row>
+<table:table-row table:style-name="ro1">
+<table:table-cell office:value-type="string">
+<text:p>Marktkauf</text:p>
+</table:table-cell>
+<table:table-cell table:style-name="ce5" table:content-validation-name="val1" office:value-type="currency" office:currency="EUR" office:value="25.01">
+<text:p>25,01 €</text:p>
+</table:table-cell>
+<table:table-cell table:style-name="ce7" office:value-type="date" office:date-value="2014-07-07">
+<text:p>07.07.14</text:p>
+</table:table-cell>
+<table:table-cell table:style-name="ce9" table:content-validation-name="val5" office:value-type="string">
+<text:p>Janine</text:p>
+</table:table-cell>
+</table:table-row>
+<table:table-row table:style-name="ro1">
+<table:table-cell office:value-type="string">
+<text:p>McDonalds</text:p>
+</table:table-cell>
+<table:table-cell table:style-name="ce5" table:content-validation-name="val1" office:value-type="currency" office:currency="EUR" office:value="10.5">
+<text:p>10,50 €</text:p>
+</table:table-cell>
+<table:table-cell table:style-name="ce7" office:value-type="date" office:date-value="2014-07-01">
+<text:p>01.07.14</text:p>
+</table:table-cell>
+<table:table-cell table:style-name="ce9" table:content-validation-name="val5" office:value-type="string">
+<text:p>Janine</text:p>
+</table:table-cell>
+</table:table-row>
+<table:table-row table:style-name="ro1">
+<table:table-cell office:value-type="string">
+<text:p>Marktkauf</text:p>
+</table:table-cell>
+<table:table-cell table:style-name="ce5" table:content-validation-name="val1" office:value-type="currency" office:currency="EUR" office:value="10.98">
+<text:p>10,98 €</text:p>
+</table:table-cell>
+<table:table-cell table:style-name="ce7" office:value-type="date" office:date-value="2014-07-14">
+<text:p>14.07.14</text:p>
+</table:table-cell>
+<table:table-cell table:style-name="ce9" table:content-validation-name="val5" office:value-type="string">
+<text:p>Janine</text:p>
+</table:table-cell>
+</table:table-row>
+<table:table-row table:style-name="ro1">
+<table:table-cell office:value-type="string">
+<text:p>Penny</text:p>
+</table:table-cell>
+<table:table-cell table:style-name="ce5" table:content-validation-name="val1" office:value-type="currency" office:currency="EUR" office:value="6.25">
+<text:p>6,25 €</text:p>
+</table:table-cell>
+<table:table-cell table:style-name="ce7" office:value-type="date" office:date-value="2014-07-14">
+<text:p>14.07.14</text:p>
+</table:table-cell>
+<table:table-cell table:style-name="ce9" table:content-validation-name="val5" office:value-type="string">
+<text:p>Janine</text:p>
+</table:table-cell>
+</table:table-row>
+</table:table>
+<table:table table:name="2014_August" table:style-name="ta1" table:print="false">
+<table:table-column table:style-name="co1" table:default-cell-style-name="Default"/>
+<table:table-column table:style-name="co2" table:number-columns-repeated="3" table:default-cell-style-name="Default"/>
+<table:table-row table:style-name="ro1">
+<table:table-cell table:style-name="ce1" office:value-type="string">
+<text:p>Verwendung</text:p>
+</table:table-cell>
+<table:table-cell table:style-name="ce4" office:value-type="string">
+<text:p>Betrag</text:p>
+</table:table-cell>
+<table:table-cell table:style-name="ce6" office:value-type="string">
+<text:p>Datum</text:p>
+</table:table-cell>
+<table:table-cell table:style-name="ce1" office:value-type="string">
+<text:p>Wer</text:p>
+</table:table-cell>
+</table:table-row>
+<table:table-row table:style-name="ro1">
+<table:table-cell table:style-name="ce2" office:value-type="string">
+<text:p>Marktkauf</text:p>
+</table:table-cell>
+<table:table-cell table:style-name="ce5" table:content-validation-name="val1" office:value-type="currency" office:currency="EUR" office:value="31.64">
+<text:p>31,64 €</text:p>
+</table:table-cell>
+<table:table-cell table:style-name="ce7" office:value-type="date" office:date-value="2014-08-06">
+<text:p>06.08.14</text:p>
+</table:table-cell>
+<table:table-cell table:style-name="ce8" table:content-validation-name="val5" office:value-type="string">
+<text:p>Marc</text:p>
+</table:table-cell>
+</table:table-row>
+</table:table>
+<table:database-ranges>
+<table:database-range table:target-range-address="2014_Mai.A5:2014_Mai.D37" table:contains-header="false">
+<table:sort>
+<table:sort-by table:field-number="2" table:data-type="automatic"/>
+</table:sort>
+</table:database-range>
+</table:database-ranges>
+</office:spreadsheet>
+</office:body>
+</office:document-content>

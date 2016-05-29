@@ -6,6 +6,7 @@ import de.clzserver.homebox.filemanager.client.FileManagerFactory;
 import de.clzserver.homebox.filemanager.client.IFileManager;
 import de.clzserver.homebox.filemanager.onlinecheck.OnlineChecker;
 import de.clzserver.homebox.filemanager.onlinecheck.OnlineStatus;
+import de.clzserver.homebox.filemanager.server.RemoteFileServer;
 import de.clzserver.homebox.filemanager.server.RemoteFileServer_Starter;
 
 /**
@@ -20,46 +21,59 @@ import de.clzserver.homebox.filemanager.server.RemoteFileServer_Starter;
  */
 public class FileManagerHandle extends Observable{
 
-	private FileManagerHandle single = null;
-	private OnlineStatus m_onlinestatus = null;
-	
+	private static FileManagerHandle single = null;
+
+	private RemoteFileServer currentServer;
+	private boolean isRunning = false;
+
 	private FileManagerHandle() {
 		init();
 	}
 	
-	public FileManagerHandle getInstance() {
+	public static FileManagerHandle getInstance() {
 		if (single == null)
 			single = new FileManagerHandle();
 		return single;
 	}
 	
 	private void init() {
-		status_update();
+		startServer();
 	}
-	
-	private void status_update() {
-		OnlineStatus temp_onlinestatus = OnlineChecker.checkStatus();
-		
-		if (m_onlinestatus != temp_onlinestatus && temp_onlinestatus != null)
-			notifyObservers(temp_onlinestatus);
-		
-		m_onlinestatus = temp_onlinestatus;
-	}
-	
-	public OnlineStatus getOnlineStatus() {
-		return this.m_onlinestatus;
-	}
-	
-	public IFileManager getFileManager() {
-		status_update();
-		return FileManagerFactory.getInstance().getFileManager(m_onlinestatus);
-	}
+
 	
 	/**
 	 * Die Methode startet den RemoteFileServer.
 	 * Von daher soll die Methode nur von der ServerInstanz der HomeBox aufgerufen werden.
 	 */
 	public void startServer() {
-		new RemoteFileServer_Starter();
+		RemoteFileServer_Starter starter = new RemoteFileServer_Starter();
+		currentServer = starter.getServer();
+		isRunning = true;
+	}
+
+	public void stopServer() {
+		isRunning = !RemoteFileServer_Starter.shutDown(currentServer);
+	}
+
+	public void turnOnOffServer() {
+		if (isRunning)
+			stopServer();
+		else
+			startServer();
+	}
+
+	public String getMenuItemMsg() {
+		if (isRunning)
+			return "Remote-FileManager beenden(Server läuft)";
+		else
+			return "Remote-FileManager starten(Server ist aus)";
+	}
+
+	public boolean isRunning() {
+		return isRunning;
+	}
+
+	public RemoteFileServer getService() {
+		return currentServer;
 	}
 }

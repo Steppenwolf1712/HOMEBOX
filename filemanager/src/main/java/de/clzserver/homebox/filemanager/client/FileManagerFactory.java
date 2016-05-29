@@ -28,11 +28,14 @@ public class FileManagerFactory {
 		switch (status) {
 
 		case Online:
-			fileManagerOld = new OnlineFileManager();
+			fileManagerOld = new ClientFileManager("pfanne.dyndns.org");
+			break;
 		case Offline:
-			fileManagerOld = new OfflineFileManager();
+			fileManagerOld = new ServerFileManager();
+			break;
 		case Lan:
-			fileManagerOld = new LanFileManager();
+			fileManagerOld = new ClientFileManager("192.168.2.114");
+			break;
 		}
 		return fileManagerOld;
 	}

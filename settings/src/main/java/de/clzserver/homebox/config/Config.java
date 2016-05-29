@@ -43,6 +43,7 @@ public class Config {
 	public static final String CALCODS_NAME_KEY = "CALCODS_NAME";
 	public static final String CALCODS_LOCK_NAME_KEY = "CALCODS_LOCK_NAME";
 	public static final String USER_STRING_KEY = "USER_STRING";
+	public static final String USER_CONTENTS_PATH_KEY = "USER_CONTENTS_PATH";
 		
 	private ArrayList<PropertyGroup> props;
 	private static Config single = null;

@@ -2,14 +2,7 @@ package de.clzserver.homebox.clipboard.funcs;
 
 import java.awt.datatransfer.DataFlavor;
 import java.awt.datatransfer.Transferable;
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.OutputStreamWriter;
+import java.io.*;
 
 import de.clzserver.homebox.config.Config;
 
@@ -44,14 +37,23 @@ public class Type_Factory {
 		Config cfg = Config.getInstance();
 		
 		try {
+			RMI_Connect connection = RMI_Connect.getInstance();
+
+			String filePath = cfg.getValue(Config.SAVE_PATH_KEY)+cfg.getValue(Config.SAVETYPE_NAME_KEY);
+
+			File temp = File.createTempFile(cfg.getValue(Config.SAVETYPE_NAME_KEY), "");
+			temp.deleteOnExit();
+
 			BufferedWriter buff = new BufferedWriter(
 					new OutputStreamWriter(
-							new FileOutputStream(cfg.getValue(Config.SAVE_PATH_KEY)+cfg.getValue(Config.SAVETYPE_NAME_KEY)) ));
+							new FileOutputStream(temp)));
 			
 			buff.write(string);
 			
 			buff.flush();
 			buff.close();
+
+			connection.commitFile(temp, filePath);
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 			return false;
@@ -68,9 +70,15 @@ public class Type_Factory {
 		Config cfg = Config.getInstance();
 		
 		try {
+			RMI_Connect connection = RMI_Connect.getInstance();
+
+			String filePath = cfg.getValue(Config.SAVE_PATH_KEY)+cfg.getValue(Config.SAVETYPE_NAME_KEY);
+
+			File temp = connection.getFile(filePath);
+
 			BufferedReader buff = new BufferedReader(
 					new InputStreamReader(
-							new FileInputStream(cfg.getValue(Config.SAVE_PATH_KEY)+cfg.getValue(Config.SAVETYPE_NAME_KEY)) ));
+							new FileInputStream(temp)));
 			
 			String erg = buff.readLine();
 			

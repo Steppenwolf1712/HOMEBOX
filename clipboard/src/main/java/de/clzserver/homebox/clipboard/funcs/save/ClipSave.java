@@ -7,17 +7,15 @@ import java.awt.datatransfer.UnsupportedFlavorException;
 import java.awt.image.BufferedImage;
 import java.io.BufferedWriter;
 import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
 import java.io.OutputStreamWriter;
+import java.rmi.RemoteException;
 import java.util.List;
 
 import javax.imageio.ImageIO;
 
+import de.clzserver.homebox.clipboard.funcs.RMI_Connect;
 import de.clzserver.homebox.clipboard.funcs.Type_Factory;
 import de.clzserver.homebox.config.Config;
 import de.clzserver.homebox.config.HBPrinter;
@@ -73,51 +71,87 @@ public class ClipSave {
 		} else {
 			HBPrinter.getInstance().printMSG(this.getClass(), "Fehler: Der zu Transferierende Typ konnte nicht erkannt werden.");
 		}
+		HBPrinter.getInstance().printMSG(this.getClass(), "Die Zwischenablage wurde erfolgreich übertragen!");
 	}
 
 	private void saveImage(BufferedImage transferData) {
 		Type_Factory.writeImage();
 		
 		Config cfg = Config.getInstance();
-		String location = cfg.getValue(Config.SAVEIMG_PATH_KEY)+cfg.getValue(Config.SAVE_NAME_KEY);
-		
-		File target = new File(location);
-		
+		RMI_Connect connect = RMI_Connect.getInstance();
+
+		String endloc = cfg.getValue(Config.SAVE_NAME_KEY), location = cfg.getValue(Config.SAVEIMG_PATH_KEY)+endloc;
+
+		File target;
 		try {
+			target = File.createTempFile(endloc, "");
+			target.deleteOnExit();
+
 			ImageIO.write(transferData, "jpg", target);
 			HBPrinter.getInstance().printMSG(this.getClass(), "Die Ablage wird gespeichert=> "+location);
 		} catch (IOException e) {
 			HBPrinter.getInstance().printError(this.getClass(), "Ein/Ausgabe-Fehler beim speichern eines Bildes!", e);
+			return;
+		}
+
+		try {
+			connect.commitFile(target, location);
+		} catch (RemoteException e) {
+			HBPrinter.getInstance().printError(this.getClass(), "Das Bild konnte nicht auf den Server übertragen werden!", e);
 		}
 	}
 
 	private void saveFiles(List<File> content) {
 		Type_Factory.writeApllication();
-		
-		File save_dir = new File(Config.getInstance().getValue(Config.SAVEAPP_PATH_KEY));
-		if (save_dir.exists() && save_dir.isDirectory()) {
-			for (File f: save_dir.listFiles()) {
-				f.delete();
+
+		RMI_Connect connection = RMI_Connect.getInstance();
+		String subLocation = Config.getInstance().getValue(Config.SAVEAPP_PATH_KEY);
+
+		String[] remotelist = new String[0];
+		try {
+			remotelist = connection.getContentList(subLocation);
+		} catch (RemoteException e) {
+			HBPrinter.getInstance().printError(this.getClass(), "Konnte das Remote-Verzeichnis "+subLocation+" nicht auslesen und übertragen!", e);
+		}
+
+		if (remotelist.length == 0) {
+			HBPrinter.getInstance().printMSG(this.getClass(), "Das Remote-Verzeichnis " + subLocation + " ist leer laut Server-Antwort!");
+			return;
+		}
+
+		for (String f: remotelist) {
+			try {
+				connection.deleteFile(f);
+			} catch (RemoteException e) {
 			}
 		}
-		
-		File copy = null;
+		String part = Config.getInstance().getValue(Config.SAVEAPP_PATH_KEY);
 		for (File f: content) {
-			copy = new File(Config.getInstance().getValue(Config.SAVEAPP_PATH_KEY)+f.getName());
-			copyFileUsingStream(f, copy);
+			try {
+				if (!connection.commitFile(f, part+f.getName())) {
+					HBPrinter.getInstance().printError(this.getClass(), "Konnte die Datei " + f + " nicht zum Server übertragen!", new IOException());
+                }
+			} catch (RemoteException e) {
+				HBPrinter.getInstance().printError(this.getClass(), "Konnte die Datei " + f + " nicht zum Server übertragen!", e);
+			}
 		}
 	}
 
 	private void saveString(String content) {
 		Type_Factory.writeText();
-		
+
+		RMI_Connect connection = RMI_Connect.getInstance();
 		Config cfg = Config.getInstance();
-		String location = cfg.getValue(Config.SAVETEXT_PATH_KEY)+cfg.getValue(Config.SAVE_NAME_KEY);
-		
+		String endloc=cfg.getValue(Config.SAVE_NAME_KEY), location = cfg.getValue(Config.SAVETEXT_PATH_KEY)+endloc;
+
+		File target;
 		try {
+			target = File.createTempFile(endloc, "");
+			target.deleteOnExit();
+
 			BufferedWriter writer = new BufferedWriter(
 					new OutputStreamWriter(
-							new FileOutputStream(location)));
+							new FileOutputStream(target)));
 			
 			HBPrinter.getInstance().printMSG(this.getClass(), "Die Ablage wird gespeichert=> "+location);
 			writer.write(content);
@@ -125,40 +159,17 @@ public class ClipSave {
 			writer.flush();
 			writer.close();
 			
-		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			HBPrinter.getInstance().printError(this.getClass(), "Ein/Ausgabe-Fehler beim Speichern eines Textes!", e);
+			return;
+		}
+
+		try {
+			connection.commitFile(target, location);
+		} catch (RemoteException e) {
+			HBPrinter.getInstance().printError(this.getClass(), "Der Text konnte nicht auf den Server übertragen werden!", e);
 		}
 	}
-
-	private void copyFileUsingStream(File source, File dest) {
-	    InputStream is = null;
-	    OutputStream os = null;
-	    try {
-	        is = new FileInputStream(source);
-	        os = new FileOutputStream(dest);
-	        byte[] buffer = new byte[1024];
-	        int length;
-	        while ((length = is.read(buffer)) > 0) {
-	            os.write(buffer, 0, length);
-	        }
-	    } catch (FileNotFoundException e) {
-			HBPrinter.getInstance().printError(this.getClass(), "Die Datei konnte nicht gefunden werden!", e);
-		} catch (IOException e) {
-			HBPrinter.getInstance().printError(this.getClass(), "Es gab einen Ein/Ausgabefehler!", e);
-		} finally {
-	        try {
-				is.close();
-		        os.close();
-			} catch (IOException e) {
-				HBPrinter.getInstance().printError(this.getClass(), "Die Streams konnten nicht geschlossen werden!", e);
-			}
-	    }
-	}
-
 	
 	private void printInfo(Transferable data) throws UnsupportedFlavorException, IOException {
 		DataFlavor[] flavors = data.getTransferDataFlavors();

@@ -43,7 +43,7 @@
         </String>
         <String>
             <Name>SAVE_PATH</Name>
-            <Value>$HOMEBOX_PATH$Zwischenablage\</Value>
+            <Value>Zwischenablage\</Value>
             <Order>8</Order>
         </String>
         <String>
@@ -55,6 +55,11 @@
             <Name>USER_STRING</Name>
             <Value>Marc</Value>
             <Order>10</Order>
+        </String>
+        <String>
+            <Name>USER_CONTENTS_PATH</Name>
+            <Value>User_Contents\</Value>
+            <Order>11</Order>
         </String>
     </PropertyGroup>
 </Properties>

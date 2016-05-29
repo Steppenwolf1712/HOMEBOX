@@ -23,4 +23,8 @@ public enum OnlineStatus {
 	public boolean isOnline() {
 		return m_b_online;
 	}
+
+	public String toString() {
+		return "Onlinestatus(Status:= "+m_s_status+", Online:="+m_b_online+")";
+	}
 }

@@ -8,6 +8,7 @@
       <module fileurl="file://$PROJECT_DIR$/homebox.iml" filepath="$PROJECT_DIR$/homebox.iml" />
       <module fileurl="file://$PROJECT_DIR$/homebox_base/homebox_base.iml" filepath="$PROJECT_DIR$/homebox_base/homebox_base.iml" />
       <module fileurl="file://$PROJECT_DIR$/linkcollection/linkcollection.iml" filepath="$PROJECT_DIR$/linkcollection/linkcollection.iml" />
+      <module fileurl="file://$PROJECT_DIR$/remoteprocess/remoteprocess.iml" filepath="$PROJECT_DIR$/remoteprocess/remoteprocess.iml" />
       <module fileurl="file://$PROJECT_DIR$/settings/settings.iml" filepath="$PROJECT_DIR$/settings/settings.iml" />
     </modules>
   </component>

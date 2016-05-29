@@ -19,5 +19,6 @@
     <orderEntry type="module" module-name="clipboard" exported="" />
     <orderEntry type="module" module-name="homebox_base" exported="" />
     <orderEntry type="module" module-name="settings" exported="" />
+    <orderEntry type="module" module-name="remoteprocess" exported="" />
   </component>
 </module>
