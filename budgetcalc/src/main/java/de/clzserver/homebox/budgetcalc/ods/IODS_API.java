@@ -10,7 +10,7 @@ public interface IODS_API {
 	public boolean islocked();
 	
 	/**
-	 * Gibt einen String mit den Informationen zu rück, wer zurzeit die ODS Datei benutzt.
+	 * Gibt einen String mit den Informationen zurück, wer zurzeit die ODS Datei benutzt.
 	 * 
 	 * @return
 	 */

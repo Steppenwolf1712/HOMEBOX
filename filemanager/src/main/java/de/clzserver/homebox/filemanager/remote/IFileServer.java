@@ -8,7 +8,6 @@ public interface IFileServer extends Remote {
 	String SERVICE_NAME = "FileManager";
 
 	int RMI_LAN_PORT = 54123;
-	int REGISTRY_BINDING = 2001;
 
 	/**
 	 * Methode zur Anfrage von Files.

@@ -1,5 +1,8 @@
 package de.clzserver.homebox.config;
 
+import javax.swing.*;
+import java.rmi.NotBoundException;
+
 public class HBPrinter {
 
 	private static HBPrinter single = null;
@@ -22,6 +25,9 @@ public class HBPrinter {
 //		Object temp = caller.getClass();
 //		if (temp.equals(Object.class.getClass()))
 //			temp = caller.;
-		System.err.println(caller.getName()+": "+msg+"\n"+ex.toString());
+	}
+
+	public void showError(Class caller, String msg, Exception e) {
+		JOptionPane.showMessageDialog(null, caller.getName() + ":\n" + msg + "\n\n" + e.toString());
 	}
 }

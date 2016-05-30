@@ -27,8 +27,8 @@ import javax.xml.transform.stream.StreamResult;
 
 
 public class Config {
-	
-	private static final String INIT_CONFIG = "build\\resources\\main\\init.xml";
+	//
+	private static String INIT_CONFIG = "init.xml";//"build\\resources\\main\\init.xml";
 
 	private static final String HOMEBOX_SETTINGS = "Homebox-Settings";
 
@@ -51,6 +51,19 @@ public class Config {
 	private Config() {
 		props = new ArrayList<PropertyGroup>();
 		init();
+	}
+
+	public static Config getInstance(String offset) {
+		INIT_CONFIG = offset+INIT_CONFIG;
+		if (single == null)
+			single = new Config();
+		return single;
+	}
+
+	public static Config getInstance() {
+		if (single == null)
+			single = new Config();
+		return single;
 	}
 
 	Collection<PropertyGroup> getProps() {
@@ -85,12 +98,6 @@ public class Config {
 					"Es gabe einen Ein-/Ausgabe-Fehler beim lesen der Config Datei",
 					e);
 		}
-	}
-
-	public static Config getInstance() {
-		if (single == null)
-			single = new Config();
-		return single;
 	}
 	
 	public void setProperty(String key, String value) {

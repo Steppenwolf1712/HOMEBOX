@@ -61,5 +61,25 @@
             <Value>User_Contents\</Value>
             <Order>11</Order>
         </String>
+        <String>
+            <Name>Itunes_PROCESS_NAME</Name>
+            <Value>iTunes.exe\</Value>
+            <Order>12</Order>
+        </String>
+        <String>
+            <Name>Itunes_LOCATION_PATH</Name>
+            <Value>C:\Program Files\iTunes\iTunes.exe</Value>
+            <Order>13</Order>
+        </String>
+        <String>
+            <Name>VisualSVN_PROCESS_NAME</Name>
+            <Value>VisualSVNServer.exe *32</Value>
+            <Order>14</Order>
+        </String>
+        <String>
+            <Name>VisualSVN_LOCATION_PATH</Name>
+            <Value>C:\Program Files (x86)\VisualSVN Server\bin\VisualSVNServer.exe\</Value>
+            <Order>15</Order>
+        </String>
     </PropertyGroup>
 </Properties>

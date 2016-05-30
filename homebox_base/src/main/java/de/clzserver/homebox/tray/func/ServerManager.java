@@ -8,7 +8,8 @@ import de.clzserver.homebox.tray.parts.IMenuItem;
  */
 public class ServerManager implements IMenuItem {
 
-    public static IMenuItem filemgr_status = new FileMgr_Status();
+    public static IMenuItem fileMngr_status = new FileMgr_Status();
+    public static IMenuItem processMngr_status  = new ProcessMngr_Status();
 
     @Override
     public void start() {
@@ -27,8 +28,9 @@ public class ServerManager implements IMenuItem {
 
     @Override
     public IMenuItem[] getSubmenu() {
-        IMenuItem[] items = new IMenuItem[1];
-        items[0] = filemgr_status;
+        IMenuItem[] items = new IMenuItem[2];
+        items[0] = fileMngr_status;
+        items[1] = processMngr_status;
 
         return items;
     }

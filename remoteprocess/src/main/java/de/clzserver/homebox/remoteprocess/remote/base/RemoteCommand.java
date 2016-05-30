@@ -24,4 +24,9 @@ public class RemoteCommand implements IRemoteCommand {
     public String getProcessName() {
         return process;
     }
+
+    @Override
+    public String toString() {
+        return "RemoteCommand(Type= "+type+", Prozess= "+process+")";
+    }
 }

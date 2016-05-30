@@ -42,7 +42,7 @@ public class JPanelBudgetReader extends JPanel implements ActionListener {
 
 		this.setLayout(null);
 
-		update_btn = new JButton("aktualisiere");
+		update_btn = new JButton("aktualisieren");
 		update_btn.setBounds(140, 10, 100, 20);
 		update_btn.addActionListener(this);
 

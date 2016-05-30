@@ -1,35 +1,56 @@
 package de.clzserver.homebox.remoteprocess.server;
 
+import de.clzserver.homebox.registry.RegistryHandle;
 import de.clzserver.homebox.config.HBPrinter;
 import de.clzserver.homebox.remoteprocess.remote.IProcessServer;
-import de.clzserver.homebox.remoteprocess.remote.base.RMI_Starter;
+import de.clzserver.homebox.registry.RMI_Starter;
+import de.clzserver.homebox.remoteprocess.remote.IRemoteCommand;
 
-import java.rmi.registry.LocateRegistry;
+import java.rmi.NotBoundException;
+import java.rmi.RemoteException;
 import java.rmi.registry.Registry;
 import java.rmi.server.UnicastRemoteObject;
 
 /**
  * Created by Marc Janßen on 29.05.2016.
  */
-public class RemoteProcessServer_Starter extends RMI_Starter{
+public class RemoteProcessServer_Starter extends RMI_Starter {
 
     private RemoteProcessServer pmngr;
 
     public RemoteProcessServer_Starter() {
-        super(null, RemoteProcessServer.class);
+        super(null, IRemoteCommand.class);
     }
 
-    public RemoteProcessServer getServer() {
-        return pmngr;
+    public boolean shutDown() {
+        try {
+            Registry registry = RegistryHandle.getInstance().getRegistry();
+
+            HBPrinter.getInstance().printMSG(
+                    this.getClass(),
+                    "Entferne Bibliothek-Verweis "
+                            + IProcessServer.SERVICE_NAME + " aus der Registry!");
+            registry.unbind(IProcessServer.SERVICE_NAME);
+
+            HBPrinter.getInstance().printMSG(this.getClass(), "Stoppe Dienst RemoteProcessServer!");
+            return UnicastRemoteObject.unexportObject(pmngr, false);
+        } catch (RemoteException e) {
+            HBPrinter.getInstance().printError(RemoteProcessServer_Starter.class,
+                    "Konnte den Service des ProcessManagers nicht stoppen!", e);
+        } catch (NotBoundException e) {
+            HBPrinter.getInstance().printError(RemoteProcessServer_Starter.class,
+                    "Der Service des ProcessManagers ist zurzeit nicht gebunden und kann deshalb nicht von der Registryy entfernt werden!", e);
+        }
+        return false;
     }
-
-
 
     @Override
     public void doCustomRmiHandling() {
-        try {
-            // System.setProperty("java.rmi.server.hostname", "127.0.0.1");
+        start();
+    }
 
+    public void start() {
+        try {
             HBPrinter.getInstance().printMSG(this.getClass(), "Eröffne Bibliothek!");
             pmngr = new RemoteProcessServer();
 
@@ -37,7 +58,7 @@ public class RemoteProcessServer_Starter extends RMI_Starter{
             IProcessServer stub = (IProcessServer) UnicastRemoteObject
                     .exportObject(pmngr, IProcessServer.RMI_LAN_PORT);
 
-            Registry registry = LocateRegistry.createRegistry(IProcessServer.REGISTRY_BINDING);
+            Registry registry = RegistryHandle.getInstance().getRegistry();
 
             HBPrinter.getInstance().printMSG(
                     this.getClass(),

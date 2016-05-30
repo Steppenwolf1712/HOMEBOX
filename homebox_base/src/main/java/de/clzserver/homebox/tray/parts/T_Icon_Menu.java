@@ -7,9 +7,10 @@ public class T_Icon_Menu {
 	
 	public static T_Icon_Menu clp_submenu = new T_Icon_Menu(new Clipboard());
 	public static T_Icon_Menu budgetcalc = new T_Icon_Menu(new BudgetCalc_Starter());
-	public static T_Icon_Menu LinkTray = new T_Icon_Menu(new Link_Collection());
+	public static T_Icon_Menu processmngr;
+	public static T_Icon_Menu linkTray = new T_Icon_Menu(new Link_Collection());
 	public static T_Icon_Menu placeholder1 = new T_Icon_Menu();
-	public static T_Icon_Menu servermanager = new T_Icon_Menu(new ServerManager());
+	public static T_Icon_Menu servermanager;
 	public static T_Icon_Menu placeholder2 = new T_Icon_Menu();
 	public static T_Icon_Menu infoTray = new T_Icon_Menu(new Info());
 	public static T_Icon_Menu properties = new T_Icon_Menu(new Property_Manager());
@@ -21,10 +22,12 @@ public class T_Icon_Menu {
 		if (OnlineChecker.isServer()) {
 			counter = 9;
 
+			servermanager = new T_Icon_Menu(new ServerManager());
+
 			values = new T_Icon_Menu[counter];
 			values[0] = clp_submenu;
 			values[1] = budgetcalc;
-			values[2] = LinkTray;
+			values[2] = linkTray;
 			values[3] = placeholder1;
 			values[4] = servermanager;
 			values[5] = placeholder2;
@@ -32,16 +35,19 @@ public class T_Icon_Menu {
 			values[7] = properties;
 			values[8] = closeTray;
 		} else {
-			counter = 7;
+			counter = 8;
+
+			processmngr = new T_Icon_Menu(new ProcessMngr_Starter());
 
 			values = new T_Icon_Menu[counter];
 			values[0] = clp_submenu;
 			values[1] = budgetcalc;
-			values[2] = LinkTray;
-			values[3] = placeholder1;
-			values[4] = infoTray;
-			values[5] = properties;
-			values[6] = closeTray;
+			values[2] = processmngr;
+			values[3] = linkTray;
+			values[4] = placeholder1;
+			values[5] = infoTray;
+			values[6] = properties;
+			values[7] = closeTray;
 		}
 		
 	}

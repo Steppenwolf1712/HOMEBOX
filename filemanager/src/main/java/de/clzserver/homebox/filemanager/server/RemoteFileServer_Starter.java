@@ -2,13 +2,13 @@ package de.clzserver.homebox.filemanager.server;
 
 import java.rmi.NotBoundException;
 import java.rmi.RemoteException;
-import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
 import java.rmi.server.UnicastRemoteObject;
 
 import de.clzserver.homebox.filemanager.remote.IFileServer;
-import de.clzserver.homebox.filemanager.remote.base.RMI_Starter;
 import de.clzserver.homebox.config.HBPrinter;
+import de.clzserver.homebox.registry.RMI_Starter;
+import de.clzserver.homebox.registry.RegistryHandle;
 
 public class RemoteFileServer_Starter extends RMI_Starter {
 
@@ -34,7 +34,7 @@ public class RemoteFileServer_Starter extends RMI_Starter {
 			IFileServer stub = (IFileServer) UnicastRemoteObject
 					.exportObject(fmngr, IFileServer.RMI_LAN_PORT);
 
-			Registry registry = LocateRegistry.createRegistry(IFileServer.REGISTRY_BINDING);
+			Registry registry = RegistryHandle.getInstance().getRegistry();
 
 			HBPrinter.getInstance().printMSG(
 					this.getClass(),
@@ -52,14 +52,14 @@ public class RemoteFileServer_Starter extends RMI_Starter {
 
 	public static boolean shutDown(RemoteFileServer currentServer) {
 		try {
-			Registry registry = LocateRegistry.createRegistry(IFileServer.REGISTRY_BINDING);
+			Registry registry = RegistryHandle.getInstance().getRegistry();
 
 			registry.unbind(IFileServer.SERVICE_NAME);
 
 			return UnicastRemoteObject.unexportObject(currentServer, false);
 		} catch (RemoteException e) {
 			HBPrinter.getInstance().printError(RemoteFileServer_Starter.class,
-					"Konnte den Service des Filemanagers nicht stopen!", e);
+					"Konnte den Service des Filemanagers nicht stoppen!", e);
 		} catch (NotBoundException e) {
 			HBPrinter.getInstance().printError(RemoteFileServer_Starter.class,
 					"Der Service des Filemanagers ist zurzeit nicht gebunden und kann deshalb nicht von der Registryy entfernt werden!", e);

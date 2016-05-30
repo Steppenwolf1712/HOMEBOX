@@ -4,13 +4,16 @@ import java.awt.SystemTray;
 
 import de.clzserver.homebox.clipboard.funcs.RMI_Connect;
 import de.clzserver.homebox.config.Config;
+import de.clzserver.homebox.filemanager.client.FileManagerFactory;
 import de.clzserver.homebox.filemanager.onlinecheck.OnlineChecker;
+import de.clzserver.homebox.remoteprocess.client.rmi.ProcessServerFactory;
 import de.clzserver.homebox.tray.T_Icon;
 
 public class MainTest {
 
 	public static final String SERVERMODE = "ServerMode";
 	public static final String CLIENTMODE = "ClientMode";
+	private static final String LOCALHOST = "192.168.2.222";//DEBUGGING auf Comet-V
 
 	static class ShutdownHook extends Thread {
 		public void run() {
@@ -35,8 +38,12 @@ public class MainTest {
 		//Lese schonmal die Config Informationen ein
 		if (args[0].equals(SERVERMODE)) {
 			OnlineChecker.setServerMode(true);
+		} else {
+			//Debugging
+			FileManagerFactory.getInstance().setHost(LOCALHOST);
+			ProcessServerFactory.getInstance().setHost(LOCALHOST);
 		}
-		cfg = Config.getInstance();
+		cfg = Config.getInstance(offset);
 		RMI_Connect.getInstance().setOffset(offset);//"build\\resources\\main\\");
 
 		// Fügt shutdown hook zum Speichern der Init und zum Entfernen des TrayIcons hinzu

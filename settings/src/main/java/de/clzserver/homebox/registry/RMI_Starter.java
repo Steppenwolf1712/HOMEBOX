@@ -1,6 +1,4 @@
-package de.clzserver.homebox.filemanager.remote.base;
-
-import de.clzserver.homebox.filemanager.remote.PolicyFileLocator;
+package de.clzserver.homebox.registry;
 
 public abstract class RMI_Starter {
 

@@ -91,10 +91,12 @@ public class OnlineChecker extends Observable {
 		Config cfg = Config.getInstance();
 
 		try {
+			String tempLoc = cfg.getValue(Config.HOMEBOX_PATH_KEY)+
+					cfg.getValue(Config.SAVE_PATH_KEY)+cfg.getValue(Config.SAVETYPE_NAME_KEY);
+			System.out.println("Die Resource zum suchen  ist "+tempLoc);
 			BufferedReader buff = new BufferedReader(
 					new InputStreamReader(
-							new FileInputStream(cfg.getValue(Config.HOMEBOX_PATH_KEY)+
-									cfg.getValue(Config.SAVE_PATH_KEY)+cfg.getValue(Config.SAVETYPE_NAME_KEY)) ));
+							new FileInputStream(tempLoc) ));
 
 			buff.readLine();
 

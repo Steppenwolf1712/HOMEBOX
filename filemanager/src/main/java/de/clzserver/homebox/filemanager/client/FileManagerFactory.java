@@ -4,12 +4,12 @@ import de.clzserver.homebox.filemanager.onlinecheck.OnlineStatus;
 
 
 public class FileManagerFactory {
-	
-
 
 	private static FileManagerFactory single = null;
 	private OnlineStatus status_old = null;
 	private IFileManager fileManagerOld;
+
+	private String localHost = "CLZ-Server";//"192.168.2222";//
 
 	private FileManagerFactory(){
 		//ich bin nur da um da zu sein
@@ -34,10 +34,14 @@ public class FileManagerFactory {
 			fileManagerOld = new ServerFileManager();
 			break;
 		case Lan:
-			fileManagerOld = new ClientFileManager("192.168.2.114");
+			fileManagerOld = new ClientFileManager(localHost);//"192.168.2.114");
 			break;
 		}
 		return fileManagerOld;
+	}
+
+	public void setHost(String host) {
+		this.localHost = host;
 	}
 
 	public static FileManagerFactory getInstance() {

@@ -19,5 +19,6 @@
     <orderEntry type="module" module-name="budgetcalc" exported="" />
     <orderEntry type="module" module-name="clipboard" exported="" />
     <orderEntry type="module" module-name="linkcollection" exported="" />
+    <orderEntry type="module" module-name="remoteprocess" exported="" />
   </component>
 </module>

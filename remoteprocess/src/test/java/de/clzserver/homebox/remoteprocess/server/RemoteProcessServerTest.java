@@ -9,7 +9,6 @@ public class RemoteProcessServerTest {
 
     public static void main(String[] args) {
         RemoteProcessServer server = new RemoteProcessServer();
-
-
     }
 }
+

@@ -6,6 +6,7 @@ import de.clzserver.homebox.filemanager.client.FileManagerFactory;
 import de.clzserver.homebox.filemanager.client.IFileManager;
 import de.clzserver.homebox.filemanager.onlinecheck.OnlineChecker;
 import de.clzserver.homebox.filemanager.onlinecheck.OnlineStatus;
+import de.clzserver.homebox.filemanager.remote.IFileServer;
 import de.clzserver.homebox.filemanager.server.RemoteFileServer;
 import de.clzserver.homebox.filemanager.server.RemoteFileServer_Starter;
 
@@ -46,6 +47,8 @@ public class FileManagerHandle extends Observable{
 	 * Von daher soll die Methode nur von der ServerInstanz der HomeBox aufgerufen werden.
 	 */
 	public void startServer() {
+		if (isRunning)
+			return;
 		RemoteFileServer_Starter starter = new RemoteFileServer_Starter();
 		currentServer = starter.getServer();
 		isRunning = true;
@@ -73,7 +76,7 @@ public class FileManagerHandle extends Observable{
 		return isRunning;
 	}
 
-	public RemoteFileServer getService() {
+	public IFileServer getService() {
 		return currentServer;
 	}
 }

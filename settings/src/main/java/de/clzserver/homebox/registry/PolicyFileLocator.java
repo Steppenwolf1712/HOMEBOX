@@ -1,4 +1,4 @@
-package de.clzserver.homebox.filemanager.remote;
+package de.clzserver.homebox.registry;
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;

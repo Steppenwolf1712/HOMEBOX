@@ -18,8 +18,10 @@ class ClientFileManager extends FileManager{
 		IRemoteFile rfile = server.getFile(file, null, false);
 
 		File temp = new File(rfile.getFileLocation());
-		if (!temp.exists())
+		if (!temp.exists()) {
+			temp.mkdirs();
 			temp.createNewFile();
+		}
 
 		rfile.safeContentAt(temp);
 
@@ -31,8 +33,10 @@ class ClientFileManager extends FileManager{
 		IRemoteFile rfile = server.getFile(file, user, exclusive);
 
 		File temp = new File(rfile.getFileLocation());
-		if (!temp.exists())
+		if (!temp.exists()) {
+			temp.mkdirs();
 			temp.createNewFile();
+		}
 
 		rfile.safeContentAt(temp);
 

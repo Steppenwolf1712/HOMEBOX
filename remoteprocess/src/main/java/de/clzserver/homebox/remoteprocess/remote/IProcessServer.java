@@ -9,10 +9,9 @@ import java.util.Map;
  */
 public interface IProcessServer extends Remote {
 
-    String SERVICE_NAME = "ProcessManager";
+    String SERVICE_NAME = "ProcessServer";
 
     int RMI_LAN_PORT = 54124;
-    int REGISTRY_BINDING = 2001;
 
 
     public String[] getAvailableApps() throws RemoteException;

@@ -18,16 +18,23 @@ dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.11'
 }
 
-task runHOMEBOX_Server(type: JavaExec) {
+task runHOMEBOX_ServerTest(type: JavaExec) {
     classpath sourceSets.test.runtimeClasspath
     main = "de.clzserver.homebox.main.MainTest"
     args "ServerMode"
     args "build\\resources\\main\\"
 }
 
-task runHOMEBOX_Client(type: JavaExec) {
+task runHOMEBOX_ClientTest(type: JavaExec) {
     classpath sourceSets.test.runtimeClasspath
     main = "de.clzserver.homebox.main.MainTest"
+    args "ClientMode"
+    args "build\\resources\\main\\"
+}
+
+task runHOMEBOX_Client(type: JavaExec) {
+    classpath sourceSets.test.runtimeClasspath
+    main = "de.clzserver.homebox.main.Main"
     args "ClientMode"
 }
 
@@ -36,7 +43,9 @@ jar {
     exclude 'META-INF/*.SF', 'META-INF/*.DSA', 'META-INF/*.RSA', 'META-INF/*.MF'
 
     manifest {
-        attributes 'Main-Class':"de.clzserver.homebox.main.MainTest",
+        attributes 'Main-Class':"de.clzserver.homebox.main.Main",
                 'Class-Path': configurations.runtime.files.collect { "lib/$it.name" }.join(' ')
     }
+    from configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
+
 }

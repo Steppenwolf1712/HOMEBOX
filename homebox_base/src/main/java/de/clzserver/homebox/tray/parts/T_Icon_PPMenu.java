@@ -13,9 +13,14 @@ public class T_Icon_PPMenu extends PopupMenu{
 	}
 
 	public void update_Labels() {
-		T_Icon_Menu[] vals = T_Icon_Menu.values();
+		T_Icon_Menu[] vals = T_Icon_Menu.values(), subvals;
 		for (int i = 0; i<vals.length; i++) {
 			updateLabel_of_Item(vals[i].toString(), vals[i].get_fkt_Name());
+			if (vals[i].has_submenu()) {
+				subvals = vals[i].get_submenu();
+				for (int j = 0; j<subvals.length; j++)
+					updateLabel_of_Item(subvals[j].toString(), subvals[j].get_fkt_Name());
+			}
 		}
 	}
 
@@ -26,10 +31,10 @@ public class T_Icon_PPMenu extends PopupMenu{
 			if (temp instanceof Menu) {
 				Menu m = (Menu) temp;
 				int m_max =m.getItemCount();
-				
+
 				for(int j = 0; j<m_max; j++) {
 					temp = m.getItem(j);
-					
+
 					if (temp.getName().equals(item_key)) {
 						temp.setLabel(item_Label);
 						return;

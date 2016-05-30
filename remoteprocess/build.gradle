@@ -10,12 +10,11 @@ repositories {
 }
 
 dependencies {
-    compile 'org.swinglabs:swingx:1.6.1'
+    compile project(":settings")
     testCompile group: 'junit', name: 'junit', version: '4.11'
 }
 
-task runConfigTest(type: org.gradle.api.tasks.JavaExec) {
+task runRemoteProcessServerTest(type: JavaExec) {
     classpath sourceSets.test.runtimeClasspath
-    main = "de.clzserver.homebox.config.ConfigTest"
-
+    main = "de.clzserver.homebox.remoteprocess.server.RemoteProcessServerTest"
 }
