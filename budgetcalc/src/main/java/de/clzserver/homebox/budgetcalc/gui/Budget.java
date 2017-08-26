@@ -4,7 +4,7 @@ import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-import de.clzserver.homebox.budgetcalc.ods.IBudget;
+import de.clzserver.homebox.budgetcalc.interfaces.IBudget;
 
 class Budget implements IBudget{
 

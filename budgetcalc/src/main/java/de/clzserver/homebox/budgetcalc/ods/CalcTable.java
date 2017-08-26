@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import javax.xml.xpath.XPath;
 import javax.xml.xpath.XPathConstants;
 
+import de.clzserver.homebox.budgetcalc.interfaces.IBudget;
 import org.odftoolkit.odfdom.doc.OdfDocument;
 import org.odftoolkit.odfdom.pkg.OdfFileDom;
 import org.w3c.dom.Attr;
@@ -68,7 +69,7 @@ class CalcTable {
 
 				Node new_line = createRow(verwendung, betrag, datum, user);
 				
-				HBPrinter.getInstance().printMSG(this.getClass(),"Füge neue Zeile hinzu");
+				HBPrinter.getInstance().printMSG(this.getClass(),"Fï¿½ge neue Zeile hinzu");
 				table_ref.appendChild(new_line);
 				
 				odfContent.saveXML(table_ref);
@@ -105,7 +106,7 @@ class CalcTable {
 		col2.setAttributeNS("table", "table:style-name", "co2");
 		tab.appendChild(col2);
 		
-		// KopfZeile hinzufügen
+		// KopfZeile hinzufï¿½gen
 		Element header = odfContent.createElementNS("table", "table:table-row");
 		header.setAttributeNS("table", "table:style-name", "ro1");
 
@@ -215,7 +216,7 @@ class CalcTable {
 	}
 	
 	/**
-	 * Gibt die Float-Repäsentation des Strings zurück
+	 * Gibt die Float-Repï¿½sentation des Strings zurï¿½ck
 	 * 
 	 * @param temp
 	 * @return

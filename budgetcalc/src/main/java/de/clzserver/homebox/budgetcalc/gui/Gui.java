@@ -6,13 +6,13 @@ import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.JTabbedPane;
 
-import de.clzserver.homebox.budgetcalc.ods.API_Factory;
-import de.clzserver.homebox.budgetcalc.ods.IODS_API;
+import de.clzserver.homebox.budgetcalc.interfaces.API_Factory;
+import de.clzserver.homebox.budgetcalc.interfaces.Budget_API;
 
 public class Gui extends JFrame {
 
 	private JTabbedPane tabbedPane;
-	private IODS_API IODS_api;
+	private Budget_API Budget_api;
 
 	private Component panel1;
 	private Component panel2;
@@ -26,8 +26,8 @@ public class Gui extends JFrame {
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 
 		API_Factory api = API_Factory.getInstance();
-		IODS_api = api.createAPI();
-		if (!IODS_api.islocked()) {
+		Budget_api = api.create_ODS_API();
+		if (!Budget_api.islocked()) {
 
 			panel1 = new JPanelBudgetWriter();
 			panel1.setBounds(0, 0, 300, 300);
@@ -36,8 +36,8 @@ public class Gui extends JFrame {
 			panel2.setBounds(0, 0, 300, 300);
 
 			tabbedPane = new JTabbedPane();
-			tabbedPane.addTab("Eintrag hinzufügen", panel1);
-			tabbedPane.addTab("Einträge ausgeben", panel2);
+			tabbedPane.addTab("Eintrag hinzufï¿½gen", panel1);
+			tabbedPane.addTab("Eintrï¿½ge ausgeben", panel2);
 			tabbedPane.setBounds(10, 10, 400, 350);
 			tabbedPane.setFocusable(false);
 
@@ -47,7 +47,7 @@ public class Gui extends JFrame {
 			setVisible(true);
 
 		} else {
-			JOptionPane.showMessageDialog(null, "Die Datei ist gelockt. "+IODS_api.getCurrentUser(),
+			JOptionPane.showMessageDialog(null, "Die Datei ist gelockt. "+ Budget_api.getCurrentUser(),
 					"Fehler", JOptionPane.ERROR_MESSAGE);
 
 			System.exit(0);

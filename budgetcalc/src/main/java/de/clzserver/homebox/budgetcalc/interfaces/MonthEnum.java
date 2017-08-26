@@ -1,9 +1,9 @@
-package de.clzserver.homebox.budgetcalc.ods;
+package de.clzserver.homebox.budgetcalc.interfaces;
 
 public enum MonthEnum {
 	JANUAR("Januar",0), FEBRUAR("Februar",1), MAERZ("März",2), APRIL("April",3),
 	MAI("Mai",4), JUNI("Juni",5), JULI("Juli",6), AUGUST("August",7),
-	SEPTEMBER("September",8), OKTOBER("Oktober",9), NOVEMBER("November",10), DEZEMBER("Dezember",11);
+	SEPTEMBER("September",8), OKTOBER("Oktober",9), NOVEMBER("November",10), DEZEMBER("Dezember",11), MONTHLY("Monatlich", 12);
 	
 	private String month = null;
 	private int index = 0;
@@ -55,6 +55,8 @@ public enum MonthEnum {
 			return NOVEMBER;
 		case 11:
 			return DEZEMBER;
+		case 12:
+			return MONTHLY;
 
 		default:
 			return null;

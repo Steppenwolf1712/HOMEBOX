@@ -14,10 +14,10 @@ import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableColumn;
 
-import de.clzserver.homebox.budgetcalc.ods.API_Factory;
-import de.clzserver.homebox.budgetcalc.ods.IBudget;
-import de.clzserver.homebox.budgetcalc.ods.IODS_API;
-import de.clzserver.homebox.budgetcalc.ods.MonthEnum;
+import de.clzserver.homebox.budgetcalc.interfaces.API_Factory;
+import de.clzserver.homebox.budgetcalc.interfaces.IBudget;
+import de.clzserver.homebox.budgetcalc.interfaces.Budget_API;
+import de.clzserver.homebox.budgetcalc.interfaces.MonthEnum;
 import de.clzserver.homebox.config.HBPrinter;
 
 public class JPanelBudgetReader extends JPanel implements ActionListener {
@@ -27,7 +27,7 @@ public class JPanelBudgetReader extends JPanel implements ActionListener {
 
 	private JButton update_btn;
 	private JComboBox c2;
-	private IODS_API IODS_api;
+	private Budget_API Budget_api;
 	private JTable table;
 	private DefaultTableModel t_model;
 	private IBudget[] mEnu;
@@ -64,8 +64,8 @@ public class JPanelBudgetReader extends JPanel implements ActionListener {
 		this.add(c2);
 
 		API_Factory api = API_Factory.getInstance();
-		IODS_api = api.createAPI();
-		if (!IODS_api.islocked()) {
+		Budget_api = api.create_ODS_API();
+		if (!Budget_api.islocked()) {
 			table = new JTable();// erg, head);
 
 			aktualisiere((MonthEnum.get((Integer.parseInt(month) - 1))), year);
@@ -96,7 +96,7 @@ public class JPanelBudgetReader extends JPanel implements ActionListener {
 			for (String header : head)
 				t_model.addColumn(header);
 		}
-		mEnu = IODS_api.getMonth(month, Integer.parseInt(year));
+		mEnu = Budget_api.getMonth(month, Integer.parseInt(year));
 
 		if (mEnu != null) {
 			for (int i = 0; i < mEnu.length; i++) {
@@ -118,7 +118,7 @@ public class JPanelBudgetReader extends JPanel implements ActionListener {
 	public void actionPerformed(ActionEvent arg0) {
 
 		if (arg0.getSource() == update_btn) {
-			if (!IODS_api.islocked()) {
+			if (!Budget_api.islocked()) {
 
 				for (int j = t_model.getRowCount() - 1; j >= 0; j--) {
 

@@ -18,5 +18,23 @@
         <processorPath useClasspath="true" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="budgetcalc_main" target="1.8" />
+      <module name="budgetcalc_test" target="1.8" />
+      <module name="clipboard_main" target="1.8" />
+      <module name="clipboard_test" target="1.8" />
+      <module name="filemanager_main" target="1.8" />
+      <module name="filemanager_test" target="1.8" />
+      <module name="homebox_base_main" target="1.8" />
+      <module name="homebox_base_test" target="1.8" />
+      <module name="homebox_main" target="1.8" />
+      <module name="homebox_test" target="1.8" />
+      <module name="linkcollection_main" target="1.8" />
+      <module name="linkcollection_test" target="1.8" />
+      <module name="remoteprocess_main" target="1.8" />
+      <module name="remoteprocess_test" target="1.8" />
+      <module name="settings_main" target="1.8" />
+      <module name="settings_test" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>

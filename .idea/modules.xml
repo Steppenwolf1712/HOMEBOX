@@ -2,14 +2,30 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/budgetcalc/budgetcalc.iml" filepath="$PROJECT_DIR$/budgetcalc/budgetcalc.iml" />
-      <module fileurl="file://$PROJECT_DIR$/clipboard/clipboard.iml" filepath="$PROJECT_DIR$/clipboard/clipboard.iml" />
-      <module fileurl="file://$PROJECT_DIR$/filemanager/filemanager.iml" filepath="$PROJECT_DIR$/filemanager/filemanager.iml" />
-      <module fileurl="file://$PROJECT_DIR$/homebox.iml" filepath="$PROJECT_DIR$/homebox.iml" />
-      <module fileurl="file://$PROJECT_DIR$/homebox_base/homebox_base.iml" filepath="$PROJECT_DIR$/homebox_base/homebox_base.iml" />
-      <module fileurl="file://$PROJECT_DIR$/linkcollection/linkcollection.iml" filepath="$PROJECT_DIR$/linkcollection/linkcollection.iml" />
-      <module fileurl="file://$PROJECT_DIR$/remoteprocess/remoteprocess.iml" filepath="$PROJECT_DIR$/remoteprocess/remoteprocess.iml" />
-      <module fileurl="file://$PROJECT_DIR$/settings/settings.iml" filepath="$PROJECT_DIR$/settings/settings.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/budgetcalc/budgetcalc.iml" filepath="$PROJECT_DIR$/.idea/modules/budgetcalc/budgetcalc.iml" group="budgetcalc" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/budgetcalc/budgetcalc_main.iml" filepath="$PROJECT_DIR$/.idea/modules/budgetcalc/budgetcalc_main.iml" group="budgetcalc" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/budgetcalc/budgetcalc_test.iml" filepath="$PROJECT_DIR$/.idea/modules/budgetcalc/budgetcalc_test.iml" group="budgetcalc" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/clipboard/clipboard.iml" filepath="$PROJECT_DIR$/.idea/modules/clipboard/clipboard.iml" group="clipboard" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/clipboard/clipboard_main.iml" filepath="$PROJECT_DIR$/.idea/modules/clipboard/clipboard_main.iml" group="clipboard" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/clipboard/clipboard_test.iml" filepath="$PROJECT_DIR$/.idea/modules/clipboard/clipboard_test.iml" group="clipboard" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/filemanager/filemanager.iml" filepath="$PROJECT_DIR$/.idea/modules/filemanager/filemanager.iml" group="filemanager" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/filemanager/filemanager_main.iml" filepath="$PROJECT_DIR$/.idea/modules/filemanager/filemanager_main.iml" group="filemanager" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/filemanager/filemanager_test.iml" filepath="$PROJECT_DIR$/.idea/modules/filemanager/filemanager_test.iml" group="filemanager" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/homebox.iml" filepath="$PROJECT_DIR$/.idea/modules/homebox.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/homebox_base/homebox_base.iml" filepath="$PROJECT_DIR$/.idea/modules/homebox_base/homebox_base.iml" group="homebox_base" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/homebox_base/homebox_base_main.iml" filepath="$PROJECT_DIR$/.idea/modules/homebox_base/homebox_base_main.iml" group="homebox_base" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/homebox_base/homebox_base_test.iml" filepath="$PROJECT_DIR$/.idea/modules/homebox_base/homebox_base_test.iml" group="homebox_base" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/homebox_main.iml" filepath="$PROJECT_DIR$/.idea/modules/homebox_main.iml" group="homebox" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/homebox_test.iml" filepath="$PROJECT_DIR$/.idea/modules/homebox_test.iml" group="homebox" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/linkcollection/linkcollection.iml" filepath="$PROJECT_DIR$/.idea/modules/linkcollection/linkcollection.iml" group="linkcollection" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/linkcollection/linkcollection_main.iml" filepath="$PROJECT_DIR$/.idea/modules/linkcollection/linkcollection_main.iml" group="linkcollection" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/linkcollection/linkcollection_test.iml" filepath="$PROJECT_DIR$/.idea/modules/linkcollection/linkcollection_test.iml" group="linkcollection" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/remoteprocess/remoteprocess.iml" filepath="$PROJECT_DIR$/.idea/modules/remoteprocess/remoteprocess.iml" group="remoteprocess" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/remoteprocess/remoteprocess_main.iml" filepath="$PROJECT_DIR$/.idea/modules/remoteprocess/remoteprocess_main.iml" group="remoteprocess" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/remoteprocess/remoteprocess_test.iml" filepath="$PROJECT_DIR$/.idea/modules/remoteprocess/remoteprocess_test.iml" group="remoteprocess" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/settings/settings.iml" filepath="$PROJECT_DIR$/.idea/modules/settings/settings.iml" group="settings" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/settings/settings_main.iml" filepath="$PROJECT_DIR$/.idea/modules/settings/settings_main.iml" group="settings" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/settings/settings_test.iml" filepath="$PROJECT_DIR$/.idea/modules/settings/settings_test.iml" group="settings" />
     </modules>
   </component>
 </project>

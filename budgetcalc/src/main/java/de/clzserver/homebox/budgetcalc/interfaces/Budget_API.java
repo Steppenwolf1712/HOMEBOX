@@ -1,6 +1,6 @@
-package de.clzserver.homebox.budgetcalc.ods;
+package de.clzserver.homebox.budgetcalc.interfaces;
 
-public interface IODS_API {
+public interface Budget_API {
 
 	/**
 	 * Gibt zurück, ob die ODS datie die zur Speicherung der Rechnugen derzeit von einem User benutzt wird.

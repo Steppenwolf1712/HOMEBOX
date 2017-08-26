@@ -16,9 +16,9 @@ import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
 
-import de.clzserver.homebox.budgetcalc.ods.API_Factory;
-import de.clzserver.homebox.budgetcalc.ods.IODS_API;
-import de.clzserver.homebox.budgetcalc.ods.MonthEnum;
+import de.clzserver.homebox.budgetcalc.interfaces.API_Factory;
+import de.clzserver.homebox.budgetcalc.interfaces.Budget_API;
+import de.clzserver.homebox.budgetcalc.interfaces.MonthEnum;
 import de.clzserver.homebox.config.Config;
 
 public class JPanelBudgetWriter extends JPanel implements ActionListener, KeyListener {
@@ -33,7 +33,7 @@ public class JPanelBudgetWriter extends JPanel implements ActionListener, KeyLis
 	private JLabel date;
 	private JComboBox<UserEnum> c;
 	private JButton enter_btn;
-	private IODS_API api;
+	private Budget_API api;
 	private JComboBox c_day;
 	private JComboBox c_month;
 	private Config conf;
@@ -105,7 +105,7 @@ public class JPanelBudgetWriter extends JPanel implements ActionListener, KeyLis
 	   this.add(c_month);
 	   
 
-		enter_btn = new JButton("Hinzufügen");
+		enter_btn = new JButton("Hinzufï¿½gen");
 		enter_btn.setBounds(60, 270, 120, 30);
 		enter_btn.addActionListener(this);
 
@@ -126,7 +126,7 @@ public class JPanelBudgetWriter extends JPanel implements ActionListener, KeyLis
 
 		if (arg0.getSource() == enter_btn) {
 			API_Factory api_fac = API_Factory.getInstance();
-			api = api_fac.createAPI();
+			api = api_fac.create_ODS_API();
 			if (!api.islocked()) {
 				Budget buddi = null;
 				

@@ -2,6 +2,7 @@ package de.clzserver.homebox.budgetcalc.ods;
 
 import java.util.ArrayList;
 
+import de.clzserver.homebox.budgetcalc.interfaces.IBudget;
 import de.clzserver.homebox.config.Config;
 import de.clzserver.homebox.config.HBPrinter;
 

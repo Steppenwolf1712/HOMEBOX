@@ -10,7 +10,7 @@ import java.io.InputStreamReader;
 import de.clzserver.homebox.config.Config;
 import de.clzserver.homebox.config.HBPrinter;
 
-public class Locker {
+class Locker {
 	
 	private final int USER = 1;
 	private final int MASCHINE = 2;

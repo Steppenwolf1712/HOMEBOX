@@ -1,11 +1,13 @@
 package de.clzserver.homebox.budgetcalc.ods;
 
+import de.clzserver.homebox.budgetcalc.interfaces.IBudget;
+
 import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
-class Budget implements IBudget{
+class Budget implements IBudget {
 
 	private String verwendung = null;
 	private float betrag = 0;

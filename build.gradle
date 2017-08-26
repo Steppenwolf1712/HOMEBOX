@@ -12,6 +12,7 @@ repositories {
 
 dependencies {
     compile project(':settings')
+    compile project(':filemanager')
     compile project(':clipboard')
     compile project(':homebox_base')
     compile project(':remoteprocess')
